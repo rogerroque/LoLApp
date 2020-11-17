@@ -3,43 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/homeMain">
+    app:startDestination="@id/homeFragment">
 
 
     <fragment
         android:id="@+id/perfilFragment"
-        android:name="com.example.spashscreen2.Perfil"
+        android:name="com.example.spashscreen2.PerfilFragment"
         android:label=""
         tools:layout="@layout/fragment_perfil" />
     <fragment
-        android:id="@+id/cambiar_idioma_drawer"
-        android:name="com.example.spashscreen2.CambiarIdioma"
+        android:id="@+id/cambiarIdiomaFragment"
+        android:name="com.example.spashscreen2.CambiarIdiomaFragment"
         android:label=""
         tools:layout="@layout/fragment_cambiar_idioma" />
     <fragment
-        android:id="@+id/ver_amigos_drawer"
-        android:name="com.example.spashscreen2.Amigos"
+        android:id="@+id/verAmigosFragment"
+        android:name="com.example.spashscreen2.AmigosFragment"
         android:label=""
         tools:layout="@layout/fragment_amigos" />
 
     <fragment
-        android:id="@+id/homeMain"
-        android:name="com.example.spashscreen2.Home"
+        android:id="@+id/homeFragment"
+        android:name="com.example.spashscreen2.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/quizesMain"
-        android:name="com.example.spashscreen2.Quizes"
+        android:id="@+id/quizesFragment"
+        android:name="com.example.spashscreen2.QuizesFragment"
         android:label=""
         tools:layout="@layout/fragment_quizes" />
     <fragment
-        android:id="@+id/puntuacionesMain"
-        android:name="com.example.spashscreen2.Puntuaciones"
+        android:id="@+id/puntuacionesFragment"
+        android:name="com.example.spashscreen2.PuntuacionesFragment"
         android:label=""
         tools:layout="@layout/fragment_puntuaciones" />
     <fragment
-        android:id="@+id/amigosMain"
-        android:name="com.example.spashscreen2.Chat"
+        android:id="@+id/amigosFragment"
+        android:name="com.example.spashscreen2.ChatFragment"
         android:label=""
         tools:layout="@layout/fragment_chat" />
     <dialog

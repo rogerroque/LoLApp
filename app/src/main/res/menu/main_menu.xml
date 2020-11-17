@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeMain"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/home_main_activity"
         android:title="Home" />
 
     <item
-        android:id="@+id/quizesMain"
+        android:id="@+id/quizesFragment"
         android:icon="@drawable/juegos_main_activity"
         android:title="Quizes" />
 
     <item
-        android:id="@+id/puntuacionesMain"
+        android:id="@+id/puntuacionesFragment"
         android:icon="@drawable/puntuaciones_main_activity"
         android:title="Puntuaciones" />
 
     <item
-        android:id="@+id/amigosMain"
+        android:id="@+id/amigosFragment"
         android:icon="@drawable/chat_main_activity"
         android:title="Chat" />
 

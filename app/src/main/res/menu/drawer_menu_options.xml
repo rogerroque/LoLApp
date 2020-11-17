@@ -7,14 +7,14 @@
         android:title="Ver perfil" />
 
     <item
-        android:id="@+id/cambiar_idioma_drawer"
+        android:id="@+id/cambiarIdiomaFragment"
         android:icon="@drawable/idioma"
         android:iconTint="#BDBF64"
         android:title="Cambiar idioma"
         />
 
     <item
-        android:id="@+id/ver_amigos_drawer"
+        android:id="@+id/verAmigosFragment"
         android:icon="@drawable/amigos"
         android:iconTint="#BDBF64"
         android:title="Amigos" />

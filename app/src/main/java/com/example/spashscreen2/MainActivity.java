@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 // Top-level destinations:
-                R.id.homeMain, R.id.quizesMain, R.id.puntuacionesMain, R.id.amigosMain
+                R.id.homeFragment, R.id.quizesFragment, R.id.puntuacionesFragment, R.id.amigosFragment
         )
                 .setOpenableLayout(binding.drawerLayout)
                 .build();
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
                 if (destination.getId() == R.id.perfilFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.cambiar_idioma_drawer) {
+                } else if (destination.getId() == R.id.cambiarIdiomaFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.ver_amigos_drawer) {
+                } else if (destination.getId() == R.id.verAmigosFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavigation.setVisibility(View.VISIBLE);
