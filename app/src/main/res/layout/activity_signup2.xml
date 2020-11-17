@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10343E"
+    tools:context=".SignupActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear_layout_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/lee_sin_drawer"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        >
+
+        <ImageView
+            android:id="@+id/profile_icon_drawer"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/champion_lee"
+
+            />
+        <TextView
+            android:id="@+id/username_drawer"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="21Roger"
+            android:textColor="#F7FFC8"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/profile_icon_drawer"
+
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/icon_ver_perfil"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_drawer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/text_ver_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="23dp"
+        android:text="Ver perfil"
+        android:textColor="#F7FFC8"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toRightOf="@id/icon_ver_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_drawer"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/icon_cambiar_idioma"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:src="@drawable/idioma"
+        app:layout_constraintTop_toBottomOf="@id/icon_ver_perfil"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/text_cambiar_idioma"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Cambiar idioma"
+        android:textColor="#F7FFC8"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toRightOf="@id/icon_cambiar_idioma"
+        app:layout_constraintTop_toBottomOf="@+id/text_ver_perfil"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/icon_amigos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/amigos"
+        app:layout_constraintTop_toBottomOf="@id/icon_cambiar_idioma"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/text_amigos"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Amigos"
+        android:textColor="#F7FFC8"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toRightOf="@id/icon_amigos"
+        app:layout_constraintTop_toBottomOf="@+id/text_cambiar_idioma"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/icon_salir"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/salir"
+        app:layout_constraintTop_toBottomOf="@id/icon_amigos"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/text_salir"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Salir"
+        android:textColor="#F7FFC8"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toRightOf="@id/icon_salir"
+        app:layout_constraintTop_toBottomOf="@+id/text_amigos"
+        android:layout_marginLeft="10dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
