@@ -1,10 +1,15 @@
 package com.example.spashscreen2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ActionBarOverlayLayout;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.spashscreen2.databinding.ActivityLoginBinding;
 import com.example.spashscreen2.databinding.ActivityMainBinding;
@@ -24,6 +29,29 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
         });
+
+        if (Configuration.ORIENTATION_LANDSCAPE != Configuration.ORIENTATION_LANDSCAPE) {
+
+        }
+
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            binding.lolImageLogin.setVisibility(View.GONE);
+            /*binding.mail.getLayoutParams().width = 20;
+            binding.mail.requestLayout();
+            binding.password.getLayoutParams().width = 20;
+            binding.password.requestLayout();*/
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            binding.lolImageLogin.setVisibility(View.VISIBLE);
+
+
+        }
 
     }
 }
