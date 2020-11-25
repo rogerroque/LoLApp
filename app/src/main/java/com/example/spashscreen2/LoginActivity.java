@@ -30,23 +30,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        if (Configuration.ORIENTATION_LANDSCAPE != Configuration.ORIENTATION_LANDSCAPE) {
-
-        }
-
     }
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             binding.lolImageLogin.setVisibility(View.GONE);
-            /*binding.mail.getLayoutParams().width = 20;
-            binding.mail.requestLayout();
-            binding.password.getLayoutParams().width = 20;
-            binding.password.requestLayout();*/
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             binding.lolImageLogin.setVisibility(View.VISIBLE);
 

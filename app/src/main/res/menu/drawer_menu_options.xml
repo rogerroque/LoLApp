@@ -1,28 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/perfilFragment"
-        android:icon="@drawable/user"
-        android:title="Ver perfil" />
+    <group
+        android:id="@+id/grupoTop">
 
-    <item
-        android:id="@+id/cambiarIdiomaFragment"
-        android:icon="@drawable/idioma"
-        android:iconTint="#BDBF64"
-        android:title="Cambiar idioma"
-        />
+        <item
+            android:id="@+id/perfilFragment"
+            android:icon="@drawable/user"
+            android:title="Perfil" />
 
-    <item
-        android:id="@+id/verAmigosFragment"
-        android:icon="@drawable/amigos"
-        android:iconTint="#BDBF64"
-        android:title="Amigos" />
+        <item
+            android:id="@id/perfilFragment"
+            android:icon="@drawable/partidasicon"
+            android:iconTint="#BDBF64"
+            android:title="Historial de partidas"
+            />
 
-    <item
-        android:id="@+id/confirmarLogoutFragment"
-        android:icon="@drawable/salir"
-        android:iconTint="#BDBF64"
-        android:title="Salir" />
+    </group>
+
+    <group
+        android:id="@+id/grupoMid">
+
+        <item
+            android:id="@+id/cambiarIdiomaFragment"
+            android:icon="@drawable/idioma"
+            android:iconTint="#BDBF64"
+            android:title="Cambiar idioma"
+            />
+
+        <item
+            android:id="@+id/verAmigosFragment"
+            android:icon="@drawable/amigos"
+            android:iconTint="#BDBF64"
+            android:title="Amigos" />
+
+    </group>
+
+    <group
+        android:id="@+id/grupoBottom">
+
+        <item
+            android:id="@+id/appInfoFragment"
+            android:icon="@drawable/appinfo"
+            android:iconTint="#BDBF64"
+            android:title="App info" />
+
+        <item
+            android:id="@+id/confirmarLogoutFragment"
+            android:icon="@drawable/salir"
+            android:iconTint="#BDBF64"
+            android:title="Salir" />
+
+    </group>
+
+
 
 </menu>

@@ -5,14 +5,11 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    >
+    android:fitsSystemWindows="true">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <!-- toolbar -->
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
@@ -24,16 +21,15 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="#11414E"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-        </com.google.android.material.appbar.AppBarLayout>
 
-        <!-- end toolbar -->
+        </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#28303C"
+            android:background="#0F2D35"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.fragment.app.FragmentContainerView
@@ -44,12 +40,28 @@
                 app:defaultNavHost="true"
                 app:navGraph="@navigation/main_graph" />
 
+            <View
+                android:id="@+id/viewTop"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_above="@+id/bottom_navigation"
+                android:background="#FFF979"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/viewBottom"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_above="@+id/bottom_navigation"
+                android:background="#FFF979"
+                app:layout_constraintBottom_toTopOf="@id/bottom_navigation"/>
+
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottom_navigation"
                 android:theme="@style/AppTheme.Bottom.Navigation"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/windowBackground"
+                android:background="#11414E"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -57,14 +69,13 @@
                 app:itemIconTint="#FFF979"
                 app:itemTextColor="#FFF979"/>
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/drawer_navigation"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:background="#10343E"
         app:itemIconTint="#FBFE7F"
         android:theme="@style/AppTheme.Toolbar.Tema"
@@ -73,6 +84,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/menu_header"
+
         app:menu="@menu/drawer_menu_options"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

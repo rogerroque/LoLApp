@@ -49,12 +49,16 @@ public class MainActivity extends AppCompatActivity {
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
                 if (destination.getId() == R.id.perfilFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
                 } else if (destination.getId() == R.id.cambiarIdiomaFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
                 } else if (destination.getId() == R.id.verAmigosFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavigation.setVisibility(View.VISIBLE);
+                    binding.viewBottom.setVisibility(View.VISIBLE);
                 }
             }
         });

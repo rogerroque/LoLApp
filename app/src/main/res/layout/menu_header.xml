@@ -1,107 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
-    android:id="@+id/constraintDrawer"
-    android:layout_height="match_parent"
-    android:background="#10343E"
-    tools:context=".SignupActivity"
-    >
+    android:layout_height="190dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayoutDrawer"
+    android:background="#000">
 
-    <LinearLayout
-        android:id="@+id/linear_layout_drawer"
+    <ImageView
+        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:orientation="vertical"
-        >
+        android:layout_height="200dp"
+        android:src="@drawable/lee_sin"
+        />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            >
+        <ImageView
+            android:id="@+id/profilePhotoDrawer"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/champion_lee"
+            android:background="@drawable/background_for_images"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="25dp" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/lee_sin"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/level_number_circle"
+            android:gravity="center"
+            android:text="168"
+            android:textAlignment="center"
+            android:textColor="#F7FFC8"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.251"/>
 
-            <ImageView
-                android:id="@+id/profile_icon_drawer"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/background_for_images"
-                android:src="@drawable/champion_lee"
-                app:layout_constraintBottom_toTopOf="@id/username_drawer"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="80dp"/>
-
-            <TextView
-                android:id="@+id/username_drawer"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:text="21Roger"
-                android:textColor="#F7FFC8"
-                android:textSize="28dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profile_icon_drawer" />
-
-
-            <ImageView
-                android:id="@+id/mastery_points_icon"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/mastery_points"
-                app:layout_constraintLeft_toRightOf="@id/username_drawer"
-                app:layout_constraintTop_toBottomOf="@id/profile_icon_drawer" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/profilePhotoDrawer"
+            android:layout_marginTop="40dp">
 
             <TextView
-                android:id="@+id/mastery_points"
+                android:id="@+id/profileTextDrawer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="13dp"
-                android:text="238"
+                android:layout_marginLeft="11dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="21Roger"
                 android:textColor="#F7FFC8"
-                android:textSize="20dp"
-                app:layout_constraintLeft_toRightOf="@id/mastery_points_icon"
-                app:layout_constraintTop_toBottomOf="@id/profile_icon_drawer" />
+                android:textSize="25dp" />
 
             <ImageView
-                android:id="@+id/challenger_icon_drawer"
-                android:layout_width="35dp"
-                android:layout_height="45dp"
-                android:src="@drawable/challenger"
-                app:layout_constraintLeft_toRightOf="@id/mastery_points"
-                app:layout_constraintTop_toBottomOf="@id/profile_icon_drawer"
-                android:layout_marginTop="7dp"
-                android:layout_marginLeft="30dp"
-                />
+                android:id="@+id/masterypointsicondrawer"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:src="@drawable/masterypointsicon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:src="@drawable/grandmaster"
-                app:layout_constraintLeft_toRightOf="@id/challenger_icon_drawer"
-                app:layout_constraintTop_toBottomOf="@id/profile_icon_drawer"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="2dp"
-                />
+            <TextView
+                android:id="@+id/masterypointstextdrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="235"
+                android:textSize="17dp"
+                android:textColor="#F7FFC8"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="3dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+</RelativeLayout>
