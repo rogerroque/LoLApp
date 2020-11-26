@@ -22,6 +22,11 @@
         android:label="Amigos"
         tools:layout="@layout/fragment_amigos" />
     <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.spashscreen2.calendarioFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendario" />
+    <fragment
         android:id="@+id/appInfoFragment"
         android:name="com.example.spashscreen2.appInfoFragment"
         android:label="App informacion"
@@ -51,5 +56,6 @@
         android:name="com.example.spashscreen2.ConfirmarLogoutFragment"
         android:label="fragment_confirmar_logout"
         tools:layout="@layout/fragment_confirmar_logout" />
+
 
 </navigation>

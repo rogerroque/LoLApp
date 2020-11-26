@@ -1,25 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#0F2D35"
-    android:padding="30dp">
+    android:padding="0dp">
+
+    <LinearLayout
+        android:id="@+id/parentLineaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textQuizes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quizes"
+            android:textSize="30dp"
+            android:textColor="#F7FFC8"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/parentLinearLayoutQuizes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/parentHorizontalScrollViewQuizes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp">
+
+                <LinearLayout
+                    android:id="@+id/parentLineaLayoutImagesQuizes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp">
+
+                    <ImageView
+                        android:id="@+id/imageOneQuizes"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/campeonesscrollview"
+                        android:layout_marginRight="10dp"/>
+                    <ImageView
+                        android:id="@+id/imageTwoQuizes"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/esportsscrollviw"
+                        android:layout_marginRight="10dp"/>
+                    <ImageView
+                        android:id="@+id/imageThreeQuizes"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/itemsscrollview"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textPuzzles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puzzles"
+            android:textSize="30dp"
+            android:textColor="#F7FFC8"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:id="@+id/parentLinearLayoutPuzzles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/parentHorizontalScrollViewPuzzles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp">
+
+                <LinearLayout
+                    android:id="@+id/parentLinearLayoutImagePuzzles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp">
+
+                    <ImageView
+                        android:id="@+id/imageOnePuzzles"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        app:layout_constraintHeight_percent="0.25"
+                        app:layout_constraintWidth_percent="0.25"
+                        android:src="@drawable/puzzlesscrollview"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textEsports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eSports"
+            android:textSize="30dp"
+            android:textColor="#F7FFC8"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/parentLinearLayoutCalendario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/parentHorizontalScrollViewCalendario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp">
+
+                <LinearLayout
+                    android:id="@+id/parentLinearLayoutImageCalendario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp">
+
+                    <ImageView
+                        android:id="@+id/imageOneCalendario"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/calendarioscrollview"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textPuntuaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puntuaciones"
+            android:textSize="30dp"
+            android:textColor="#F7FFC8"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/parentLinearLayoutPuntuaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/parentHorizontalScrollViewPuntuaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp">
+
+                <LinearLayout
+                    android:id="@+id/parentLineaLayoutImagePuntuaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp">
+
+                    <ImageView
+                        android:id="@+id/imageOnePuntuaciones"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/puntuacionesscrollview"
+                        android:layout_marginRight="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageTwoPuntuaciones"
+                        android:layout_width="360dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/puntuacionesscrollview"
+                        android:layout_marginRight="10dp"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textSize="50dp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+                </LinearLayout>
 
-        />
+            </HorizontalScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -7,14 +7,14 @@
         <item
             android:id="@+id/perfilFragment"
             android:icon="@drawable/user"
+            android:iconTint="#BDBF64"
             android:title="Perfil" />
 
         <item
             android:id="@id/perfilFragment"
             android:icon="@drawable/partidasicon"
             android:iconTint="#BDBF64"
-            android:title="Historial de partidas"
-            />
+            android:title="Historial de partidas" />
 
     </group>
 
@@ -25,14 +25,19 @@
             android:id="@+id/cambiarIdiomaFragment"
             android:icon="@drawable/idioma"
             android:iconTint="#BDBF64"
-            android:title="Cambiar idioma"
-            />
+            android:title="Cambiar idioma" />
 
         <item
             android:id="@+id/verAmigosFragment"
             android:icon="@drawable/amigos"
             android:iconTint="#BDBF64"
             android:title="Amigos" />
+
+        <item
+            android:id="@+id/calendarioFragment"
+            android:icon="@drawable/schedulecup"
+            android:iconTint="#BDBF64"
+            android:title="Calendario"/>
 
     </group>
 
@@ -52,7 +57,5 @@
             android:title="Salir" />
 
     </group>
-
-
 
 </menu>
