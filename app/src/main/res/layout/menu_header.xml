@@ -29,19 +29,20 @@
             android:layout_marginLeft="25dp" />
 
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:background="@drawable/level_number_circle"
             android:gravity="center"
             android:text="168"
             android:textAlignment="center"
             android:textColor="#F7FFC8"
-            android:textSize="12dp"
+            android:textSize="9dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.251"/>
+            app:layout_constraintVertical_bias="0.51" />
 
         <LinearLayout
             android:id="@+id/linearLayout"

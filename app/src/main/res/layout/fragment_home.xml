@@ -182,14 +182,14 @@
                         android:id="@+id/imageOnePuntuaciones"
                         android:layout_width="360dp"
                         android:layout_height="130dp"
-                        android:src="@drawable/puntuacionesscrollview"
+                        android:src="@drawable/puntuacionesquizesscrollview"
                         android:layout_marginRight="10dp"/>
 
                     <ImageView
                         android:id="@+id/imageTwoPuntuaciones"
                         android:layout_width="360dp"
                         android:layout_height="130dp"
-                        android:src="@drawable/puntuacionesscrollview"
+                        android:src="@drawable/puntuacionespuzzlesscrollview"
                         android:layout_marginRight="10dp"/>
 
 
