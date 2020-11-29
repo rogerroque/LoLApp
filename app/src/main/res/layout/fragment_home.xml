@@ -22,7 +22,8 @@
             android:textSize="30dp"
             android:textColor="#F7FFC8"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            />
 
         <LinearLayout
             android:id="@+id/parentLinearLayoutQuizes"
@@ -48,14 +49,14 @@
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/campeonesscrollview"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/background_images"/>
                     <ImageView
                         android:id="@+id/imageTwoQuizes"
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/esportsscrollviw"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/background_images"/>
                     <ImageView
                         android:id="@+id/imageThreeQuizes"
@@ -193,7 +194,7 @@
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/puntuacionesquizesscrollview"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/background_images"/>
 
                     <ImageView
