@@ -46,20 +46,23 @@
                     <ImageView
                         android:id="@+id/imageOneQuizes"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
+                        android:layout_height="115dp"
                         android:src="@drawable/campeonesscrollview"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_images"/>
                     <ImageView
                         android:id="@+id/imageTwoQuizes"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
+                        android:layout_height="115dp"
                         android:src="@drawable/esportsscrollviw"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_images"/>
                     <ImageView
                         android:id="@+id/imageThreeQuizes"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
-                        android:src="@drawable/itemsscrollview"/>
+                        android:layout_height="115dp"
+                        android:src="@drawable/itemsscrollview"
+                        android:background="@drawable/background_images"/>
 
                 </LinearLayout>
 
@@ -99,11 +102,12 @@
                     <ImageView
                         android:id="@+id/imageOnePuzzles"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
+                        android:layout_height="115dp"
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.25"
                         android:src="@drawable/puzzlesscrollview"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_images"/>
 
                 </LinearLayout>
 
@@ -115,7 +119,7 @@
             android:id="@+id/textEsports"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="eSports"
+            android:text="Calendario"
             android:textSize="30dp"
             android:textColor="#F7FFC8"
             android:layout_marginTop="10dp"
@@ -143,9 +147,10 @@
                     <ImageView
                         android:id="@+id/imageOneCalendario"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
+                        android:layout_height="115dp"
                         android:src="@drawable/calendarioscrollview"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_images"/>
 
                 </LinearLayout>
 
@@ -166,7 +171,8 @@
         <LinearLayout
             android:id="@+id/parentLinearLayoutPuntuaciones"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
 
             <HorizontalScrollView
                 android:id="@+id/parentHorizontalScrollViewPuntuaciones"
@@ -185,16 +191,17 @@
                     <ImageView
                         android:id="@+id/imageOnePuntuaciones"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
+                        android:layout_height="115dp"
                         android:src="@drawable/puntuacionesquizesscrollview"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_images"/>
 
                     <ImageView
                         android:id="@+id/imageTwoPuntuaciones"
                         android:layout_width="360dp"
-                        android:layout_height="130dp"
+                        android:layout_height="115dp"
                         android:src="@drawable/puntuacionespuzzlesscrollview"
-                        android:layout_marginRight="10dp"/>
+                        android:background="@drawable/background_images"/>
 
 
                 </LinearLayout>

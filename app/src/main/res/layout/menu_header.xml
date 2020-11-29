@@ -22,7 +22,7 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@drawable/champion_lee"
-            android:background="@drawable/background_for_images"
+            android:background="@drawable/background_image_icon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="45dp"

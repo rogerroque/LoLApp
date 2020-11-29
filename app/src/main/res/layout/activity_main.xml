@@ -40,7 +40,9 @@
                 app:defaultNavHost="true"
                 app:layout_constraintBottom_toTopOf="@+id/viewBottom"
                 app:layout_constraintTop_toTopOf="parent"
-                app:navGraph="@navigation/main_graph" />
+                app:navGraph="@navigation/main_graph"
+                android:paddingLeft="5dp"
+                android:paddingRight="7dp"/>
 
             <View
                 android:id="@+id/viewTop"
