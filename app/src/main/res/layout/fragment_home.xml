@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#0F2D35"
-    android:padding="0dp">
+    android:scrollbars="none">
 
     <LinearLayout
         android:id="@+id/parentLineaLayout"
@@ -33,7 +33,8 @@
                 android:id="@+id/parentHorizontalScrollViewQuizes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-40dp">
+                android:layout_marginTop="-40dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/parentLineaLayoutImagesQuizes"
@@ -85,7 +86,8 @@
                 android:id="@+id/parentHorizontalScrollViewPuzzles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-40dp">
+                android:layout_marginTop="-40dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/parentLinearLayoutImagePuzzles"
@@ -128,7 +130,8 @@
                 android:id="@+id/parentHorizontalScrollViewCalendario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-40dp">
+                android:layout_marginTop="-40dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/parentLinearLayoutImageCalendario"
@@ -169,7 +172,8 @@
                 android:id="@+id/parentHorizontalScrollViewPuntuaciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-40dp">
+                android:layout_marginTop="-40dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/parentLineaLayoutImagePuntuaciones"

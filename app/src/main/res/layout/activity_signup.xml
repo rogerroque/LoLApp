@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#0F2D35"
     tools:context=".SignupActivity"
-    android:padding="30dp">
+    android:padding="15dp">
 
 
     <ImageView

@@ -56,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 } else if (destination.getId() == R.id.verAmigosFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.appInfoFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.calendarioFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavigation.setVisibility(View.VISIBLE);
                     binding.viewBottom.setVisibility(View.VISIBLE);
