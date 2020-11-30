@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashScreenFragment">
 
 
     <fragment
@@ -35,7 +35,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.spashscreen2.HomeFragment"
         android:label=""
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quizesFragment"
         android:name="com.example.spashscreen2.QuizesFragment"
@@ -56,6 +60,45 @@
         android:name="com.example.spashscreen2.ConfirmarLogoutFragment"
         android:label="fragment_confirmar_logout"
         tools:layout="@layout/fragment_confirmar_logout" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.spashscreen2.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_firstScreenFragment"
+            app:destination="@id/firstScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.example.spashscreen2.FirstScreenFragment"
+        android:label="fragment_first_screen"
+        tools:layout="@layout/fragment_first_screen" >
+        <action
+            android:id="@+id/action_firstScreenFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_firstScreenFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.spashscreen2.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.spashscreen2.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
 
 </navigation>

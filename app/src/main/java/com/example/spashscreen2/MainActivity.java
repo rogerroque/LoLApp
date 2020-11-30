@@ -1,5 +1,9 @@
 package com.example.spashscreen2;
 
+import android.app.Dialog;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,11 +12,6 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import android.app.Dialog;
-import android.os.Bundle;
-import android.view.View;
-
 
 import com.example.spashscreen2.databinding.ActivityMainBinding;
 
@@ -29,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView((binding = ActivityMainBinding.inflate(getLayoutInflater())).getRoot());
 
         setSupportActionBar(binding.toolbar);
+
+
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 // Top-level destinations:
@@ -62,14 +63,33 @@ public class MainActivity extends AppCompatActivity {
                 } else if (destination.getId() == R.id.calendarioFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.splashScreenFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.signInFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.signUpFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.firstScreenFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavigation.setVisibility(View.VISIBLE);
+                    binding.toolbar.setVisibility(View.VISIBLE);
                     binding.viewBottom.setVisibility(View.VISIBLE);
+                    binding.viewTop.setVisibility(View.VISIBLE);
                 }
             }
         });
-
-
     }
-
 }

@@ -19,7 +19,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".SignupActivity"
+        <!--<activity android:name=".SignupActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <activity android:name=".LoginActivity"
@@ -32,14 +32,17 @@
         <activity android:name=".SplashScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>-->
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme" />
+        </activity>
 
     </application>
 
