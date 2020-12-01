@@ -2,12 +2,8 @@
     android:interpolator="@android:interpolator/accelerate_decelerate"
     android:fillAfter="true">
     <alpha
-        android:fromAlpha="0"
-        android:toAlpha="1"
-        android:duration="1000" />
-    <alpha
-        android:fromAlpha="1"
-        android:toAlpha="0"
-        android:duration="1000"
-        android:startOffset="1000"/>
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="1100" />
+
 </set>
