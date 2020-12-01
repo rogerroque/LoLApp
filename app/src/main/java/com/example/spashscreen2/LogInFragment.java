@@ -1,28 +1,19 @@
 package com.example.spashscreen2;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.spashscreen2.databinding.FragmentSignInBinding;
 
-import java.util.List;
-import java.util.Objects;
-
-public class SignInFragment extends Fragment {
+public class LogInFragment extends Fragment {
 
     private FragmentSignInBinding binding;
     private NavController navController;

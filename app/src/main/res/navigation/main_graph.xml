@@ -87,18 +87,18 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.spashscreen2.SignInFragment"
+        android:name="com.example.spashscreen2.LogInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" >
+        tools:layout="@layout/fragment_log_in" >
         <action
             android:id="@+id/action_signInFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.spashscreen2.SignUpFragment"
+        android:name="com.example.spashscreen2.RegisterFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_signUpFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
