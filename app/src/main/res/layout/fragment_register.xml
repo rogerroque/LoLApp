@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/image"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/textEditCorreo"
@@ -88,7 +88,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/button_border_color"
         android:fontFamily="@font/ubuntu_medium"
-        android:text="LOGIN"
+        android:text="REGISTER"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

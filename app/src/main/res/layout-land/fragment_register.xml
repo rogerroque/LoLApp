@@ -5,33 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0F2D35"
-    android:padding="10dp"
     tools:context=".RegisterFragment">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </ScrollView>
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="170dp"
+        android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/lol_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47000003" />
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/image">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingEnd="40dp"
+        tools:ignore="RtlSymmetry">
 
         <EditText
             android:id="@+id/textEditCorreo"
@@ -74,28 +73,34 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textEditPassword" />
 
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_border_color"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="REGISTER"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            />
 
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/button_border_color"
-        android:fontFamily="@font/ubuntu_medium"
-        android:text="LOGIN"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
     <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier3"
+        android:id="@+id/barrier2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="left" />
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="image"
+
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

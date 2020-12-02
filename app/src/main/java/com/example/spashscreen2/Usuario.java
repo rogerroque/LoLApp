@@ -1,3 +1,4 @@
+/*
 package com.example.spashscreen2;
 
 import androidx.room.Entity;
@@ -21,3 +22,4 @@ public class Usuario {
     }
 
 }
+*/

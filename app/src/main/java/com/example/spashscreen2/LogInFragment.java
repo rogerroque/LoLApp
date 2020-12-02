@@ -10,19 +10,18 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
-import com.example.spashscreen2.databinding.FragmentSignInBinding;
+import com.example.spashscreen2.databinding.FragmentLogInBinding;
 
 public class LogInFragment extends Fragment {
 
-    private FragmentSignInBinding binding;
+    private FragmentLogInBinding binding;
     private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentSignInBinding.inflate(inflater, container, false);
+        binding = FragmentLogInBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
 

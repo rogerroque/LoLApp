@@ -1,3 +1,4 @@
+/*
 package com.example.spashscreen2;
 
 import android.content.Context;
@@ -43,3 +44,4 @@ public abstract class BaseDeDatos extends RoomDatabase {
 
     }
 }
+*/
