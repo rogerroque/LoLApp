@@ -14,7 +14,8 @@
             android:id="@id/perfilFragment"
             android:icon="@drawable/partidasicon"
             android:iconTint="#BDBF64"
-            android:title="Historial de partidas" />
+            android:title="Historial de partidas"
+            />
 
     </group>
 
@@ -31,7 +32,8 @@
             android:id="@+id/verAmigosFragment"
             android:icon="@drawable/amigos"
             android:iconTint="#BDBF64"
-            android:title="Amigos" />
+            android:title="Amigos"
+            />
 
         <item
             android:id="@+id/calendarioFragment"
