@@ -3,6 +3,7 @@ package com.example.spashscreen2;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,11 +26,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView((binding = ActivityMainBinding.inflate(getLayoutInflater())).getRoot());
 
         setSupportActionBar(binding.toolbar);
-
-
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.lee_sin_drawer);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 // Top-level destinations:
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 if (destination.getId() == R.id.perfilFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
                 } else if (destination.getId() == R.id.cambiarIdiomaFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
