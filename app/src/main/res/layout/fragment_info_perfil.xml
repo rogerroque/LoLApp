@@ -1,20 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".InfoPerfilFragment"
-    android:background="#2C7A8F">
+    android:background="#0F2D35"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Perfil"
-        android:textSize="50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textCameponesMasJugados"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20sp"
+            android:gravity="center_vertical"
+            android:text="Campeones mas jugados"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/ubuntu_medium"/>
+
+        <ImageView
+            android:id="@+id/masJugadoLee"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/mas_jugado_lee"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
+
+        <ImageView
+            android:id="@+id/masJugadoJarvan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mas_jugado_jarvan"
+            app:layout_constraintLeft_toRightOf="@id/masJugadoLee"
+            app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
+
+        <ImageView
+            android:id="@+id/masJugadoYi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mas_jugado_yi"
+            app:layout_constraintLeft_toRightOf="@id/masJugadoJarvan"
+            app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
+
+        <ImageView
+            android:id="@+id/masJugadoTeemo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mas_jugado_teemo"
+            app:layout_constraintLeft_toRightOf="@id/masJugadoYi"
+            app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
+
+        <ImageView
+            android:id="@+id/masJugadoJax"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mas_jugado_jax"
+            app:layout_constraintLeft_toRightOf="@id/masJugadoTeemo"
+            app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
+
+        <TextView
+            android:id="@+id/textClasificatorias"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="Clasificatorias"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/masJugadoLee"
+            android:fontFamily="@font/ubuntu_medium"/>
+
+        <ImageView
+            android:id="@+id/challgerIconPerfil"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/challenger_icon_perfil"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textClasificatorias" />
+
+        <TextView
+            android:id="@+id/challengerLPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100 LP"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/textClasificatorias"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/barrier4"
+            app:layout_constraintTop_toBottomOf="@id/textClasificatorias">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solo/Duo"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Aspirante"
+                android:textColor="#FFFA8C"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/grandmasterIconPerfil"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/grandmaster_icon_perfil"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/challgerIconPerfil" />
+
+        <TextView
+            android:id="@+id/grandmasterLPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="75 LP"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/challgerIconPerfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/barrier4"
+            app:layout_constraintTop_toBottomOf="@id/challgerIconPerfil">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flex 5v5"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Gran Maestro"
+                android:textColor="#FFFA8C"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="grandmasterIconPerfil,challgerIconPerfil" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

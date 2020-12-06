@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView((binding = ActivityMainBinding.inflate(getLayoutInflater())).getRoot());
 
         setSupportActionBar(binding.toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.lee_sin_drawer);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 // Top-level destinations:

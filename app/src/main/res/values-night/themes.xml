@@ -26,6 +26,7 @@
         <item name="colorControlNormal">#DBDD69</item>
         <item name="fontFamily"> @font/ubuntu_medium </item>
 
+
     </style>
 
     <style name="AppTheme.Color.Letra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
