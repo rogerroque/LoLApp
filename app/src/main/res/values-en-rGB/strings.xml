@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoL App</string>
+    <string name="campeones_mas_jugados">Most played champions</string>
+    <string name="clasificatorias">Rankeds</string>
+    <string name="aspirante" translatable="false">Challenger</string>
+    <string name="gran_maestro">Grandmaster</string>
+    <string name="registrarse">REGISTER</string>
+    <string name="entrar">LOGIN</string>
+    <string name="recuerdame">Remember me</string>
+    <string name="has_olvidado_la_contrase_a">Forgotten password?</string>
+    <string name="correo">Email</string>
+    <string name="contrase_a">Password</string>
+    <string name="nombre_de_usuario">Username</string>
+    <string name="calendario">Calendar</string>
+    <string name="puntuaciones">Scores</string>
+    <string name="perfil">Profile</string>
+    <string name="historial_de_partidas">Game history</string>
+    <string name="cambiar_idioma">Change language</string>
+    <string name="amigos">Friends</string>
+    <string name="salir">Log out</string>
+</resources>

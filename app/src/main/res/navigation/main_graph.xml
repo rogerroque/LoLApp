@@ -36,9 +36,6 @@
         android:name="com.example.spashscreen2.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_perfilFragment"
-            app:destination="@id/perfilFragment" />
     </fragment>
     <fragment
         android:id="@+id/quizesFragment"

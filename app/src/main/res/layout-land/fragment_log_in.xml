@@ -33,7 +33,7 @@
             android:layout_height="55dp"
             android:background="@drawable/text_edits_login_signup"
             android:fontFamily="@font/ubuntu_medium"
-            android:hint="Nombre de usuario"
+            android:hint="@string/nombre_de_usuario"
             android:paddingLeft="17dp"
             android:textColor="@color/white"
             android:textColorHint="#96FFFFFF" />
@@ -45,8 +45,9 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/text_edits_login_signup"
             android:fontFamily="@font/ubuntu_medium"
-            android:hint="Contraseña"
-            android:paddingLeft="17dp"
+            android:hint="@string/contrase_a"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
             android:textColor="@color/white"
             android:textColorHint="#96FFFFFF" />
 
@@ -62,7 +63,7 @@
                 android:layout_marginTop="5dp"
                 android:buttonTint="#BDBF64"
                 android:fontFamily="@font/ubuntu_medium"
-                android:text="Recuerdame"
+                android:text="@string/recuerdame"
                 android:textColor="@color/white"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -73,12 +74,9 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_border_color"
                 android:fontFamily="@font/ubuntu_medium"
-                android:text="LOGIN"
+                android:text="@string/entrar"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-
-
-                />
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -89,9 +87,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_medium"
-        android:text="Has olvidado la contraseña"
+        android:text="@string/has_olvidado_la_contrase_a"
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

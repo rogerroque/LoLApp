@@ -8,12 +8,6 @@
     tools:context=".RegisterFragment"
     android:padding="10dp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </ScrollView>
 
     <ImageView
         android:id="@+id/image"
@@ -24,8 +18,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        />
+        android:layout_gravity="center" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -41,8 +34,9 @@
             android:layout_height="55dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/text_edits_login_signup"
-            android:hint="Correo"
-            android:paddingLeft="20dp"
+            android:hint="@string/correo"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -59,8 +53,9 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="10dp"
             android:background="@drawable/text_edits_login_signup"
-            android:hint="Contraseña"
-            android:paddingLeft="20dp"
+            android:hint="@string/contrase_a"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:textColorHint="#96FFFFFF"/>
 
         <EditText
@@ -72,34 +67,24 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="10dp"
             android:background="@drawable/text_edits_login_signup"
-            android:hint="Nombre de usuario"
-            android:paddingLeft="20dp"
+            android:hint="@string/nombre_de_usuario"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:textColorHint="#96FFFFFF"/>
 
-
-
     </LinearLayout>
-
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/button_border_color"
         android:fontFamily="@font/ubuntu_medium"
-        android:text="REGISTER"
+        android:text="@string/registrarse"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-
-
-
-
-
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

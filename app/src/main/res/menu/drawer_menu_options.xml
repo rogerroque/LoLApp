@@ -8,13 +8,13 @@
             android:id="@+id/perfilFragment"
             android:icon="@drawable/user"
             android:iconTint="#BDBF64"
-            android:title="Perfil" />
+            android:title="@string/perfil" />
 
         <item
             android:id="@id/perfilFragment"
             android:icon="@drawable/partidasicon"
             android:iconTint="#BDBF64"
-            android:title="Historial de partidas"
+            android:title="@string/historial_de_partidas"
             />
 
     </group>
@@ -26,20 +26,20 @@
             android:id="@+id/cambiarIdiomaFragment"
             android:icon="@drawable/idioma"
             android:iconTint="#BDBF64"
-            android:title="Cambiar idioma" />
+            android:title="@string/cambiar_idioma" />
 
         <item
             android:id="@+id/verAmigosFragment"
             android:icon="@drawable/amigos"
             android:iconTint="#BDBF64"
-            android:title="Amigos"
+            android:title="@string/amigos"
             />
 
         <item
             android:id="@+id/calendarioFragment"
             android:icon="@drawable/schedulecup"
             android:iconTint="#BDBF64"
-            android:title="Calendario"/>
+            android:title="@string/calendario"/>
 
     </group>
 
@@ -50,13 +50,13 @@
             android:id="@+id/appInfoFragment"
             android:icon="@drawable/appinfo"
             android:iconTint="#BDBF64"
-            android:title="App info" />
+            android:title="@string/app_info" />
 
         <item
             android:id="@+id/confirmarLogoutFragment"
             android:icon="@drawable/salir"
             android:iconTint="#BDBF64"
-            android:title="Salir" />
+            android:title="@string/salir" />
 
     </group>
 

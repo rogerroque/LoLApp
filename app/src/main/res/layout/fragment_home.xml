@@ -13,18 +13,18 @@
     <LinearLayout
         android:id="@+id/parentLineaLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textQuizes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quizes"
-            android:textSize="30dp"
+            android:text="@string/quizes"
+            android:textSize="30sp"
             android:textColor="#F7FFC8"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             />
 
         <LinearLayout
@@ -41,7 +41,7 @@
 
                 <LinearLayout
                     android:id="@+id/parentLineaLayoutImagesQuizes"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="50dp">
@@ -51,14 +51,14 @@
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/campeonesscrollview"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/background_images"/>
                     <ImageView
                         android:id="@+id/imageTwoQuizes"
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/esportsscrollviw"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/background_images"/>
                     <ImageView
                         android:id="@+id/imageThreeQuizes"
@@ -77,11 +77,11 @@
             android:id="@+id/textPuzzles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Puzzles"
-            android:textSize="30dp"
+            android:text="@string/puzzles"
+            android:textSize="30sp"
             android:textColor="#F7FFC8"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginStart="10dp" />
 
         <LinearLayout
             android:id="@+id/parentLinearLayoutPuzzles"
@@ -97,7 +97,7 @@
 
                 <LinearLayout
                     android:id="@+id/parentLinearLayoutImagePuzzles"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="50dp">
@@ -109,7 +109,7 @@
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.25"
                         android:src="@drawable/puzzlesscrollview"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@drawable/background_images"/>
 
                 </LinearLayout>
@@ -122,11 +122,11 @@
             android:id="@+id/textEsports"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calendario"
-            android:textSize="30dp"
+            android:text="@string/calendario"
+            android:textSize="30sp"
             android:textColor="#F7FFC8"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginStart="10dp"/>
 
         <LinearLayout
             android:id="@+id/parentLinearLayoutCalendario"
@@ -142,7 +142,7 @@
 
                 <LinearLayout
                     android:id="@+id/parentLinearLayoutImageCalendario"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="50dp">
@@ -152,7 +152,7 @@
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/calendarioscrollview"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@drawable/background_images"/>
 
                 </LinearLayout>
@@ -165,11 +165,11 @@
             android:id="@+id/textPuntuaciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Puntuaciones"
-            android:textSize="30dp"
+            android:text="@string/puntuaciones"
+            android:textSize="30sp"
             android:textColor="#F7FFC8"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginStart="10dp"/>
 
         <LinearLayout
             android:id="@+id/parentLinearLayoutPuntuaciones"
@@ -186,7 +186,7 @@
 
                 <LinearLayout
                     android:id="@+id/parentLineaLayoutImagePuntuaciones"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="50dp">
@@ -196,7 +196,7 @@
                         android:layout_width="360dp"
                         android:layout_height="115dp"
                         android:src="@drawable/puntuacionesquizesscrollview"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/background_images"/>
 
                     <ImageView

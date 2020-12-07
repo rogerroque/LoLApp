@@ -12,7 +12,7 @@
         android:layout_width="170dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:src="@drawable/lol_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -38,14 +38,9 @@
             android:layout_height="55dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/text_edits_login_signup"
-            android:hint="Correo"
-            android:paddingLeft="20dp"
-            android:textColorHint="#96FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image"
-            app:layout_constraintVertical_bias="0.3" />
+            android:hint="@string/correo"
+            android:paddingStart="20dp"
+            android:textColorHint="#96FFFFFF" />
 
         <EditText
             android:id="@+id/textEditPassword"
@@ -53,12 +48,9 @@
             android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/text_edits_login_signup"
-            android:hint="Contraseña"
-            android:paddingLeft="20dp"
-            android:textColorHint="#96FFFFFF"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textEditCorreo" />
+            android:hint="@string/contrase_a"
+            android:paddingStart="20dp"
+            android:textColorHint="#96FFFFFF" />
 
         <EditText
             android:id="@+id/textEditUsername"
@@ -66,12 +58,9 @@
             android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/text_edits_login_signup"
-            android:hint="Nombre de usuario"
-            android:paddingLeft="20dp"
-            android:textColorHint="#96FFFFFF"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textEditPassword" />
+            android:hint="@string/nombre_de_usuario"
+            android:paddingStart="20dp"
+            android:textColorHint="#96FFFFFF" />
 
         <Button
             android:id="@+id/buttonLogin"
@@ -80,27 +69,18 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_border_color"
             android:fontFamily="@font/ubuntu_medium"
-            android:text="REGISTER"
+            android:text="@string/registrarse"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password"
             />
 
     </LinearLayout>
-
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="right"
-        app:constraint_referenced_ids="image"
-
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="15dp" />
-
-
+        app:constraint_referenced_ids="image" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,75 @@
 <resources>
     <string name="app_name">LoL App</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login" translatable="false">LoginActivity</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="open">open</string>
-    <string name="close">close</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="open" translatable="false">open</string>
+    <string name="close" translatable="false">close</string>
+
+
+    <!--  PerfilInfoFragment  -->
+    <!-- ###################### -->
+
+    <string name="campeones_mas_jugados">Campeones mas jugados</string>
+    <string name="clasificatorias">Clasificatorias</string>
+    <string name="_100_lp" translatable="false">100 LP</string>
+    <string name="solo_duo" translatable="false">Solo/Duo</string>
+    <string name="aspirante">Aspirante</string>
+    <string name="_75_lp" translatable="false">75 LP</string>
+    <string name="flex_5v5" translatable="false">Flex 5v5</string>
+    <string name="gran_maestro">Gran Maestro</string>
+
+    <!--  PerfilFragment  -->
+    <!-- ###################### -->
+
+    <string name="_168" translatable="false">168</string>
+    <string name="_21roger" translatable="false">21Roger</string>
+    <string name="_235" translatable="false">235</string>
+
+    <!--  FirstScreenFragment  -->
+    <!-- ###################### -->
+
+    <string name="lolapp" translatable="false">LoLApp</string>
+    <string name="the_league_of_legends_app" translatable="false">The League of Legends App</string>
+    <string name="registrarse">REGISTRARSE</string>
+    <string name="entrar">ENTRAR</string>
+
+    <!--  LogInFragment  -->
+    <!-- ###################### -->
+
+    <string name="recuerdame">Recuerdame</string>
+    <string name="has_olvidado_la_contrase_a">Has olvidado la contraseña?</string>
+    <string name="correo">Correo</string>
+    <string name="contrase_a">Contraseña</string>
+
+    <!--  RegisterFragment  -->
+    <!-- ###################### -->
+
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+
+    <!--  HomeFragment  -->
+    <!-- ###################### -->
+
+    <string name="quizes" translatable="false">Quizzes</string>
+    <string name="puzzles" translatable="false">Puzzles</string>
+    <string name="calendario">Calendario</string>
+    <string name="puntuaciones">Puntuaciones</string>
+
+
+    <!--  Navigation View Menu  -->
+    <!-- ###################### -->
+
+    <string name="perfil">Perfil</string>
+    <string name="historial_de_partidas">Historial de partidas</string>
+    <string name="cambiar_idioma">Cambiar idioma</string>
+    <string name="amigos">Amigos</string>
+    <string name="app_info" translatable="false">App info</string>
+    <string name="salir">Salir</string>
+
+
 </resources>

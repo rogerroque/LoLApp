@@ -10,8 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textCameponesMasJugados"
@@ -19,61 +18,66 @@
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20sp"
+            android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"
-            android:text="Campeones mas jugados"
+            android:text="@string/campeones_mas_jugados"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="@font/ubuntu_medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/masJugadoLee"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="15dp"
-            android:src="@drawable/mas_jugado_lee"
-            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="10dp"
+            android:src="@drawable/mas_jugado_lee"
+            android:background="@drawable/background_image_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
 
         <ImageView
             android:id="@+id/masJugadoJarvan"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/mas_jugado_jarvan"
+            android:background="@drawable/background_image_icon"
             app:layout_constraintLeft_toRightOf="@id/masJugadoLee"
             app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
 
         <ImageView
             android:id="@+id/masJugadoYi"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/mas_jugado_yi"
+            android:background="@drawable/background_image_icon"
             app:layout_constraintLeft_toRightOf="@id/masJugadoJarvan"
             app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
 
         <ImageView
             android:id="@+id/masJugadoTeemo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/mas_jugado_teemo"
+            android:background="@drawable/background_image_icon"
             app:layout_constraintLeft_toRightOf="@id/masJugadoYi"
             app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
 
         <ImageView
             android:id="@+id/masJugadoJax"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/mas_jugado_jax"
+            android:background="@drawable/background_image_icon"
             app:layout_constraintLeft_toRightOf="@id/masJugadoTeemo"
             app:layout_constraintTop_toBottomOf="@id/textCameponesMasJugados" />
 
@@ -83,13 +87,13 @@
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"
-            android:text="Clasificatorias"
+            android:text="@string/clasificatorias"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/masJugadoLee"
-            android:fontFamily="@font/ubuntu_medium"/>
+            app:layout_constraintTop_toBottomOf="@id/masJugadoLee" />
 
         <ImageView
             android:id="@+id/challgerIconPerfil"
@@ -104,19 +108,20 @@
             android:id="@+id/challengerLPS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100 LP"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/textClasificatorias"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="35dp"
             android:layout_marginEnd="15dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/_100_lp"
             android:textColor="@color/white"
-            android:fontFamily="@font/ubuntu_bold"/>
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textClasificatorias" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="7dp"
             android:gravity="center_vertical"
             android:orientation="vertical"
             app:layout_constraintStart_toEndOf="@id/barrier4"
@@ -125,17 +130,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Solo/Duo"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/solo_duo"
                 android:textColor="@color/white"
-                android:textSize="15sp"
-                android:fontFamily="@font/ubuntu_medium"/>
+                android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Aspirante"
+                android:text="@string/aspirante"
                 android:textColor="#FFFA8C"
                 android:textSize="25sp" />
 
@@ -155,19 +160,20 @@
             android:id="@+id/grandmasterLPS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="75 LP"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/challgerIconPerfil"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="15dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/_75_lp"
             android:textColor="@color/white"
-            android:fontFamily="@font/ubuntu_bold"/>
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/challgerIconPerfil" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:layout_marginStart="7dp"
             android:gravity="center_vertical"
             android:orientation="vertical"
             app:layout_constraintStart_toEndOf="@id/barrier4"
@@ -176,17 +182,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Flex 5v5"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/flex_5v5"
                 android:textColor="@color/white"
-                android:textSize="15sp"
-                android:fontFamily="@font/ubuntu_medium"/>
+                android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Gran Maestro"
+                android:text="@string/gran_maestro"
                 android:textColor="#FFFA8C"
                 android:textSize="25sp" />
 
@@ -197,7 +204,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="right"
-            app:constraint_referenced_ids="grandmasterIconPerfil,challgerIconPerfil" />
+            app:constraint_referenced_ids="grandmasterIconPerfil,challgerIconPerfil"
+            tools:layout_editor_absoluteX="75dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

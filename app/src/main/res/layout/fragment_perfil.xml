@@ -23,13 +23,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="300dp"
             android:layout_height="400dp"
-            android:layout_centerHorizontal="true"
-            >
+            android:layout_centerHorizontal="true">
 
             <ImageView
                 android:id="@+id/imageLeeCircle"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/background_image_icon"
                 android:src="@drawable/champion_lee"
@@ -43,52 +42,38 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/level_number_circle"
-                android:text="168"
                 android:gravity="center"
+                android:text="@string/_168"
                 android:textColor="#F7FFC8"
-                android:textSize="9dp"
+                android:textSize="9sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.58"
+                app:layout_constraintHorizontal_bias="0.56"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.41000003" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/viewTop"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_above="@+id/bottom_navigation"
-            android:background="#FFF979"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="110dp"
-            tools:ignore="MissingConstraints"
-            android:layout_centerHorizontal="true"
-            >
+                app:layout_constraintVertical_bias="0.37" />
 
             <TextView
                 android:id="@+id/profileTextDrawer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="21Roger"
+                android:text="@string/_21roger"
                 android:textColor="#F7FFC8"
-                android:textSize="25dp"
-                />
+                android:textSize="25sp"
+                app:layout_constraintTop_toBottomOf="@id/imageLeeCircle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="10dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileTextDrawer">
 
                 <ImageView
                     android:id="@+id/masterypointsicondrawer"
@@ -101,17 +86,23 @@
                     android:id="@+id/masterypointstextdrawer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="235"
-                    android:textSize="17dp"
+                    android:text="@string/_235"
+                    android:textSize="17sp"
                     android:textColor="#F7FFC8"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:layout_marginLeft="3dp"
-                    android:layout_gravity="center"
-                    />
+                    android:layout_marginStart="3dp"/>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FFF979"
+            app:layout_constraintTop_toTopOf="parent"/>
+
 
     </RelativeLayout>
 
@@ -120,6 +111,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/relativeLayoutPerfil"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabMaxWidth="0dp"
         android:background="@android:color/transparent"
         app:tabTextColor="@color/white"
         />
