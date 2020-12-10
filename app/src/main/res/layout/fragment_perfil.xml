@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayoutPerfil"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="210dp"
         tools:ignore="MissingConstraints"
         android:gravity="center">
 
@@ -36,7 +36,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.17000002" />
+                app:layout_constraintVertical_bias="0.120000005" />
 
             <TextView
                 android:layout_width="25dp"

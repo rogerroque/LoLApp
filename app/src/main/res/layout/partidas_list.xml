@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintParentPartidas"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#0F2D35"
+        android:layout_marginBottom="5dp">
+
+        <View
+            android:id="@+id/viewWinLose"
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            android:background="#CD2828"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imgPlayedChamp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/mas_jugado_lee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/viewWinLose"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRunas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="6dp">
+
+            <ImageView
+                android:id="@+id/runa1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/mas_jugado_lee"
+                app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                app:layout_constraintBottom_toTopOf="@id/runa2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="3dp"/>
+
+            <ImageView
+                android:id="@+id/runa2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/mas_jugado_lee"
+                app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/runa1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSpells"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/linearLayoutRunas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="3dp">
+
+            <ImageView
+                android:id="@+id/summonerSpell1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/mas_jugado_lee"
+                app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                app:layout_constraintBottom_toTopOf="@id/runa2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="3dp"/>
+
+            <ImageView
+                android:id="@+id/summonerSpell2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/mas_jugado_lee"
+                app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/runa1"/>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayoutItems"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            app:layout_constraintLeft_toRightOf="@id/linearLayoutSpells"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:stretchColumns="4"
+            android:layout_marginLeft="10dp">
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/item1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toTopOf="@id/runa2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="3dp" />
+
+                <ImageView
+                    android:id="@+id/item2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/runa1"
+                    android:layout_marginLeft="4dp"/>
+
+                <ImageView
+                    android:id="@+id/item3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toTopOf="@id/runa2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="4dp"/>
+
+                <ImageView
+                    android:id="@+id/item4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/runa1"
+                    android:layout_marginLeft="4dp"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/item5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toTopOf="@id/runa2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="3dp" />
+
+                <ImageView
+                    android:id="@+id/item6"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/runa1"
+                    android:layout_marginLeft="4dp"/>
+
+                <ImageView
+                    android:id="@+id/item7"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintLeft_toRightOf="@id/imgPlayedChamp"
+                    app:layout_constraintBottom_toTopOf="@id/runa2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="4dp"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10/1/9"
+                android:textSize="13dp"
+                android:textColor="#FFFA8C"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/ubuntu_bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clasificatoria"
+                android:textSize="13dp"
+                android:textAlignment="viewEnd"
+                android:textColor="#E0E343"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hace 6 horas"
+                android:textSize="13dp"
+                android:textAlignment="viewEnd"
+                android:textColor="#D1D292"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -51,10 +51,10 @@ public class PerfilFragment extends Fragment {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position) {
                     case 0: default:
-                        tab.setText("Perfil");
+                        tab.setText(R.string.perfil);
                         break;
                     case 1:
-                        tab.setText("Historia partidas");
+                        tab.setText(R.string.historial_de_partidas);
                         break;
                 }
             }

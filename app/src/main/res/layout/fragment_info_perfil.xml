@@ -118,6 +118,7 @@
             app:layout_constraintTop_toBottomOf="@id/textClasificatorias" />
 
         <LinearLayout
+            android:id="@+id/linearChallenger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -160,16 +161,17 @@
             android:id="@+id/grandmasterLPS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="15dp"
             android:fontFamily="@font/ubuntu_bold"
             android:text="@string/_75_lp"
             android:textColor="@color/white"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/challgerIconPerfil" />
+            app:layout_constraintBottom_toBottomOf="@id/linearGrandmaster"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <LinearLayout
+            android:id="@+id/linearGrandmaster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"

@@ -19,4 +19,9 @@
     <string name="cambiar_idioma">Change language</string>
     <string name="amigos">Friends</string>
     <string name="salir">Log out</string>
+    <string name="campeones">Champions</string>
+    <string name="objetos">Items</string>
+    <string name="puntuaciones_quizzes">Scores quizzes</string>
+    <string name="puntuaciones_puzzles">Scores puzzles</string>
+    <string name="app_info">About this App</string>
 </resources>
