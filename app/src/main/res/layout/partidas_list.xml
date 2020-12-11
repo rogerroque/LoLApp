@@ -1,10 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="79dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintParentPartidas"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="#0F2D35"
+        android:layout_marginBottom="5dp">
+
+        <View
+            android:id="@+id/viewWinLose"
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            android:background="#9C0F1B"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imgPlayedChamp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/mas_jugado_lee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/viewWinLose"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRunes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgPlayedChamp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:id="@+id/rune1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/mas_jugado_lee"/>
+
+            <ImageView
+                android:id="@+id/rune2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/mas_jugado_lee"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSpells"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutRunes"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:id="@+id/spell1"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/mas_jugado_lee" />
+
+            <ImageView
+                android:id="@+id/spell2"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/mas_jugado_lee"
+                android:layout_marginTop="7dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutSpells"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item1"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+                <ImageView
+                    android:id="@+id/item2"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+                <ImageView
+                    android:id="@+id/item3"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+                <ImageView
+                    android:id="@+id/item4"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/item5"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+                <ImageView
+                    android:id="@+id/item6"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+                <ImageView
+                    android:id="@+id/item7"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/mas_jugado_lee" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/kda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10/1/9"
+                android:textSize="11dp"
+                android:textColor="#FFFA8C"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/ubuntu_bold"/>
+
+            <TextView
+                android:id="@+id/gameType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clasificatoria"
+                android:textSize="11dp"
+                android:textAlignment="viewEnd"
+                android:textColor="#E0E343"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+            <TextView
+                android:id="@+id/timeAgo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hace 6 horas"
+                android:textSize="11dp"
+                android:textAlignment="viewEnd"
+                android:textColor="#D1D292"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#126480"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintParentPartidas"
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -192,6 +390,7 @@
             android:layout_marginRight="10dp">
 
             <TextView
+                android:id="@+id/kda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="10/1/9"
@@ -201,6 +400,7 @@
                 android:fontFamily="@font/ubuntu_bold"/>
 
             <TextView
+                android:id="@+id/gameType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Clasificatoria"
@@ -210,6 +410,7 @@
                 android:fontFamily="@font/ubuntu_medium"/>
 
             <TextView
+                android:id="@+id/timeAgo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hace 6 horas"
@@ -220,6 +421,6 @@
 
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>
