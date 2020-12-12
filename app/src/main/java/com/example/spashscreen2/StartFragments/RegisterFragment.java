@@ -1,4 +1,4 @@
-package com.example.spashscreen2;
+package com.example.spashscreen2.StartFragments;
 
 import android.os.Bundle;
 
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.spashscreen2.R;
 
 public class RegisterFragment extends Fragment {
 

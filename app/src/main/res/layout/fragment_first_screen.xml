@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0F2D35"
-    tools:context=".FirstScreenFragment"
+    tools:context=".StartFragments.FirstScreenFragment"
     tools:deviceIds="wear"
     android:padding="15dp">
 

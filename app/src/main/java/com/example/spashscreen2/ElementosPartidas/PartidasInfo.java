@@ -1,4 +1,4 @@
-package com.example.spashscreen2.elementosPartidas;
+package com.example.spashscreen2.ElementosPartidas;
 
 import android.view.View;
 

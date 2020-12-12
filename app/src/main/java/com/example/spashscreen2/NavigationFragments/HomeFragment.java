@@ -1,4 +1,4 @@
-package com.example.spashscreen2;
+package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {

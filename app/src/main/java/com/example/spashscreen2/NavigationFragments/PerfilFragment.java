@@ -1,4 +1,4 @@
-package com.example.spashscreen2;
+package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.spashscreen2.HistorialPartidasFragment;
+import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentPerfilBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;

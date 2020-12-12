@@ -76,5 +76,12 @@
     <string name="puntuaciones_quizzes">Puntuaciones quizzes</string>
     <string name="puntuaciones_puzzles">Puntuaciones puzzles</string>
 
+    <!--  PuntuacionesFragment  -->
+    <!-- ###################### -->
+
+    <string name="invocador">Invocador</string>
+    <string name="puntuaci_n">Puntuación</string>
+
+
 
 </resources>

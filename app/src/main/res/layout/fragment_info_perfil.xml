@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".InfoPerfilFragment"
+    tools:context=".NavigationFragments.InfoPerfilFragment"
     android:background="#0F2D35"
     android:orientation="vertical">
 

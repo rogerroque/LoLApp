@@ -1,4 +1,4 @@
-package com.example.spashscreen2.elementosPartidas;
+package com.example.spashscreen2.ElementosPartidas;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -19,7 +19,6 @@ public class AdapterPartidas extends RecyclerView.Adapter<AdapterPartidas.ViewHo
 
     List<PartidasInfo> partidasInfo;
     LayoutInflater layoutInflater;
-    Context context;
 
     public AdapterPartidas(List<PartidasInfo> partidasInfo, Context context) {
         this.partidasInfo = partidasInfo;
@@ -40,7 +39,6 @@ public class AdapterPartidas extends RecyclerView.Adapter<AdapterPartidas.ViewHo
         String timeAgo = partidasInfo.get(position).getTimeAgo();
         String kda = partidasInfo.get(position).getKda();
         String gameType = partidasInfo.get(position).getGameType();
-        int playedChamp = partidasInfo.get(position).getImageView();
 
         holder.timeAgo.setText(timeAgo);
         holder.kda.setText(kda);
@@ -66,7 +64,7 @@ public class AdapterPartidas extends RecyclerView.Adapter<AdapterPartidas.ViewHo
         return partidasInfo.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView timeAgo, kda, gameType;
         public ImageView playedChamp;

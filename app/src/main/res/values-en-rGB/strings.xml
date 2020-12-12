@@ -24,4 +24,6 @@
     <string name="puntuaciones_quizzes">Scores quizzes</string>
     <string name="puntuaciones_puzzles">Scores puzzles</string>
     <string name="app_info">About this App</string>
+    <string name="invocador">Summoner</string>
+    <string name="puntuaci_n">Score</string>
 </resources>

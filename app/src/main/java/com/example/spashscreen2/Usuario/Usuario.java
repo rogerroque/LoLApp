@@ -1,5 +1,5 @@
 /*
-package com.example.spashscreen2.usuario;
+package com.example.spashscreen2.Usuario;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

@@ -1,5 +1,5 @@
 /*
-package com.example.spashscreen2.usuario;
+package com.example.spashscreen2.Usuario;
 
 public class BaseDeDatosRepositorio {
 

@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.spashscreen2.databinding.FragmentHistorialPartidasBinding;
 import com.example.spashscreen2.databinding.PartidasListBinding;
-import com.example.spashscreen2.elementosPartidas.AdapterPartidas;
-import com.example.spashscreen2.elementosPartidas.PartidasInfo;
+import com.example.spashscreen2.ElementosPartidas.AdapterPartidas;
+import com.example.spashscreen2.ElementosPartidas.PartidasInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +22,8 @@ import java.util.List;
 public class HistorialPartidasFragment extends Fragment {
 
     private FragmentHistorialPartidasBinding binding;
-    private PartidasListBinding binding2;
     AdapterPartidas adapterPartidas;
-    RecyclerView recyclerView;
-    List<PartidasInfo> partidasInfos = new ArrayList<>();;
+    List<PartidasInfo> partidasInfos = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,7 +38,6 @@ public class HistorialPartidasFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.recyclerViewPartidas);
         cargarPartidas();
         mostrarDatos();
 
@@ -267,9 +264,9 @@ public class HistorialPartidasFragment extends Fragment {
     }
 
     public void mostrarDatos() {
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.recyclerViewPartidas.setLayoutManager(new LinearLayoutManager(getContext()));
         adapterPartidas = new AdapterPartidas(partidasInfos, getContext());
-        recyclerView.setAdapter(adapterPartidas);
+        binding.recyclerViewPartidas.setAdapter(adapterPartidas);
     }
 
 }

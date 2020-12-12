@@ -1,4 +1,4 @@
-package com.example.spashscreen2;
+package com.example.spashscreen2.StartFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+
+import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentLogInBinding;
 
 public class LogInFragment extends Fragment {

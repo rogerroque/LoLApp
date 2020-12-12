@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#0F2D35"
-    android:padding="30dp">
+    android:background="#0F2D35">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textPuntuaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/puntuaciones"
+            android:textAlignment="center"
+            android:textColor="#F7FFC8"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textTipoPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campeones"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/textPuntuaciones"
+            android:fontFamily="@font/ubuntu_medium"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invocador"
+            android:textSize="20sp"
+            android:textColor="#F7FFC8"
+            android:fontFamily="@font/ubuntu_medium"
+            app:layout_constraintTop_toBottomOf="@id/textTipoPuntuacion"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/puntuaci_n"
+            android:textColor="#F7FFC8"
+            android:textSize="20sp"
+            android:fontFamily="@font/ubuntu_medium"
+            app:layout_constraintTop_toBottomOf="@id/textTipoPuntuacion"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15sp"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPuntuaciones"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Puntuaciones"
-        android:textSize="50dp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
 
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
