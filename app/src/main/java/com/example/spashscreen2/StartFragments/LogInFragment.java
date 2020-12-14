@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 
 import com.example.spashscreen2.R;
@@ -33,23 +34,15 @@ public class LogInFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        navController = navController = Navigation.findNavController(view);
-        /*final SignInViewModel loginViewModel = new ViewModelProvider(this).get(SignInViewModel.class);*/
+        NavOptions navOptions = new NavOptions.Builder().setPopUpTo(R.id.homeFragment, true).build();
+        navController = Navigation.findNavController(view);
+
 
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_signInFragment_to_homeFragment);
-                /*String email = (binding.email.getText().toString());
-                String password = (binding.password.getText().toString());
 
-                if (TextUtils.isEmpty(email)) {
-                    binding.email.setError("Por favor pon un correo");
-                } else if (TextUtils.isEmpty(password)) {
-                    binding.password.setError("Por favor pon una contraseña");
-                } else {
-                    loginViewModel.verificar(email, password);
-                }*/
 
             }
         });

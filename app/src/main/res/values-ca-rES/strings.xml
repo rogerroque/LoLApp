@@ -26,4 +26,14 @@
     <string name="app_info" translatable="false">Sobre aquesta App</string>
     <string name="invocador">Invocador</string>
     <string name="puntuaci_n">Puntuació</string>
+    <string name="idioma">Idioma</string>
+    <string name="espa_ol">Espanyol</string>
+    <string name="ingles">Anglès</string>
+    <string name="aleman">Alemany</string>
+    <string name="frances">Frances</string>
+    <string name="italiano">Italià</string>
+    <string name="coreano">Coreà</string>
+    <string name="chino">Xinès</string>
+    <string name="catalan">Català</string>
+    <string name="volver">TORNAR</string>
 </resources>

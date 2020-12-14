@@ -104,7 +104,6 @@
             android:background="#FFF979"
             app:layout_constraintTop_toTopOf="parent"/>
 
-
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout
@@ -116,8 +115,7 @@
         app:tabMode="fixed"
         app:tabMaxWidth="0dp"
         android:background="@android:color/transparent"
-        app:tabTextColor="@color/white"
-        />
+        app:tabTextColor="@color/white" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"

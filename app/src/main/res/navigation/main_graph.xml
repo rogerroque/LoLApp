@@ -53,7 +53,7 @@
         </fragment>
     </navigation>
     <navigation android:id="@+id/navigation2"
-        app:startDestination="@id/puntuacionesFragment">
+        app:startDestination="@id/homeFragment">
         <fragment
             android:id="@+id/quizesFragment"
             android:name="com.example.spashscreen2.NavigationFragments.QuizesFragment"

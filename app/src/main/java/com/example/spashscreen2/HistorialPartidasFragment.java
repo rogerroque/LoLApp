@@ -9,12 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.spashscreen2.databinding.FragmentHistorialPartidasBinding;
-import com.example.spashscreen2.databinding.PartidasListBinding;
-import com.example.spashscreen2.ElementosPartidas.AdapterPartidas;
-import com.example.spashscreen2.ElementosPartidas.PartidasInfo;
+import com.example.spashscreen2.AdaptersRecyclers.AdapterPartidas;
+import com.example.spashscreen2.AdaptersRecyclers.ElementosPartidas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +21,7 @@ public class HistorialPartidasFragment extends Fragment {
 
     private FragmentHistorialPartidasBinding binding;
     AdapterPartidas adapterPartidas;
-    List<PartidasInfo> partidasInfos = new ArrayList<>();
+    List<ElementosPartidas> partidasInfos = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +43,7 @@ public class HistorialPartidasFragment extends Fragment {
 
     public void cargarPartidas() {
 
-        PartidasInfo game1 = new PartidasInfo();
+        ElementosPartidas game1 = new ElementosPartidas();
         game1.setKda("10/0/10");
         game1.setGameType("Clasificatoria");
         game1.setTimeAgo("Hace 6 horas");
@@ -63,7 +61,7 @@ public class HistorialPartidasFragment extends Fragment {
         game1.setItem7("https://i.ibb.co/FnqQcHS/NoItem.png");
         partidasInfos.add(game1);
 
-        PartidasInfo game2 = new PartidasInfo();
+        ElementosPartidas game2 = new ElementosPartidas();
         game2.setKda("15/5/10");
         game2.setGameType("Clasificatoria");
         game2.setTimeAgo("Hace 8 horas");
@@ -81,7 +79,7 @@ public class HistorialPartidasFragment extends Fragment {
         game2.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
         partidasInfos.add(game2);
 
-        PartidasInfo game3 = new PartidasInfo();
+        ElementosPartidas game3 = new ElementosPartidas();
         game3.setKda("20/10/10");
         game3.setGameType("Clasificatoria");
         game3.setTimeAgo("Hace 1 dia");
@@ -99,7 +97,7 @@ public class HistorialPartidasFragment extends Fragment {
         game3.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
         partidasInfos.add(game3);
 
-        PartidasInfo game4 = new PartidasInfo();
+        ElementosPartidas game4 = new ElementosPartidas();
         game4.setKda("20/10/10");
         game4.setGameType("Clasificatoria");
         game4.setTimeAgo("Hace 1 dia");
@@ -117,7 +115,7 @@ public class HistorialPartidasFragment extends Fragment {
         game4.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         partidasInfos.add(game4);
 
-        PartidasInfo game5 = new PartidasInfo();
+        ElementosPartidas game5 = new ElementosPartidas();
         game5.setKda("20/10/10");
         game5.setGameType("Clasificatoria");
         game5.setTimeAgo("Hace 1 dia");
@@ -135,7 +133,7 @@ public class HistorialPartidasFragment extends Fragment {
         game5.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
         partidasInfos.add(game5);
 
-        PartidasInfo game6 = new PartidasInfo();
+        ElementosPartidas game6 = new ElementosPartidas();
         game6.setKda("20/10/10");
         game6.setGameType("Clasificatoria");
         game6.setTimeAgo("Hace 1 dia");
@@ -153,7 +151,7 @@ public class HistorialPartidasFragment extends Fragment {
         game6.setItem7("https://i.ibb.co/FnqQcHS/NoItem.png");
         partidasInfos.add(game6);
 
-        PartidasInfo game7 = new PartidasInfo();
+        ElementosPartidas game7 = new ElementosPartidas();
         game7.setKda("20/10/10");
         game7.setGameType("Clasificatoria");
         game7.setTimeAgo("Hace 1 dia");
@@ -171,7 +169,7 @@ public class HistorialPartidasFragment extends Fragment {
         game7.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         partidasInfos.add(game7);
 
-        PartidasInfo game8 = new PartidasInfo();
+        ElementosPartidas game8 = new ElementosPartidas();
         game8.setKda("20/10/10");
         game8.setGameType("Clasificatoria");
         game8.setTimeAgo("Hace 1 dia");
@@ -189,7 +187,7 @@ public class HistorialPartidasFragment extends Fragment {
         game8.setItem7("https://i.ibb.co/FnqQcHS/NoItem.png");
         partidasInfos.add(game8);
 
-        PartidasInfo game9 = new PartidasInfo();
+        ElementosPartidas game9 = new ElementosPartidas();
         game9.setKda("20/10/10");
         game9.setGameType("Clasificatoria");
         game9.setTimeAgo("Hace 1 dia");
@@ -207,7 +205,7 @@ public class HistorialPartidasFragment extends Fragment {
         game9.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
         partidasInfos.add(game9);
 
-        PartidasInfo game10 = new PartidasInfo();
+        ElementosPartidas game10 = new ElementosPartidas();
         game10.setKda("20/10/10");
         game10.setGameType("Clasificatoria");
         game10.setTimeAgo("Hace 1 dia");
@@ -225,7 +223,7 @@ public class HistorialPartidasFragment extends Fragment {
         game10.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         partidasInfos.add(game10);
 
-        PartidasInfo game11 = new PartidasInfo();
+        ElementosPartidas game11 = new ElementosPartidas();
         game11.setKda("20/10/10");
         game11.setGameType("Clasificatoria");
         game11.setTimeAgo("Hace 1 dia");
@@ -243,7 +241,7 @@ public class HistorialPartidasFragment extends Fragment {
         game11.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         partidasInfos.add(game11);
 
-        PartidasInfo game12 = new PartidasInfo();
+        ElementosPartidas game12 = new ElementosPartidas();
         game12.setKda("20/10/10");
         game12.setGameType("Clasificatoria");
         game12.setTimeAgo("Hace 1 dia");

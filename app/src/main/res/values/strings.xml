@@ -82,6 +82,19 @@
     <string name="invocador">Invocador</string>
     <string name="puntuaci_n">Puntuación</string>
 
+    <!--  CambiarIdiomaFragment  -->
+    <!-- ###################### -->
+
+    <string name="idioma">Idioma</string>
+    <string name="espa_ol">Español</string>
+    <string name="ingles">Ingles</string>
+    <string name="aleman">Aleman</string>
+    <string name="frances">Francés</string>
+    <string name="italiano">Italiano</string>
+    <string name="coreano">Coreano</string>
+    <string name="chino">Chino</string>
+    <string name="catalan">Catalán</string>
+    <string name="volver">VOLVER</string>
 
 
 </resources>

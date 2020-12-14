@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.spashscreen2.ElementosPuntuaciones.AdapterPuntuaciones;
-import com.example.spashscreen2.ElementosPuntuaciones.ElementosPuntuaciones;
+import com.example.spashscreen2.AdaptersRecyclers.AdapterPuntuaciones;
+import com.example.spashscreen2.AdaptersRecyclers.ElementosPuntuaciones;
 import com.example.spashscreen2.databinding.FragmentPuntuacionesBinding;
 
 import java.util.ArrayList;

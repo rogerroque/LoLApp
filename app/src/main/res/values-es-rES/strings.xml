@@ -26,4 +26,14 @@
     <string name="puntuaci_n">Puntuación</string>
     <string name="clasificatorias">Clasificatorias</string>
     <string name="recuerdame">Recuerdame</string>
+    <string name="idioma">Idioma</string>
+    <string name="espa_ol">Español</string>
+    <string name="ingles">Ingles</string>
+    <string name="aleman">Aleman</string>
+    <string name="frances">Frances</string>
+    <string name="italiano">Italiano</string>
+    <string name="coreano">Coreano</string>
+    <string name="chino">Chino</string>
+    <string name="catalan">Catalán</string>
+    <string name="volver">VOLVER</string>
 </resources>

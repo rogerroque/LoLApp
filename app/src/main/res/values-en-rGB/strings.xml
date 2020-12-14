@@ -26,4 +26,14 @@
     <string name="app_info">About this App</string>
     <string name="invocador">Summoner</string>
     <string name="puntuaci_n">Score</string>
+    <string name="idioma">Language</string>
+    <string name="espa_ol">Spanish</string>
+    <string name="ingles">English</string>
+    <string name="aleman">German</string>
+    <string name="frances">French</string>
+    <string name="italiano">Italian</string>
+    <string name="coreano">Korean</string>
+    <string name="chino">Chinese</string>
+    <string name="catalan">Catalan</string>
+    <string name="volver">BACK</string>
 </resources>
