@@ -36,4 +36,6 @@
     <string name="chino">Chino</string>
     <string name="catalan">Catalán</string>
     <string name="volver">VOLVER</string>
+    <string name="autenticacion">Datos no validos</string>
+    <string name="cerrar_sesion">¿Quieres cerrar sesion?</string>
 </resources>

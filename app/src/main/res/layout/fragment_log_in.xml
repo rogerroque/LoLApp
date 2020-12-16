@@ -17,15 +17,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:src="@drawable/lol_logo"
-        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintBottom_toTopOf="@+id/usernameLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/usernameLogin"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@drawable/text_edits_login_signup"
@@ -42,7 +41,7 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordLogin"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="5dp"
@@ -55,10 +54,10 @@
         android:textColorHint="#96FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameLogin" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxLogin"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -67,7 +66,7 @@
         android:text="@string/recuerdame"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
 
     <Button
         android:id="@+id/buttonLogin"
@@ -79,7 +78,7 @@
         android:text="@string/entrar"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
 
     <TextView
         android:layout_width="wrap_content"

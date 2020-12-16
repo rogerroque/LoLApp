@@ -40,6 +40,6 @@ public class SplashScreenFragment extends Fragment {
             public void run() {
                 navController.navigate(R.id.action_splashScreenFragment_to_firstScreenFragment);
             }
-        },2000);
+        },3000);
     }
 }

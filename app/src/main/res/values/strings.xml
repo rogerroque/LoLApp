@@ -46,6 +46,7 @@
     <string name="has_olvidado_la_contrase_a">Has olvidado la contraseña?</string>
     <string name="correo">Correo</string>
     <string name="contrase_a">Contraseña</string>
+    <string name="autenticacion"> Datos no validos </string>
 
     <!--  RegisterFragment  -->
     <!-- ###################### -->
@@ -95,6 +96,7 @@
     <string name="chino">Chino</string>
     <string name="catalan">Catalán</string>
     <string name="volver">VOLVER</string>
+    <string name="cerrar_sesion">¿Quieres salir y cerrar sesión?</string>
 
 
 </resources>

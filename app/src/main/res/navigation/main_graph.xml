@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/navigation2">
+    app:startDestination="@id/navigation">
 
 
     <navigation android:id="@+id/navigation"
@@ -50,8 +50,12 @@
             <action
                 android:id="@+id/action_signUpFragment_to_homeFragment"
                 app:destination="@id/navigation2" />
+            <action
+                android:id="@+id/action_signUpFragment_to_signInFragment"
+                app:destination="@id/signInFragment" />
         </fragment>
     </navigation>
+
     <navigation android:id="@+id/navigation2"
         app:startDestination="@id/homeFragment">
         <fragment
@@ -78,7 +82,11 @@
             android:id="@+id/confirmarLogoutFragment"
             android:name="com.example.spashscreen2.ConfirmarLogoutFragment"
             android:label="fragment_confirmar_logout"
-            tools:layout="@layout/fragment_confirmar_logout" />
+            tools:layout="@layout/fragment_confirmar_logout" >
+            <action
+                android:id="@+id/action_confirmarLogoutFragment_to_firstScreenFragment"
+                app:destination="@id/navigation" />
+        </dialog>
         <fragment
             android:id="@+id/perfilFragment"
             android:name="com.example.spashscreen2.NavigationFragments.PerfilFragment"

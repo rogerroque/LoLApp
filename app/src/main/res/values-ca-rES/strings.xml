@@ -36,4 +36,6 @@
     <string name="chino">Xinès</string>
     <string name="catalan">Català</string>
     <string name="volver">TORNAR</string>
+    <string name="autenticacion">Dades no vàlids</string>
+    <string name="cerrar_sesion">Vols tancar la sesió?</string>
 </resources>

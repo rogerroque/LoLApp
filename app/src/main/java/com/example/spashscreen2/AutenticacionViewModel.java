@@ -11,20 +11,20 @@ import com.example.spashscreen2.Model.Usuario;
 
 public class AutenticacionViewModel extends AndroidViewModel {
 
-    enum EstadoDeLaAutenticacion {
+    public enum EstadoDeLaAutenticacion {
         NO_AUTENTICADO,
         AUTENTICADO,
         AUTENTICACION_INVALIDA
     }
 
-    enum EstadoDelRegistro {
+    public enum EstadoDelRegistro {
         INICIO_DEL_REGISTRO,
         NOMBRE_NO_DISPONIBLE,
         REGISTRO_COMPLETADO
     }
 
-    MutableLiveData<EstadoDeLaAutenticacion> estadoDeLaAutenticacion = new MutableLiveData<>(EstadoDeLaAutenticacion.NO_AUTENTICADO);
-    MutableLiveData<EstadoDelRegistro> estadoDelRegistro = new MutableLiveData<>(EstadoDelRegistro.INICIO_DEL_REGISTRO);
+    public MutableLiveData<EstadoDeLaAutenticacion> estadoDeLaAutenticacion = new MutableLiveData<>(EstadoDeLaAutenticacion.NO_AUTENTICADO);
+    public MutableLiveData<EstadoDelRegistro> estadoDelRegistro = new MutableLiveData<>(EstadoDelRegistro.INICIO_DEL_REGISTRO);
     MutableLiveData<Usuario> usuarioAutenticado = new MutableLiveData<>();
 
     AutenticacionManager autenticacionManager;
@@ -34,7 +34,7 @@ public class AutenticacionViewModel extends AndroidViewModel {
         autenticacionManager = new AutenticacionManager(application);
     }
 
-    void iniciarSesion(String username, String password){
+    public void iniciarSesion(String username, String password){
         autenticacionManager.iniciarSesion(username, password, new AutenticacionManager.IniciarSesionCallback() {
             @Override
             public void cuandoUsuarioAutenticado(Usuario usuario) {
@@ -49,12 +49,12 @@ public class AutenticacionViewModel extends AndroidViewModel {
         });
     }
 
-    void iniciarRegistro(){
+    public void iniciarRegistro(){
         estadoDelRegistro.postValue(EstadoDelRegistro.INICIO_DEL_REGISTRO);
     }
 
-    void crearCuentaEIniciarSesion(String username, String password, String biography){
-        autenticacionManager.crearCuenta(username, password, biography, new AutenticacionManager.RegistrarCallback() {
+    public void crearCuentaEIniciarSesion(String username, String password, String email){
+        autenticacionManager.crearCuenta(username, password, email, new AutenticacionManager.RegistrarCallback() {
             @Override
             public void cuandoRegistroCompletado() {
                 estadoDelRegistro.postValue(EstadoDelRegistro.REGISTRO_COMPLETADO);
