@@ -17,15 +17,14 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme.Toolbar.Tema" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppTheme.Toolbar.Tema" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <item name="colorPrimary"> #11414E </item>
         <item name="title">Nothing here</item>
-        <item name="actionMenuTextColor">#F7FFC8</item>
-        <item name="android:actionMenuTextColor">#F7FFC8</item>
-        <item name="colorControlNormal">#DBDD69</item>
-        <item name="fontFamily"> @font/ubuntu_medium </item>
-
+        <item name="actionMenuTextColor">#DC1414</item>
+        <item name="android:actionMenuTextColor">#DC1414</item>
+        <item name="colorControlNormal">#DC1414</item>
+        <item name="fontFamily"> @font/ubuntu_bold </item>
 
     </style>
 

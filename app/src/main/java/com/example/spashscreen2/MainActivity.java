@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView((binding = ActivityMainBinding.inflate(getLayoutInflater())).getRoot());
 
         setSupportActionBar(binding.toolbar);
+        binding.toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 // Top-level destinations:
@@ -94,5 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 }
