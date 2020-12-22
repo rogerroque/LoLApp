@@ -38,4 +38,6 @@
     <string name="volver">BACK</string>
     <string name="autenticacion">Invalid data</string>
     <string name="cerrar_sesion">Do you want to log out?</string>
+    <string name="como_quieres_jugar">How do you want play?</string>
+    <string name="comenzando">Starting...</string>
 </resources>

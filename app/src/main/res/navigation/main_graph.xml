@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/navigation2">
+    app:startDestination="@id/preguntaUnoFragment">
 
 
     <navigation android:id="@+id/navigation"
@@ -47,9 +47,6 @@
             android:name="com.example.spashscreen2.StartFragments.RegisterFragment"
             android:label="fragment_sign_up"
             tools:layout="@layout/fragment_register">
-            <action
-                android:id="@+id/action_signUpFragment_to_homeFragment"
-                app:destination="@id/navigation2" />
             <action
                 android:id="@+id/action_signUpFragment_to_signInFragment"
                 app:destination="@id/signInFragment" />
@@ -113,6 +110,31 @@
             android:label="App informacion"
             tools:layout="@layout/fragment_app_info" />
     </navigation>
+    <fragment
+        android:id="@+id/gameTypeFragment"
+        android:name="com.example.spashscreen2.GameTypeFragment"
+        android:label="fragment_game_type"
+        tools:layout="@layout/fragment_game_type" />
+    <fragment
+        android:id="@+id/startingGameFragment"
+        android:name="com.example.spashscreen2.StartingGameFragment"
+        android:label="fragment_starting_game"
+        tools:layout="@layout/fragment_starting_game" />
+    <fragment
+        android:id="@+id/preguntaUnoFragment"
+        android:name="com.example.spashscreen2.PreguntaUnoFragment"
+        android:label="fragment_pregunta_uno"
+        tools:layout="@layout/fragment_pregunta_uno" />
+    <fragment
+        android:id="@+id/preguntaDosFragment"
+        android:name="com.example.spashscreen2.PreguntaDosFragment"
+        android:label="fragment_pregunta_dos"
+        tools:layout="@layout/fragment_pregunta_dos" />
+    <fragment
+        android:id="@+id/preguntaDiezFragment"
+        android:name="com.example.spashscreen2.PreguntaDiezFragment"
+        android:label="fragment_pregunta_diez"
+        tools:layout="@layout/fragment_pregunta_diez" />
 
 
 </navigation>

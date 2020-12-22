@@ -98,5 +98,11 @@
     <string name="volver">VOLVER</string>
     <string name="cerrar_sesion">¿Quieres salir y cerrar sesión?</string>
 
+    <!--  GameTypeFragment  -->
+    <!-- ###################### -->
+
+    <string name="como_quieres_jugar">¿Como quieres jugar?</string>
+    <string name="comenzando">Comenzando...</string>
+
 
 </resources>

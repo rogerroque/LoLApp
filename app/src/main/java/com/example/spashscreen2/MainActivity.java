@@ -19,9 +19,6 @@ import com.example.spashscreen2.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    private NavController navController;
-    Dialog dialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +80,21 @@ public class MainActivity extends AppCompatActivity {
                     binding.viewBottom.setVisibility(View.GONE);
                     binding.viewTop.setVisibility(View.GONE);
                 } else if (destination.getId() == R.id.firstScreenFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.gameTypeFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.startingGameFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.preguntaUnoFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.toolbar.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
