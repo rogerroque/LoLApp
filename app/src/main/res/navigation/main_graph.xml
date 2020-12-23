@@ -3,133 +3,148 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/preguntaUnoFragment">
+    app:startDestination="@id/homeFragment">
 
 
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/splashScreenFragment">
-        <fragment
-            android:id="@+id/splashScreenFragment"
-            android:name="com.example.spashscreen2.StartFragments.SplashScreenFragment"
-            android:label="fragment_splash_screen"
-            tools:layout="@layout/fragment_splash_screen">
-            <action
-                android:id="@+id/action_splashScreenFragment_to_firstScreenFragment"
-                app:destination="@id/firstScreenFragment"
-                app:enterAnim="@anim/fade_in"
-                app:exitAnim="@anim/fade_out"
-                app:popEnterAnim="@anim/fade_in"
-                app:popExitAnim="@anim/fade_out" />
-        </fragment>
-        <fragment
-            android:id="@+id/firstScreenFragment"
-            android:name="com.example.spashscreen2.StartFragments.FirstScreenFragment"
-            android:label="fragment_first_screen"
-            tools:layout="@layout/fragment_first_screen">
-            <action
-                android:id="@+id/action_firstScreenFragment_to_signInFragment"
-                app:destination="@id/signInFragment" />
-            <action
-                android:id="@+id/action_firstScreenFragment_to_signUpFragment"
-                app:destination="@id/signUpFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/signInFragment"
-            android:name="com.example.spashscreen2.StartFragments.LogInFragment"
-            android:label="fragment_sign_in"
-            tools:layout="@layout/fragment_log_in">
-            <action
-                android:id="@+id/action_signInFragment_to_homeFragment"
-                app:destination="@id/navigation2" />
-        </fragment>
-        <fragment
-            android:id="@+id/signUpFragment"
-            android:name="com.example.spashscreen2.StartFragments.RegisterFragment"
-            android:label="fragment_sign_up"
-            tools:layout="@layout/fragment_register">
-            <action
-                android:id="@+id/action_signUpFragment_to_signInFragment"
-                app:destination="@id/signInFragment" />
-        </fragment>
-    </navigation>
+    <fragment
+        android:id="@+id/appInfoFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.AppInfoFragment"
+        android:label="App informacion"
+        tools:layout="@layout/fragment_app_info" />
+    <fragment
+        android:id="@+id/puntuacionesFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.PuntuacionesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_puntuaciones" />
+    <fragment
+        android:id="@+id/cambiarIdiomaFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.CambiarIdiomaFragment"
+        android:label="Cambiar idioma"
+        tools:layout="@layout/fragment_cambiar_idioma" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <dialog
+        android:id="@+id/confirmarLogoutFragment"
+        android:name="com.example.spashscreen2.ConfirmarLogoutFragment"
+        android:label="fragment_confirmar_logout"
+        tools:layout="@layout/fragment_confirmar_logout">
+        <action
+            android:id="@+id/action_confirmarLogoutFragment_to_firstScreenFragment"
+            app:destination="@id/firstScreenFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/amigosFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.ChatFragment"
+        android:label=""
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.CalendarioFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/verAmigosFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.AmigosFragment"
+        android:label="Amigos"
+        tools:layout="@layout/fragment_amigos" />
+    <fragment
+        android:id="@+id/quizesFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.QuizesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_quizes" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.spashscreen2.NavigationFragments.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_gameTypeFragment"
+            app:destination="@id/gameTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.spashscreen2.StartFragments.RegisterFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_register"
+        app:startDestination="@id/action_signUpFragment_to_signInFragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.spashscreen2.StartFragments.LogInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.example.spashscreen2.StartFragments.FirstScreenFragment"
+        android:label="fragment_first_screen"
+        tools:layout="@layout/fragment_first_screen">
+        <action
+            android:id="@+id/action_firstScreenFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_firstScreenFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.spashscreen2.StartFragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_firstScreenFragment"
+            app:destination="@id/firstScreenFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
 
-    <navigation android:id="@+id/navigation2"
-        app:startDestination="@id/homeFragment">
-        <fragment
-            android:id="@+id/quizesFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.QuizesFragment"
-            android:label=""
-            tools:layout="@layout/fragment_quizes" />
-        <fragment
-            android:id="@+id/verAmigosFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.AmigosFragment"
-            android:label="Amigos"
-            tools:layout="@layout/fragment_amigos" />
-        <fragment
-            android:id="@+id/calendarioFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.CalendarioFragment"
-            android:label="Calendario"
-            tools:layout="@layout/fragment_calendario" />
-        <fragment
-            android:id="@+id/amigosFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.ChatFragment"
-            android:label=""
-            tools:layout="@layout/fragment_chat" />
-        <dialog
-            android:id="@+id/confirmarLogoutFragment"
-            android:name="com.example.spashscreen2.ConfirmarLogoutFragment"
-            android:label="fragment_confirmar_logout"
-            tools:layout="@layout/fragment_confirmar_logout" >
-            <action
-                android:id="@+id/action_confirmarLogoutFragment_to_firstScreenFragment"
-                app:destination="@id/navigation" />
-        </dialog>
-        <fragment
-            android:id="@+id/perfilFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.PerfilFragment"
-            android:label="Perfil"
-            tools:layout="@layout/fragment_perfil" />
-        <fragment
-            android:id="@+id/cambiarIdiomaFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.CambiarIdiomaFragment"
-            android:label="Cambiar idioma"
-            tools:layout="@layout/fragment_cambiar_idioma" />
-        <fragment
-            android:id="@+id/puntuacionesFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.PuntuacionesFragment"
-            android:label=""
-            tools:layout="@layout/fragment_puntuaciones" />
-        <fragment
-            android:id="@+id/homeFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.HomeFragment"
-            android:label=""
-            tools:layout="@layout/fragment_home"/>
-        <fragment
-            android:id="@+id/appInfoFragment"
-            android:name="com.example.spashscreen2.NavigationFragments.AppInfoFragment"
-            android:label="App informacion"
-            tools:layout="@layout/fragment_app_info" />
-    </navigation>
     <fragment
         android:id="@+id/gameTypeFragment"
         android:name="com.example.spashscreen2.GameTypeFragment"
         android:label="fragment_game_type"
-        tools:layout="@layout/fragment_game_type" />
+        tools:layout="@layout/fragment_game_type" >
+        <action
+            android:id="@+id/action_gameTypeFragment_to_startingGameFragment"
+            app:destination="@id/startingGameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/startingGameFragment"
         android:name="com.example.spashscreen2.StartingGameFragment"
         android:label="fragment_starting_game"
-        tools:layout="@layout/fragment_starting_game" />
+        tools:layout="@layout/fragment_starting_game" >
+        <action
+            android:id="@+id/action_startingGameFragment_to_preguntaUnoFragment"
+            app:destination="@id/preguntaUnoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/preguntaUnoFragment"
         android:name="com.example.spashscreen2.PreguntaUnoFragment"
         android:label="fragment_pregunta_uno"
-        tools:layout="@layout/fragment_pregunta_uno" />
+        tools:layout="@layout/fragment_pregunta_uno" >
+        <action
+            android:id="@+id/action_preguntaUnoFragment_to_preguntaDosFragment"
+            app:destination="@id/preguntaDosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/preguntaDosFragment"
         android:name="com.example.spashscreen2.PreguntaDosFragment"
         android:label="fragment_pregunta_dos"
-        tools:layout="@layout/fragment_pregunta_dos" />
+        tools:layout="@layout/fragment_pregunta_dos" >
+        <action
+            android:id="@+id/action_preguntaDosFragment_to_preguntaDiezFragment"
+            app:destination="@id/preguntaDiezFragment" />
+    </fragment>
     <fragment
         android:id="@+id/preguntaDiezFragment"
         android:name="com.example.spashscreen2.PreguntaDiezFragment"

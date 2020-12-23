@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreguntaDosFragment">
+    tools:context=".PreguntaUnoFragment"
+    android:background="#0F2D35">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ProgressBar
+        android:id="@+id/progressBarPreguntas"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBarPreguntasHorizontal"
+        tools:progress="90"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="9"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBarPreguntas"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarPreguntas"
+        app:layout_constraintStart_toStartOf="@+id/progressBarPreguntas"
+        app:layout_constraintTop_toTopOf="@+id/progressBarPreguntas" />
 
-</FrameLayout>
+    <ProgressBar
+        android:id="@+id/progressBarPreguntasHorizontal"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="10"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/pregunta2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:text="Pregunta 2"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ubuntu_medium"
+        app:layout_constraintTop_toBottomOf="@id/progressBarPreguntasHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/imagePregunta2"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta2"
+        android:src="@drawable/lee_sin_photo_x44"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGrupPadre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preguntaDos"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/respuestaUnoPreguntaDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rammus"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_light"
+            app:buttonTint="#F6E337"
+            />
+
+        <RadioButton
+            android:id="@+id/respuestaDosPreguntaDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sivir"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_light"
+            app:buttonTint="#F6E337"/>
+
+        <RadioButton
+            android:id="@+id/respuestaTresPreguntaDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cassiopeia"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_light"
+            app:buttonTint="#F6E337"/>
+
+        <RadioButton
+            android:id="@+id/respuestaCuatroPreguntaDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skarner"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_light"
+            app:buttonTint="#F6E337"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botonSiguientePreguntaDos"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Siguiente"
+        android:fontFamily="@font/ubuntu_medium"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_border_color"/>
+
+    <TextView
+        android:id="@+id/preguntaDos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="¿Cúal de estos campeones no es de Shurima"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagePregunta2"
+        app:layout_constraintBottom_toTopOf="@id/radioGrupPadre"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/ubuntu_medium"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

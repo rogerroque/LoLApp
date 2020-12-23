@@ -17,6 +17,8 @@ import androidx.annotation.RequiresApi;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.spashscreen2.databinding.FragmentPreguntaUnoBinding;
 import com.squareup.picasso.Picasso;
@@ -30,16 +32,16 @@ public class PreguntaUnoFragment extends Fragment {
     private FragmentPreguntaUnoBinding binding;
     private int number = 0;
     private boolean timeOver = true;
-    Typeface typeface;
-    Typeface typeface2;
+    private Typeface typeface;
+    private Typeface typeface2;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        binding = FragmentPreguntaUnoBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        return (binding = FragmentPreguntaUnoBinding.inflate(inflater, container, false)).getRoot();
 
     }
 
@@ -51,38 +53,47 @@ public class PreguntaUnoFragment extends Fragment {
         typeface = ResourcesCompat.getFont(getContext(), R.font.ubuntu_medium);
         typeface2 = ResourcesCompat.getFont(getContext(), R.font.ubuntu_light);
 
+        navController = Navigation.findNavController(view);
+
         //progres();
         binding.progressBarPreguntasHorizontal.setProgress(10);
         binding.progressBarPreguntas.setProgress(70);
 
         Picasso.get().load("https://i.ibb.co/gD1hn3t/Caytlin-Pregunta1.png").into(binding.imagePregunta1);
 
+        binding.botonSiguientePreguntaUno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_preguntaUnoFragment_to_preguntaDosFragment);
+            }
+        });
+
         binding.radioGrupPadre.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (binding.respuestaUno.isChecked()) {
-                    binding.respuestaUno.setTypeface(typeface);
+                if (binding.respuestaUnoPreguntaUno.isChecked()) {
+                    binding.respuestaUnoPreguntaUno.setTypeface(typeface);
                 } else {
-                    binding.respuestaUno.setTypeface(typeface2);
+                    binding.respuestaUnoPreguntaUno.setTypeface(typeface2);
                 }
 
-                if (binding.respuestaDos.isChecked()) {
-                    binding.respuestaDos.setTypeface(typeface);
+                if (binding.respuestaDosPreguntaUno.isChecked()) {
+                    binding.respuestaDosPreguntaUno.setTypeface(typeface);
                 } else {
-                    binding.respuestaDos.setTypeface(typeface2);
+                    binding.respuestaDosPreguntaUno.setTypeface(typeface2);
                 }
 
-                if (binding.respuestaTres.isChecked()) {
-                    binding.respuestaTres.setTypeface(typeface);
+                if (binding.respuestaTresPreguntaUno.isChecked()) {
+                    binding.respuestaTresPreguntaUno.setTypeface(typeface);
                 } else {
-                    binding.respuestaTres.setTypeface(typeface2);
+                    binding.respuestaTresPreguntaUno.setTypeface(typeface2);
                 }
 
-                if (binding.respuestaCuatro.isChecked()) {
-                    binding.respuestaCuatro.setTypeface(typeface);
+                if (binding.respuestaCuatroPreguntaUno.isChecked()) {
+                    binding.respuestaCuatroPreguntaUno.setTypeface(typeface);
                 } else {
-                    binding.respuestaCuatro.setTypeface(typeface2);
+                    binding.respuestaCuatroPreguntaUno.setTypeface(typeface2);
                 }
             }
         });

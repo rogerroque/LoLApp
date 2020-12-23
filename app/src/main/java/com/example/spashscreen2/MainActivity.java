@@ -1,10 +1,8 @@
 package com.example.spashscreen2;
 
-import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +11,6 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import com.example.spashscreen2.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,18 +29,13 @@ public class MainActivity extends AppCompatActivity {
         binding.toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                // Top-level destinations:
                 R.id.homeFragment, R.id.quizesFragment, R.id.puntuacionesFragment, R.id.amigosFragment
-        )
-                .setOpenableLayout(binding.drawerLayout)
-                .build();
+        ).setOpenableLayout(binding.drawerLayout).build();
 
         NavController navController = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
         NavigationUI.setupWithNavController(binding.drawerNavigation, navController);
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
-
-
 
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
@@ -107,6 +99,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

@@ -23,8 +23,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="#11414E"
                 app:theme="@style/AppTheme.Toolbar.Tema"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                 />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -42,8 +41,7 @@
                 app:defaultNavHost="true"
                 app:layout_constraintBottom_toTopOf="@+id/viewBottom"
                 app:layout_constraintTop_toTopOf="parent"
-                app:navGraph="@navigation/main_graph"
-                />
+                app:navGraph="@navigation/main_graph" />
 
             <View
                 android:id="@+id/viewTop"
@@ -73,7 +71,6 @@
                 app:menu="@menu/main_menu"
                 app:itemIconTint="#FFF979"
                 app:itemTextColor="#FFF979"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
