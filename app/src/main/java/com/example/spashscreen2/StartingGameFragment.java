@@ -57,6 +57,5 @@ public class StartingGameFragment extends Fragment {
             },
                 3
         );*/
-
     }
 }
