@@ -5,7 +5,6 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/homeFragment">
 
-
     <fragment
         android:id="@+id/appInfoFragment"
         android:name="com.example.spashscreen2.NavigationFragments.AppInfoFragment"
