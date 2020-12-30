@@ -21,7 +21,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#11414E"
+                android:background="@color/ToolbarBottomColor"
                 app:theme="@style/AppTheme.Toolbar.Tema"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -64,12 +64,12 @@
                 android:theme="@style/AppTheme.Bottom.Navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#11414E"
+                android:background="@color/ToolbarBottomColor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:menu="@menu/main_menu"
-                app:itemIconTint="#FFF979"
+                app:itemIconTint="@color/IconColors"
                 app:itemTextColor="#FFF979"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

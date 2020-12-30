@@ -13,26 +13,26 @@
 
         <TextView
             android:id="@+id/textPuntuaciones"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu_bold"
             android:text="@string/puntuaciones"
             android:textAlignment="center"
             android:textColor="#F7FFC8"
             android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/textTipoPuntuacion"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/campeones"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="15dp"
             app:layout_constraintStart_toStartOf="parent"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@id/textPuntuaciones"
