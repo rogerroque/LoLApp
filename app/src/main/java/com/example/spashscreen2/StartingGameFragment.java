@@ -1,4 +1,4 @@
-package com.example.spashscreen2;
+    package com.example.spashscreen2;
 
 import android.os.Bundle;
 
