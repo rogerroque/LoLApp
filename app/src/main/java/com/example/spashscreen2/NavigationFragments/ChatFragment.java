@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.spashscreen2.AdaptersRecyclers.AdapterChat;
 import com.example.spashscreen2.AdaptersRecyclers.ElementosChat;
-import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentChatBinding;
 
 import java.util.ArrayList;
@@ -38,9 +36,10 @@ public class ChatFragment extends Fragment {
 
         cargarChat();
         mostrarChat();
+
     }
 
-    public void cargarChat() {
+    private void cargarChat() {
 
         ElementosChat chat1 = new ElementosChat();
         chat1.setImgCharURL("https://i.ibb.co/C1S6VkV/Teemo.png");
@@ -134,7 +133,7 @@ public class ChatFragment extends Fragment {
 
     }
 
-    public void mostrarChat() {
+    private void mostrarChat() {
 
         binding.recyclerViewChat.setLayoutManager(new LinearLayoutManager(getContext()));
         adapterChat = new AdapterChat(elementosChats, getContext());

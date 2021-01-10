@@ -104,5 +104,10 @@
     <string name="como_quieres_jugar">¿Como quieres jugar?</string>
     <string name="comenzando">Comenzando...</string>
 
+    <!--  FriendsFragment  -->
+    <!-- ###################### -->
+
+    <string name="lista_de_amigos">Lista de amigos</string>
+
 
 </resources>

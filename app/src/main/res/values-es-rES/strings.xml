@@ -40,4 +40,5 @@
     <string name="cerrar_sesion">¿Quieres cerrar sesion?</string>
     <string name="como_quieres_jugar">¿Como quieres jugar?</string>
     <string name="comenzando">Comenzando...</string>
+    <string name="lista_de_amigos">Lista de amigos</string>
 </resources>

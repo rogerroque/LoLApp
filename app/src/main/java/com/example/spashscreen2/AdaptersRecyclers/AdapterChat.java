@@ -49,7 +49,7 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.ViewHolder> {
         return elementosChats.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
 
         public ImageView image;
         public TextView name;
