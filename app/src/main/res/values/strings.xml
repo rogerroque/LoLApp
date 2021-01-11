@@ -109,5 +109,13 @@
 
     <string name="lista_de_amigos">Lista de amigos</string>
 
+    <!--  FragmentTags  -->
+    <!-- ###################### -->
+
+    <!--<string name="perfilTag">Perfil</string>
+    <string name="confirmar_logout">Confirmar logout</string>
+    <string name="calendario">Calendario</string>
+    <string name="amigosTag">Amigos</string>
+    <string name="lista_de_amigos">Lista de amigos</string>-->
 
 </resources>

@@ -1,95 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#0F2D35"
-    android:orientation="vertical">
+    android:background="#0F2D35">
 
-
-    <RadioGroup
-        android:id="@+id/radioGrupLanguages"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <RadioButton
-            android:id="@+id/spanish"
+        <RadioGroup
+            android:id="@+id/radioGrupLanguages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/espa_ol"
-            android:button="@null"
-            android:layout_marginTop="10dp"
-            android:textSize="23sp"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <RadioButton
-            android:id="@+id/english"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ingles"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="10dp">
 
-        <RadioButton
-            android:id="@+id/catalan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/catalan"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+                <ImageView
+                    android:id="@+id/imgspanish"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
 
-        <RadioButton
-            android:id="@+id/german"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/aleman"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+                <RadioButton
+                    android:id="@+id/spanish"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/espa_ol"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
 
-        <RadioButton
-            android:id="@+id/french"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/frances"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+                <ImageView
+                    android:id="@+id/imgenglish"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/imgspanish"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
 
-        <RadioButton
-            android:id="@+id/italian"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/italiano"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+                <RadioButton
+                    android:id="@+id/english"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/ingles"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/spanish"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
 
-        <RadioButton
-            android:id="@+id/korean"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/coreano"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+                <ImageView
+                    android:id="@+id/imgcatalan"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/imgenglish"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
 
-        <RadioButton
-            android:id="@+id/chinese"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/chino"
-            android:button="@null"
-            android:layout_marginTop="17dp"
-            android:textSize="23sp"/>
+                <RadioButton
+                    android:id="@+id/catalan"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/catalan"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/english"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
 
-    </RadioGroup>
+                <ImageView
+                    android:id="@+id/imggerman"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/imgcatalan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
 
+                <RadioButton
+                    android:id="@+id/german"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/aleman"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/catalan"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
 
+                <ImageView
+                    android:id="@+id/imgfrench"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/imggerman"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <RadioButton
+                    android:id="@+id/french"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/frances"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/german"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
+
+                <ImageView
+                    android:id="@+id/imgitalian"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/imgfrench"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
+
+                <RadioButton
+                    android:id="@+id/italian"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/italiano"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/french"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
+
+                <ImageView
+                    android:id="@+id/imgcorean"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/imgitalian"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
+
+                <RadioButton
+                    android:id="@+id/corean"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/coreano"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/italian"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
+
+                <ImageView
+                    android:id="@+id/imgchinese"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/mas_jugado_lee"
+                    app:layout_constraintTop_toBottomOf="@id/corean"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"/>
+
+                <RadioButton
+                    android:id="@+id/chinese"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:text="@string/chino"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintStart_toEndOf="@id/imgspanish"
+                    app:layout_constraintTop_toBottomOf="@id/corean"
+                    android:button="@null"
+                    tools:ignore="MissingConstraints"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_light"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RadioGroup>
+
+</ScrollView>
