@@ -40,7 +40,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imgenglish"
@@ -63,7 +64,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imgcatalan"
@@ -86,7 +88,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imggerman"
@@ -109,7 +112,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imgfrench"
@@ -132,7 +136,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imgitalian"
@@ -155,7 +160,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imgcorean"
@@ -178,7 +184,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imgchinese"
@@ -201,7 +208,8 @@
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/ubuntu_light"/>
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textColor="@color/white"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

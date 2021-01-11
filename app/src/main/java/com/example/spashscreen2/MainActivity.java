@@ -96,6 +96,21 @@ public class MainActivity extends AppCompatActivity {
                     binding.toolbar.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
                     binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.preguntaDosFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.preguntaDiezFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
+                } else if (destination.getId() == R.id.resultadoPreguntasFragment) {
+                    binding.bottomNavigation.setVisibility(View.GONE);
+                    binding.toolbar.setVisibility(View.GONE);
+                    binding.viewBottom.setVisibility(View.GONE);
+                    binding.viewTop.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavigation.setVisibility(View.VISIBLE);
                     binding.toolbar.setVisibility(View.VISIBLE);

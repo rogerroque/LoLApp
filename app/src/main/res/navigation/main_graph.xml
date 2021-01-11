@@ -148,7 +148,20 @@
         android:id="@+id/preguntaDiezFragment"
         android:name="com.example.spashscreen2.PreguntaDiezFragment"
         android:label="fragment_pregunta_diez"
-        tools:layout="@layout/fragment_pregunta_diez" />
+        tools:layout="@layout/fragment_pregunta_diez" >
+        <action
+            android:id="@+id/action_preguntaDiezFragment_to_resultadoPreguntasFragment"
+            app:destination="@id/resultadoPreguntasFragment" />
+    </fragment>
+     <fragment
+        android:id="@+id/resultadoPreguntasFragment"
+        android:name="com.example.spashscreen2.ResultadoPreguntasFragment"
+        android:label="fragment_resultado_preguntas"
+        tools:layout="@layout/fragment_resultado_preguntas" >
+         <action
+             android:id="@+id/action_resultadoPreguntasFragment_to_homeFragment"
+             app:destination="@id/homeFragment" />
+     </fragment>
 
 
 </navigation>

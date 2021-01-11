@@ -56,8 +56,8 @@ public class PreguntaUnoFragment extends Fragment {
         navController = Navigation.findNavController(view);
 
         //progres();
-        binding.progressBarPreguntasHorizontal.setProgress(10);
-        binding.progressBarPreguntas.setProgress(70);
+        binding.progressBarPreguntasHorizontal1.setProgress(10);
+        binding.progressBarPreguntas1.setProgress(70);
 
         Picasso.get().load("https://i.ibb.co/gD1hn3t/Caytlin-Pregunta1.png").into(binding.imagePregunta1);
 

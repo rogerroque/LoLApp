@@ -47,8 +47,8 @@ public class PreguntaDosFragment extends Fragment {
         typeface2 = ResourcesCompat.getFont(getContext(), R.font.ubuntu_light);
 
         //progres();
-        binding.progressBarPreguntasHorizontal.setProgress(10);
-        binding.progressBarPreguntas.setProgress(70);
+        binding.progressBarPreguntasHorizontal2.setProgress(20);
+        binding.progressBarPreguntas2.setProgress(90);
 
         Picasso.get().load("https://i.ibb.co/S5r0yp5/Shurima-Pregunta2.png").into(binding.imagePregunta2);
 
