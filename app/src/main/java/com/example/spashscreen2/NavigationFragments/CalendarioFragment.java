@@ -2,6 +2,8 @@ package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,58 +11,50 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.spashscreen2.R;
+import com.example.spashscreen2.databinding.FragmentCalendarioBinding;
+import com.squareup.picasso.Picasso;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CalendarioFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class CalendarioFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CalendarioFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment calendarioFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CalendarioFragment newInstance(String param1, String param2) {
-        CalendarioFragment fragment = new CalendarioFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private FragmentCalendarioBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calendario, container, false);
+        return (binding = FragmentCalendarioBinding.inflate(inflater, container, false)).getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //Game1
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game1);
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game1);
+        //Game2
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo1Game2);
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo2Game2);
+        //Game3
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo1Game3);
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo2Game3);
+        //Game4
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game4);
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo2Game4);
+        //Game5
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo1Game5);
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game5);
+        //Game6
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo1Game6);
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo2Game6);
+        //Game7
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/7d/FlyQuestlogo_std.png/revision/latest/scale-to-width-down/45?cb=20171121011050").into(binding.imgEquipo1Game7);
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo2Game7);
+        //Game8
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo1Game8);
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo2Game8);
+        //Game9
+        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo1Game9);
+        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game9);
     }
 }

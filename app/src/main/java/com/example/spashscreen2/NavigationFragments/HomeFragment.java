@@ -34,26 +34,18 @@ public class HomeFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        binding.imageOneQuizes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_homeFragment_to_gameTypeFragment);
-            }
-        });
+        binding.imageOneQuizes.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_gameTypeFragment));
 
-        binding.imageTwoQuizes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_homeFragment_to_gameTypeFragment);
-            }
-        });
+        binding.imageTwoQuizes.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_gameTypeFragment));
 
-        binding.imageThreeQuizes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_homeFragment_to_gameTypeFragment);
-            }
-        });
+        binding.imageThreeQuizes.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_gameTypeFragment));
+
+        binding.imageOneCalendario.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_calendarioFragment));
+
+        binding.imageOnePuntuaciones.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_puntuacionesFragment));
+
+        binding.imageOnePuzzles.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_puzzlesDisponiblesFragment));
+
 
     }
 }

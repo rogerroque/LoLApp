@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/quizesFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/appInfoFragment"
@@ -62,6 +62,15 @@
         <action
             android:id="@+id/action_homeFragment_to_gameTypeFragment"
             app:destination="@id/gameTypeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_puntuacionesFragment"
+            app:destination="@id/puntuacionesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_puzzlesDisponiblesFragment"
+            app:destination="@id/puzzlesDisponiblesFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -162,6 +171,11 @@
              android:id="@+id/action_resultadoPreguntasFragment_to_homeFragment"
              app:destination="@id/homeFragment" />
      </fragment>
+    <fragment
+        android:id="@+id/puzzlesDisponiblesFragment"
+        android:name="com.example.spashscreen2.PuzzlesDisponiblesFragment"
+        android:label="fragment_puzzles_disponibles"
+        tools:layout="@layout/fragment_puzzles_disponibles" />
 
 
 </navigation>
