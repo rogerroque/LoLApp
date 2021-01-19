@@ -41,4 +41,6 @@
     <string name="como_quieres_jugar">Com vols jugar?</string>
     <string name="comenzando">Començant...</string>
     <string name="lista_de_amigos">Llista d\'amics</string>
+    <string name="online">En línia</string>
+    <string name="offline">Desconnectat</string>
 </resources>

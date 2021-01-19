@@ -45,6 +45,16 @@
 
     </LinearLayout>
 
-
+    <View
+        android:id="@+id/statusBallChat"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:background="@drawable/online_circular_chat_status"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChat"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewChat"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChat"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChat"
+        app:layout_constraintVertical_bias="0.89" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

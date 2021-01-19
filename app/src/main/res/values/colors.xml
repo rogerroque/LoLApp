@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ToolbarBottomColor"> #11414E </color>
     <color name="IconColors"> #FFF979 </color>
+    <color name="OfflineColor"> #E62323 </color>
+    <color name="DarkerOfflineColor">#9A2E2E</color>
+    <color name="OnlineColor">#45C118</color>
+    <color name="DarkerOnlineColor">#44FF00</color>
 </resources>

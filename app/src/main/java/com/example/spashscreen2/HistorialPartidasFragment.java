@@ -63,7 +63,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game1);
 
         Partida game2 = new Partida();
-        game1.setWinLose("red");
+        game2.setWinLose("red");
         game2.setKda("15/5/10");
         game2.setGameType("Clasificatoria");
         game2.setTimeAgo("Hace 8 horas");
@@ -82,7 +82,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game2);
 
         Partida game3 = new Partida();
-        game1.setWinLose("blue");
+        game3.setWinLose("blue");
         game3.setKda("20/10/10");
         game3.setGameType("Clasificatoria");
         game3.setTimeAgo("Hace 1 dia");
@@ -101,7 +101,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game3);
 
         Partida game4 = new Partida();
-        game1.setWinLose("blue");
+        game4.setWinLose("blue");
         game4.setKda("20/10/10");
         game4.setGameType("Clasificatoria");
         game4.setTimeAgo("Hace 1 dia");
@@ -120,7 +120,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game4);
 
         Partida game5 = new Partida();
-        game1.setWinLose("red");
+        game5.setWinLose("red");
         game5.setKda("20/10/10");
         game5.setGameType("Clasificatoria");
         game5.setTimeAgo("Hace 1 dia");
@@ -139,7 +139,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game5);
 
         Partida game6 = new Partida();
-        game1.setWinLose("red");
+        game6.setWinLose("red");
         game6.setKda("20/10/10");
         game6.setGameType("Clasificatoria");
         game6.setTimeAgo("Hace 1 dia");
@@ -158,7 +158,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game6);
 
         Partida game7 = new Partida();
-        game1.setWinLose("blue");
+        game7.setWinLose("blue");
         game7.setKda("20/10/10");
         game7.setGameType("Clasificatoria");
         game7.setTimeAgo("Hace 1 dia");
@@ -177,7 +177,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game7);
 
         Partida game8 = new Partida();
-        game1.setWinLose("red");
+        game8.setWinLose("red");
         game8.setKda("20/10/10");
         game8.setGameType("Clasificatoria");
         game8.setTimeAgo("Hace 1 dia");
@@ -196,7 +196,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game8);
 
         Partida game9 = new Partida();
-        game1.setWinLose("blue");
+        game9.setWinLose("blue");
         game9.setKda("20/10/10");
         game9.setGameType("Clasificatoria");
         game9.setTimeAgo("Hace 1 dia");
@@ -215,7 +215,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game9);
 
         Partida game10 = new Partida();
-        game1.setWinLose("blue");
+        game10.setWinLose("blue");
         game10.setKda("20/10/10");
         game10.setGameType("Clasificatoria");
         game10.setTimeAgo("Hace 1 dia");
@@ -234,7 +234,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game10);
 
         Partida game11 = new Partida();
-        game1.setWinLose("red");
+        game11.setWinLose("red");
         game11.setKda("20/10/10");
         game11.setGameType("Clasificatoria");
         game11.setTimeAgo("Hace 1 dia");
@@ -253,7 +253,7 @@ public class HistorialPartidasFragment extends Fragment {
         partidasInfo.add(game11);
 
         Partida game12 = new Partida();
-        game1.setWinLose("red");
+        game12.setWinLose("red");
         game12.setKda("20/10/10");
         game12.setGameType("Clasificatoria");
         game12.setTimeAgo("Hace 1 dia");

@@ -118,4 +118,10 @@
     <string name="amigosTag">Amigos</string>
     <string name="lista_de_amigos">Lista de amigos</string>-->
 
+    <!--  JavaThings  -->
+    <!-- ###################### -->
+
+    <string name="online">En línea</string>
+    <string name="offline">Desconectado</string>
+
 </resources>

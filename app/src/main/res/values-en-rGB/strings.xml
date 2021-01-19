@@ -41,4 +41,6 @@
     <string name="como_quieres_jugar">How do you want play?</string>
     <string name="comenzando">Starting...</string>
     <string name="lista_de_amigos">Friends list</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
 </resources>

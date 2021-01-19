@@ -2,7 +2,7 @@ package com.example.spashscreen2.AdaptersRecyclers;
 
 public class Chat {
 
-    private int imgChat;
+    private String statusBall;
     private String nameChat;
     private String statusChat;
     private String imgCharURL;
@@ -13,14 +13,6 @@ public class Chat {
 
     public void setImgCharURL(String imgCharURL) {
         this.imgCharURL = imgCharURL;
-    }
-
-    public int getImgChat() {
-        return imgChat;
-    }
-
-    public void setImgChat(int imgChat) {
-        this.imgChat = imgChat;
     }
 
     public String getNameChat() {
@@ -37,5 +29,13 @@ public class Chat {
 
     public void setStatusChat(String statusChat) {
         this.statusChat = statusChat;
+    }
+
+    public String getStatusBall() {
+        return statusBall;
+    }
+
+    public void setStatusBall(String statusBall) {
+        this.statusBall = statusBall;
     }
 }

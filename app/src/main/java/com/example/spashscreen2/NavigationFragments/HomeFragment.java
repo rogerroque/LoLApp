@@ -25,7 +25,6 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
         return (binding = FragmentHomeBinding.inflate(inflater, container, false)).getRoot();
 
@@ -41,17 +40,11 @@ public class HomeFragment extends Fragment {
         if(!appViewModel.cargados) {
                navController.navigate(R.id.splashScreenFragment);
         } else {
-
             binding.imageOneQuizes.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_gameTypeFragment));
-
             binding.imageTwoQuizes.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_gameTypeFragment));
-
             binding.imageThreeQuizes.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_gameTypeFragment));
-
             binding.imageOneCalendario.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_calendarioFragment));
-
             binding.imageOnePuntuaciones.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_puntuacionesFragment));
-
             binding.imageOnePuzzles.setOnClickListener(v -> navController.navigate(R.id.action_homeFragment_to_puzzlesDisponiblesFragment));
         }
 
