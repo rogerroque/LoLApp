@@ -17,10 +17,10 @@ import java.util.List;
 
 public class AdapterPuntuaciones extends RecyclerView.Adapter<AdapterPuntuaciones.ViewHolder> {
 
-    List<ElementosPuntuaciones> elementosPuntuaciones;
+    List<Puntuaciones> elementosPuntuaciones;
     LayoutInflater layoutInflater;
 
-    public AdapterPuntuaciones(List<ElementosPuntuaciones> elementosPuntuaciones, Context context) {
+    public AdapterPuntuaciones(List<Puntuaciones> elementosPuntuaciones, Context context) {
         this.elementosPuntuaciones = elementosPuntuaciones;
         this.layoutInflater = LayoutInflater.from(context);
     }
@@ -28,7 +28,7 @@ public class AdapterPuntuaciones extends RecyclerView.Adapter<AdapterPuntuacione
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.puntuaciones_list, parent, false);
+        View view = layoutInflater.inflate(R.layout.viewholder_puntuaciones, parent, false);
         return new ViewHolder(view);
     }
 

@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -18,7 +17,7 @@ import com.example.spashscreen2.databinding.FragmentConfirmarLogoutBinding;
 
 public class ConfirmarLogoutFragment extends DialogFragment {
 
-    private AutenticacionViewModel autenticacionViewModel;
+    private AppViewModel appViewModel;
     private NavController navController;
     private FragmentConfirmarLogoutBinding binding;
 
@@ -33,13 +32,13 @@ public class ConfirmarLogoutFragment extends DialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        autenticacionViewModel = new ViewModelProvider(requireActivity()).get(AutenticacionViewModel.class);
+        appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
         navController = Navigation.findNavController(requireParentFragment().requireView());
 
         binding.buttomConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                autenticacionViewModel.cerrarSesion();
+                appViewModel.cerrarSesion();
                 navController.navigate(R.id.action_confirmarLogoutFragment_to_firstScreenFragment);
             }
         });

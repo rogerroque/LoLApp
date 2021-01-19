@@ -12,17 +12,16 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
-import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 
-import com.example.spashscreen2.AutenticacionViewModel;
+import com.example.spashscreen2.AppViewModel;
 import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentLogInBinding;
 
 public class LogInFragment extends Fragment {
 
     private FragmentLogInBinding binding;
-    private AutenticacionViewModel autenticacionViewModel;
+    private AppViewModel appViewModel;
     private NavController navController;
 
     @Override
@@ -39,7 +38,7 @@ public class LogInFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        autenticacionViewModel = new ViewModelProvider(requireActivity()).get(AutenticacionViewModel.class);
+        appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
         navController = Navigation.findNavController(view);
 
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +47,13 @@ public class LogInFragment extends Fragment {
                 String username = binding.usernameLogin.getText().toString();
                 String password = binding.passwordLogin.getText().toString();
 
-                autenticacionViewModel.iniciarSesion(username, password);
+                appViewModel.iniciarSesion(username, password);
             }
         });
 
-        autenticacionViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), new Observer<AutenticacionViewModel.EstadoDeLaAutenticacion>() {
+        appViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), new Observer<AppViewModel.EstadoDeLaAutenticacion>() {
             @Override
-            public void onChanged(AutenticacionViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
+            public void onChanged(AppViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
                 switch (estadoDeLaAutenticacion){
                     case AUTENTICADO:
                         navController.navigate(R.id.action_signInFragment_to_homeFragment);

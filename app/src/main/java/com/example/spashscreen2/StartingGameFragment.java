@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -26,11 +28,10 @@ public class StartingGameFragment extends Fragment {
 
     private FragmentStartingGameBinding binding;
     private NavController navController;
+    Executor executor = Executors.newSingleThreadExecutor();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return (binding = FragmentStartingGameBinding.inflate(inflater, container, false)).getRoot();
 
     }
@@ -41,21 +42,17 @@ public class StartingGameFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                navController.navigate(R.id.action_startingGameFragment_to_preguntaUnoFragment);
-            }
-        },3000);
+        MutableLiveData<Boolean> finishedLoading = new MutableLiveData<>();
 
-        /*new Timer().schedule(
-            new TimerTask() {
-                @Override
-                public void run() {
-                    navController.navigate(R.id.action_startingGameFragment_to_preguntaUnoFragment);
-                }
-            },
-                3
-        );*/
+        finishedLoading.observe(getViewLifecycleOwner(), aBoolean -> navController.navigate(R.id.action_startingGameFragment_to_preguntaUnoFragment));
+
+        executor.execute(() -> {
+            try {
+                Thread.sleep(100);
+                finishedLoading.postValue(true);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }

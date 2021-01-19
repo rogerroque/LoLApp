@@ -24,7 +24,7 @@
         android:id="@+id/perfilFragment"
         android:name="com.example.spashscreen2.NavigationFragments.PerfilFragment"
         android:label="@string/perfil"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil"/>
     <dialog
         android:id="@+id/confirmarLogoutFragment"
         android:name="com.example.spashscreen2.ConfirmarLogoutFragment"
@@ -176,6 +176,26 @@
         android:name="com.example.spashscreen2.PuzzlesDisponiblesFragment"
         android:label="fragment_puzzles_disponibles"
         tools:layout="@layout/fragment_puzzles_disponibles" />
+    <action
+        android:id="@+id/action_global_perfilFragment_Perfil"
+        app:destination="@id/perfilFragment">
 
+        <argument
+            android:name="argumento"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+    </action>
+
+    <action
+        android:id="@+id/action_global_perfilFragment_History"
+        app:destination="@id/perfilFragment" >
+
+        <argument
+            android:name="argumento"
+            app:argType="integer"
+            android:defaultValue="1" />
+
+    </action>
 
 </navigation>

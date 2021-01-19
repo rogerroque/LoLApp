@@ -1,6 +1,6 @@
 package com.example.spashscreen2.AdaptersRecyclers;
 
-public class ElementosPuntuaciones {
+public class Puntuaciones {
 
     private int profileIMG;
     private String username;

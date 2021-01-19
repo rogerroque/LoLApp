@@ -5,13 +5,13 @@
         android:id="@+id/grupoTop">
 
         <item
-            android:id="@+id/perfilFragment"
+            android:id="@+id/action_global_perfilFragment_Perfil"
             android:icon="@drawable/user"
             android:iconTint="#BDBF64"
             android:title="@string/perfil" />
 
         <item
-            android:id="@id/perfilFragment"
+            android:id="@id/action_global_perfilFragment_History"
             android:icon="@drawable/partidasicon"
             android:iconTint="#BDBF64"
             android:title="@string/historial_de_partidas"

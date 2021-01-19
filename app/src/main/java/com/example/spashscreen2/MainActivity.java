@@ -21,6 +21,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    AppBarConfiguration appBarConfiguration;
+    NavController navController;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
         binding.toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+        appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.homeFragment, R.id.quizesFragment, R.id.puntuacionesFragment, R.id.amigosFragment
         ).setOpenableLayout(binding.drawerLayout).build();
 
-        NavController navController = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
+        navController = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
         NavigationUI.setupWithNavController(binding.drawerNavigation, navController);
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
@@ -119,8 +122,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
+                || super.onSupportNavigateUp();
+    }
 
 
 }

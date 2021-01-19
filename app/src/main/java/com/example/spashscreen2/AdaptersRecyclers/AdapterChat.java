@@ -17,10 +17,10 @@ import java.util.List;
 
 public class AdapterChat extends RecyclerView.Adapter<AdapterChat.ViewHolder> {
 
-    List<ElementosChat> elementosChats;
+    List<Chat> elementosChats;
     LayoutInflater layoutInflater;
 
-    public AdapterChat(List<ElementosChat> elementosChats, Context context) {
+    public AdapterChat(List<Chat> elementosChats, Context context) {
         this.elementosChats = elementosChats;
         this.layoutInflater = LayoutInflater.from(context);
     }
@@ -28,7 +28,7 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.chat_list, parent, false);
+        View view = layoutInflater.inflate(R.layout.viewholder_chat, parent, false);
         return new ViewHolder(view);
     }
 

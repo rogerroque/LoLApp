@@ -31,6 +31,9 @@ public class PerfilFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        int argumento = getArguments().getInt("argumento");
+
+
         binding.viewPager.setAdapter(new FragmentStateAdapter(this) {
             @NonNull
             @Override
@@ -49,19 +52,17 @@ public class PerfilFragment extends Fragment {
             }
         });
 
-        new TabLayoutMediator(binding.tabLayout, binding.viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
-            @Override
-            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                switch (position) {
-                    case 0: default:
-                        tab.setText(R.string.perfil);
-                        break;
-                    case 1:
-                        tab.setText(R.string.historial_de_partidas);
-                        break;
-                }
+        new TabLayoutMediator(binding.tabLayout, binding.viewPager, (tab, position) -> {
+            switch (position) {
+                case 0: default:
+                    tab.setText(R.string.perfil);
+                    break;
+                case 1:
+                    tab.setText(R.string.historial_de_partidas);
+                    break;
             }
         }).attach();
 
+        binding.viewPager.post(() -> binding.viewPager.setCurrentItem(argumento));
     }
 }

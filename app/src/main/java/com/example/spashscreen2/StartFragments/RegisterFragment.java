@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import com.example.spashscreen2.AutenticacionViewModel;
+import com.example.spashscreen2.AppViewModel;
 import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentRegisterBinding;
 
@@ -22,7 +22,7 @@ public class RegisterFragment extends Fragment {
 
     private FragmentRegisterBinding binding;
     private NavController navController;
-    private AutenticacionViewModel autenticacionViewModel;
+    private AppViewModel appViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,10 +35,10 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        autenticacionViewModel = new ViewModelProvider(requireActivity()).get(AutenticacionViewModel.class);
+        appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
         navController = Navigation.findNavController(view);
 
-        autenticacionViewModel.iniciarRegistro();
+        appViewModel.iniciarRegistro();
 
         binding.register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,14 +48,14 @@ public class RegisterFragment extends Fragment {
                 String password = binding.passwordRegister.getText().toString();
                 String email = binding.emailRegister.getText().toString();
 
-                autenticacionViewModel.crearCuentaEIniciarSesion(username, password, email);
+                appViewModel.crearCuentaEIniciarSesion(username, password, email);
 
             }
         });
 
-        autenticacionViewModel.estadoDelRegistro.observe(getViewLifecycleOwner(), new Observer<AutenticacionViewModel.EstadoDelRegistro>() {
+        appViewModel.estadoDelRegistro.observe(getViewLifecycleOwner(), new Observer<AppViewModel.EstadoDelRegistro>() {
             @Override
-            public void onChanged(AutenticacionViewModel.EstadoDelRegistro estadoDelRegistro) {
+            public void onChanged(AppViewModel.EstadoDelRegistro estadoDelRegistro) {
                 switch (estadoDelRegistro){
                     case NOMBRE_NO_DISPONIBLE:
                         Toast.makeText(getContext(), "NOMBRE DE USUARIO NO DISPONIBLE", Toast.LENGTH_SHORT).show();
@@ -64,9 +64,9 @@ public class RegisterFragment extends Fragment {
             }
         });
 
-        autenticacionViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), new Observer<AutenticacionViewModel.EstadoDeLaAutenticacion>() {
+        appViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), new Observer<AppViewModel.EstadoDeLaAutenticacion>() {
             @Override
-            public void onChanged(AutenticacionViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
+            public void onChanged(AppViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
                 switch (estadoDeLaAutenticacion){
                     case AUTENTICADO:
                         navController.navigate(R.id.action_signUpFragment_to_signInFragment);

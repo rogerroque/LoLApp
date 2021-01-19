@@ -1,10 +1,11 @@
 package com.example.spashscreen2.AdaptersRecyclers;
 
+import android.graphics.Color;
 import android.view.View;
 
-public class ElementosPartidas {
+public class Partida {
 
-    private View winLose;
+    private String winLose;
     private String timeAgo, gameType, kda, imgURL;
     private int imageView;
     private String rune1, rune2, spell1, spell2, item1, item2, item3, item4, item5, item6, item7;
@@ -104,11 +105,11 @@ public class ElementosPartidas {
         this.item7 = item7;
     }
 
-    public View getWinLose() {
+    public String getWinLose() {
         return winLose;
     }
 
-    public void setWinLose(View winLose) {
+    public void setWinLose(String winLose) {
         this.winLose = winLose;
     }
 

@@ -1,6 +1,6 @@
 package com.example.spashscreen2.AdaptersRecyclers;
 
-public class ElementosAmigos {
+public class Amigos {
 
     private int imgChat;
     private String nameAmigo;

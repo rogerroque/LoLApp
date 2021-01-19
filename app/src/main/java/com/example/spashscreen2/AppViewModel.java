@@ -9,7 +9,9 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.spashscreen2.Model.AutenticacionManager;
 import com.example.spashscreen2.Model.Usuario;
 
-public class AutenticacionViewModel extends AndroidViewModel {
+public class AppViewModel extends AndroidViewModel {
+
+    public boolean cargados = false;
 
     public enum EstadoDeLaAutenticacion {
         NO_AUTENTICADO,
@@ -29,7 +31,7 @@ public class AutenticacionViewModel extends AndroidViewModel {
 
     AutenticacionManager autenticacionManager;
 
-    public AutenticacionViewModel(@NonNull Application application) {
+    public AppViewModel(@NonNull Application application) {
         super(application);
         autenticacionManager = new AutenticacionManager(application);
     }

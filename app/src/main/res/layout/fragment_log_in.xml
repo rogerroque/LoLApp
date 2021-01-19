@@ -24,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:text="roger"
         android:id="@+id/usernameLogin"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -41,6 +42,7 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <EditText
+        android:text="roger"
         android:id="@+id/passwordLogin"
         android:layout_width="match_parent"
         android:layout_height="55dp"

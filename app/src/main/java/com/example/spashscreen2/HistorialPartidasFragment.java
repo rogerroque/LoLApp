@@ -1,5 +1,6 @@
 package com.example.spashscreen2;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.spashscreen2.AdaptersRecyclers.Partida;
 import com.example.spashscreen2.databinding.FragmentHistorialPartidasBinding;
-import com.example.spashscreen2.AdaptersRecyclers.AdapterPartidas;
-import com.example.spashscreen2.AdaptersRecyclers.ElementosPartidas;
+import com.example.spashscreen2.databinding.ViewholderPartidaBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,15 +25,11 @@ public class HistorialPartidasFragment extends Fragment {
 
     private FragmentHistorialPartidasBinding binding;
     AdapterPartidas adapterPartidas;
-    List<ElementosPartidas> partidasInfos = new ArrayList<>();
+    List<Partida> partidasInfo = new ArrayList<>();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        binding = FragmentHistorialPartidasBinding.inflate(inflater, container, false);
-        return binding.getRoot();
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return (binding = FragmentHistorialPartidasBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -38,12 +38,12 @@ public class HistorialPartidasFragment extends Fragment {
 
         cargarPartidas();
         mostrarDatos();
-
     }
 
     public void cargarPartidas() {
 
-        ElementosPartidas game1 = new ElementosPartidas();
+        Partida game1 = new Partida();
+        game1.setWinLose("blue");
         game1.setKda("10/0/10");
         game1.setGameType("Clasificatoria");
         game1.setTimeAgo("Hace 6 horas");
@@ -59,9 +59,11 @@ public class HistorialPartidasFragment extends Fragment {
         game1.setItem5("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         game1.setItem6("https://i.ibb.co/qCX7gxB/Death-Dance.png");
         game1.setItem7("https://i.ibb.co/FnqQcHS/NoItem.png");
-        partidasInfos.add(game1);
 
-        ElementosPartidas game2 = new ElementosPartidas();
+        partidasInfo.add(game1);
+
+        Partida game2 = new Partida();
+        game1.setWinLose("red");
         game2.setKda("15/5/10");
         game2.setGameType("Clasificatoria");
         game2.setTimeAgo("Hace 8 horas");
@@ -77,9 +79,10 @@ public class HistorialPartidasFragment extends Fragment {
         game2.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game2.setItem6("https://i.ibb.co/xMCGKcb/Guardian-Angel.png");
         game2.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
-        partidasInfos.add(game2);
+        partidasInfo.add(game2);
 
-        ElementosPartidas game3 = new ElementosPartidas();
+        Partida game3 = new Partida();
+        game1.setWinLose("blue");
         game3.setKda("20/10/10");
         game3.setGameType("Clasificatoria");
         game3.setTimeAgo("Hace 1 dia");
@@ -95,9 +98,10 @@ public class HistorialPartidasFragment extends Fragment {
         game3.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game3.setItem6("https://i.ibb.co/xMCGKcb/Guardian-Angel.png");
         game3.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
-        partidasInfos.add(game3);
+        partidasInfo.add(game3);
 
-        ElementosPartidas game4 = new ElementosPartidas();
+        Partida game4 = new Partida();
+        game1.setWinLose("blue");
         game4.setKda("20/10/10");
         game4.setGameType("Clasificatoria");
         game4.setTimeAgo("Hace 1 dia");
@@ -113,9 +117,10 @@ public class HistorialPartidasFragment extends Fragment {
         game4.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game4.setItem6("https://i.ibb.co/1vznfqK/Rabadon-s-Deathcap.png");
         game4.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
-        partidasInfos.add(game4);
+        partidasInfo.add(game4);
 
-        ElementosPartidas game5 = new ElementosPartidas();
+        Partida game5 = new Partida();
+        game1.setWinLose("red");
         game5.setKda("20/10/10");
         game5.setGameType("Clasificatoria");
         game5.setTimeAgo("Hace 1 dia");
@@ -131,9 +136,10 @@ public class HistorialPartidasFragment extends Fragment {
         game5.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game5.setItem6("https://i.ibb.co/xMCGKcb/Guardian-Angel.png");
         game5.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
-        partidasInfos.add(game5);
+        partidasInfo.add(game5);
 
-        ElementosPartidas game6 = new ElementosPartidas();
+        Partida game6 = new Partida();
+        game1.setWinLose("red");
         game6.setKda("20/10/10");
         game6.setGameType("Clasificatoria");
         game6.setTimeAgo("Hace 1 dia");
@@ -149,9 +155,10 @@ public class HistorialPartidasFragment extends Fragment {
         game6.setItem5("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         game6.setItem6("https://i.ibb.co/qCX7gxB/Death-Dance.png");
         game6.setItem7("https://i.ibb.co/FnqQcHS/NoItem.png");
-        partidasInfos.add(game6);
+        partidasInfo.add(game6);
 
-        ElementosPartidas game7 = new ElementosPartidas();
+        Partida game7 = new Partida();
+        game1.setWinLose("blue");
         game7.setKda("20/10/10");
         game7.setGameType("Clasificatoria");
         game7.setTimeAgo("Hace 1 dia");
@@ -167,9 +174,10 @@ public class HistorialPartidasFragment extends Fragment {
         game7.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game7.setItem6("https://i.ibb.co/1vznfqK/Rabadon-s-Deathcap.png");
         game7.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
-        partidasInfos.add(game7);
+        partidasInfo.add(game7);
 
-        ElementosPartidas game8 = new ElementosPartidas();
+        Partida game8 = new Partida();
+        game1.setWinLose("red");
         game8.setKda("20/10/10");
         game8.setGameType("Clasificatoria");
         game8.setTimeAgo("Hace 1 dia");
@@ -185,9 +193,10 @@ public class HistorialPartidasFragment extends Fragment {
         game8.setItem5("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         game8.setItem6("https://i.ibb.co/qCX7gxB/Death-Dance.png");
         game8.setItem7("https://i.ibb.co/FnqQcHS/NoItem.png");
-        partidasInfos.add(game8);
+        partidasInfo.add(game8);
 
-        ElementosPartidas game9 = new ElementosPartidas();
+        Partida game9 = new Partida();
+        game1.setWinLose("blue");
         game9.setKda("20/10/10");
         game9.setGameType("Clasificatoria");
         game9.setTimeAgo("Hace 1 dia");
@@ -203,9 +212,10 @@ public class HistorialPartidasFragment extends Fragment {
         game9.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game9.setItem6("https://i.ibb.co/xMCGKcb/Guardian-Angel.png");
         game9.setItem7("https://i.ibb.co/Gn0cPKr/Hoja-Carmesi.png");
-        partidasInfos.add(game9);
+        partidasInfo.add(game9);
 
-        ElementosPartidas game10 = new ElementosPartidas();
+        Partida game10 = new Partida();
+        game1.setWinLose("blue");
         game10.setKda("20/10/10");
         game10.setGameType("Clasificatoria");
         game10.setTimeAgo("Hace 1 dia");
@@ -221,9 +231,10 @@ public class HistorialPartidasFragment extends Fragment {
         game10.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game10.setItem6("https://i.ibb.co/1vznfqK/Rabadon-s-Deathcap.png");
         game10.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
-        partidasInfos.add(game10);
+        partidasInfo.add(game10);
 
-        ElementosPartidas game11 = new ElementosPartidas();
+        Partida game11 = new Partida();
+        game1.setWinLose("red");
         game11.setKda("20/10/10");
         game11.setGameType("Clasificatoria");
         game11.setTimeAgo("Hace 1 dia");
@@ -239,9 +250,10 @@ public class HistorialPartidasFragment extends Fragment {
         game11.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game11.setItem6("https://i.ibb.co/1vznfqK/Rabadon-s-Deathcap.png");
         game11.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
-        partidasInfos.add(game11);
+        partidasInfo.add(game11);
 
-        ElementosPartidas game12 = new ElementosPartidas();
+        Partida game12 = new Partida();
+        game1.setWinLose("red");
         game12.setKda("20/10/10");
         game12.setGameType("Clasificatoria");
         game12.setTimeAgo("Hace 1 dia");
@@ -257,14 +269,67 @@ public class HistorialPartidasFragment extends Fragment {
         game12.setItem5("https://i.ibb.co/grwVDHP/Berserker-s-Greaves-item.webp");
         game12.setItem6("https://i.ibb.co/1vznfqK/Rabadon-s-Deathcap.png");
         game12.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
-        partidasInfos.add(game12);
+        partidasInfo.add(game12);
 
     }
 
     public void mostrarDatos() {
         binding.recyclerViewPartidas.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapterPartidas = new AdapterPartidas(partidasInfos, getContext());
+        adapterPartidas = new AdapterPartidas();
         binding.recyclerViewPartidas.setAdapter(adapterPartidas);
     }
 
+    class AdapterPartidas extends RecyclerView.Adapter<PartidaViewHolder> {
+        
+        @NonNull
+        @Override
+        public PartidaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new PartidaViewHolder(ViewholderPartidaBinding.inflate(getLayoutInflater(), parent, false));
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull PartidaViewHolder holder, int position) {
+            String timeAgo = partidasInfo.get(position).getTimeAgo();
+            String kda = partidasInfo.get(position).getKda();
+            String gameType = partidasInfo.get(position).getGameType();
+            String viewWinLose = partidasInfo.get(position).getWinLose();
+
+            holder.binding.timeAgo.setText(timeAgo);
+            holder.binding.kda.setText(kda);
+            holder.binding.gameType.setText(gameType);
+
+            if (viewWinLose.equals("blue")) {
+                holder.binding.viewWinLose.setBackgroundColor(Color.parseColor("#54BDFC")); // azul
+            } else {
+                holder.binding.viewWinLose.setBackgroundColor(Color.parseColor("#9C0F1B")); // rojo
+            }
+
+            Glide.with(requireContext()).load(partidasInfo.get(position).getImgURL()).into(holder.binding.imgPlayedChamp);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getRune1()).into(holder.binding.rune1);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getRune2()).into(holder.binding.rune2);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getSpell1()).into(holder.binding.spell1);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getSpell2()).into(holder.binding.spell2);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem1()).into(holder.binding.item1);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem2()).into(holder.binding.item2);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem3()).into(holder.binding.item3);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem4()).into(holder.binding.item4);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem5()).into(holder.binding.item5);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem6()).into(holder.binding.item6);
+            Glide.with(requireContext()).load(partidasInfo.get(position).getItem7()).into(holder.binding.item7);
+        }
+
+        @Override
+        public int getItemCount() {
+            return partidasInfo.size();
+        }
+    }
+
+    static class PartidaViewHolder extends RecyclerView.ViewHolder {
+        private final ViewholderPartidaBinding binding;
+
+        public PartidaViewHolder(ViewholderPartidaBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
+        }
+    }
 }
