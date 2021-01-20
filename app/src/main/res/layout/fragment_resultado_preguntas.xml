@@ -47,12 +47,13 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
+        android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7/10"
-        android:textSize="35dp"
-        android:textColor="@color/white"
         android:fontFamily="@font/ubuntu_medium"
+        android:text="7/10"
+        android:textColor="@color/white"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -68,6 +69,14 @@
         android:text="Volver al menu"
         android:background="@drawable/button_border_color"/>
 
-
+    <Button
+        android:id="@+id/confeti"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="confeti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,7 +50,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/imgspanish"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/english"
@@ -63,7 +63,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 
@@ -74,7 +74,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/imgenglish"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/catalan"
@@ -87,7 +87,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 
@@ -98,7 +98,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/imgcatalan"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/german"
@@ -111,7 +111,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 
@@ -122,7 +122,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/imggerman"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/french"
@@ -135,7 +135,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 
@@ -146,7 +146,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/imgfrench"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/italian"
@@ -159,7 +159,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 
@@ -170,7 +170,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/imgitalian"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/corean"
@@ -183,7 +183,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 
@@ -194,7 +194,7 @@
                     android:src="@drawable/mas_jugado_lee"
                     app:layout_constraintTop_toBottomOf="@id/corean"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="23dp"/>
 
                 <RadioButton
                     android:id="@+id/chinese"
@@ -207,7 +207,7 @@
                     android:button="@null"
                     tools:ignore="MissingConstraints"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/ubuntu_light"
                     android:textColor="@color/white"/>
 

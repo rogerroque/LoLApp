@@ -43,4 +43,6 @@
     <string name="lista_de_amigos">Lista de amigos</string>
     <string name="online">En línea</string>
     <string name="offline">Desconectado</string>
+    <string name="muy_mal">Mas suerte la siguiente</string>
+    <string name="muy_bien">Muy buena loko</string>
 </resources>

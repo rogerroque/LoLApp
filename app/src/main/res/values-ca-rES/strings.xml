@@ -43,4 +43,6 @@
     <string name="lista_de_amigos">Llista d\'amics</string>
     <string name="online">En línia</string>
     <string name="offline">Desconnectat</string>
+    <string name="muy_mal">Més sort la següent</string>
+    <string name="muy_bien">Molt bé amic</string>
 </resources>

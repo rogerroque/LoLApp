@@ -43,4 +43,6 @@
     <string name="lista_de_amigos">Friends list</string>
     <string name="online">Online</string>
     <string name="offline">Offline</string>
+    <string name="muy_mal">More luck next</string>
+    <string name="muy_bien">Very nice friend</string>
 </resources>

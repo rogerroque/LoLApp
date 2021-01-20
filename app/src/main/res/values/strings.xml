@@ -123,5 +123,8 @@
 
     <string name="online">En línea</string>
     <string name="offline">Desconectado</string>
+    <string name="muy_mal">Muy mal</string>
+    <string name="muy_bien">Muy bien</string>
+
 
 </resources>
