@@ -1,5 +1,6 @@
 package com.example.spashscreen2;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
@@ -10,14 +11,20 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.spashscreen2.databinding.FragmentPreguntaDiezBinding;
 import com.example.spashscreen2.databinding.FragmentPreguntaDosBinding;
+import com.github.jinatonic.confetti.CommonConfetti;
 import com.squareup.picasso.Picasso;
+
+import java.util.Random;
 
 
 public class PreguntaDiezFragment extends Fragment {
@@ -29,6 +36,8 @@ public class PreguntaDiezFragment extends Fragment {
     private Typeface typeface;
     private Typeface typeface2;
     private NavController navController;
+    private int puntacion = 0;
+    private Random random = new Random();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,12 +93,29 @@ public class PreguntaDiezFragment extends Fragment {
             }
         });
 
+
+
         binding.botonSiguientePregunta10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_preguntaDiezFragment_to_resultadoPreguntasFragment);
+                /*LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.fragment_resultado_preguntas,
+                       view.findViewById(R.id.elPadre));
+
+
+                Toast toast = new Toast(requireContext());
+                toast.setGravity(Gravity.FILL_VERTICAL | Gravity.FILL_HORIZONTAL, 0, 0);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(layout);
+                toast.show();
+
+                CommonConfetti.rainingConfetti((ViewGroup) view, new int[] {Color.YELLOW, Color.RED, Color.BLUE}).stream(3500);*/
+
             }
         });
+
+
 
     }
 

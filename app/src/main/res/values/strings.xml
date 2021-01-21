@@ -126,5 +126,31 @@
     <string name="muy_mal">Muy mal</string>
     <string name="muy_bien">Muy bien</string>
 
+    <string name="sobre_la_app_header"> Sobre la app </string>
+    <string name="sobre_la_app"> Para los jugadores de League of Legends que quieran seguir conectados al juego y a sus amigos cuando estén inactivos.
+                                ESPORTS A UN TOQUE
+                                Si lo que quieres ver es el LEC y la LCS te hace decir ꞌꞌSÍꞌꞌ o la LCK te hace gritar de emoción, entonces tenemos lo que buscas. Mantente al tanto de las posiciones,
+                                mira las partidas y obtén recompensas por hacerlo desde la aplicación.\n\n
+
+                                TODO EL CONTENIDO DE LOL QUE DESEAS
+                                Sé la primera persona en enterarse del campeón, la actualización del juego o del streamer de LoL más reciente. Recibe notificaciones para ser siempre de los primeros en enterarse
+                                de los acontecimientos importantes del mundo de LoL.\n\n
+
+                                CONOCE GENTE Y NO TE PIERDAS NINGUNA PARTIDA
+                                Chatea desde el teléfono con tus amigos de LoL, revisa su historial de partidas, analiza o copia sus armados, y no vuelvas jamás a perderte una sala llena de amigos.\n\n
+
+                                La aplicación Amigos de LoL se conecta directamente a tu cuenta y a tu lista de amigos de League of Legends. Crea una cuenta en leagueoflegends.com si no tienes una. </string>
+
+    <string name="funcionalidades_header"> Funcionalidades </string>
+    <string name="funcionalidades"> - Jugar a responder preguntas y puzzles\n\n
+                                    - Chat para hablar con amigos\n\n
+                                    - Calendario para consultar fechas de los partidos competitivos\n\n
+                                    - Ver perfil propio y el de amigos </string>
+
+    <string name="detailed_info_header"> Informacion detallada </string>
+    <string name="detailed_info_about_the_app"> - Version de la app: 1.1.7af8\n\n
+                                    - Latest release date: 29/01/2021\n\n
+                                    - Desarrollador de la app: 21Roger\n\n
+                                    - App size: 67.20 Mb </string>
 
 </resources>
