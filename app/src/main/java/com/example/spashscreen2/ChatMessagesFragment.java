@@ -1,22 +1,19 @@
 package com.example.spashscreen2;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.ui.AppBarConfiguration;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.bumptech.glide.Glide;
-import com.example.spashscreen2.Model.Chat;
 import com.example.spashscreen2.Model.ChatMessageViewModel;
 import com.example.spashscreen2.databinding.FragmentChatMessagesBinding;
 
@@ -24,10 +21,8 @@ import com.example.spashscreen2.databinding.FragmentChatMessagesBinding;
 public class ChatMessagesFragment extends Fragment {
 
     private FragmentChatMessagesBinding binding;
-    private NavController navController;
     private ChatMessageViewModel chatMessageViewModel;
-    private AppBarConfiguration appBarConfiguration;
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,8 +48,6 @@ public class ChatMessagesFragment extends Fragment {
             } else {
                 binding.statusSummonerChat.setTextColor(ContextCompat.getColor(requireContext(), R.color.OfflineColor));
             }
-
         });
-
     }
 }
