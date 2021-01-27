@@ -1,4 +1,4 @@
-package com.example.spashscreen2.AdaptersRecyclers;
+package com.example.spashscreen2.Model;
 
 import android.graphics.Color;
 import android.view.View;
@@ -9,13 +9,6 @@ public class Partida {
     private String timeAgo, gameType, kda, imgURL;
     private int imageView;
     private String rune1, rune2, spell1, spell2, item1, item2, item3, item4, item5, item6, item7;
-
-    /*public PartidasInfo(String timeAgo, String gameType, String kda, int imageView) {
-        this.timeAgo = timeAgo;
-        this.gameType = gameType;
-        this.kda = kda;
-        this.imageView = imageView;
-    }*/
 
     public String getRune1() {
         return rune1;
@@ -133,16 +126,8 @@ public class Partida {
         this.kda = kda;
     }
 
-    public void setImageView(int imageView) {
-        this.imageView = imageView;
-    }
-
     public String getKda() {
         return kda;
-    }
-
-    public int getImageView() {
-        return imageView;
     }
 
     public String getImgURL() {

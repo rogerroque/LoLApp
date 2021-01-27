@@ -1,8 +1,11 @@
 package com.example.spashscreen2;
 
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,18 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RadioGroup;
-import android.widget.Toast;
-
+import com.bumptech.glide.Glide;
 import com.example.spashscreen2.databinding.FragmentPreguntaDiezBinding;
-import com.example.spashscreen2.databinding.FragmentPreguntaDosBinding;
-import com.github.jinatonic.confetti.CommonConfetti;
-import com.squareup.picasso.Picasso;
 
 import java.util.Random;
 
@@ -61,7 +54,7 @@ public class PreguntaDiezFragment extends Fragment {
         binding.progressBarPreguntasHorizontal3.setProgress(100);
         binding.progressBarPreguntas3.setProgress(20);
 
-        Picasso.get().load("https://i.ibb.co/qxZ4bRB/image-11.png").into(binding.imagePregunta10);
+        Glide.with(requireActivity()).load("https://i.ibb.co/qxZ4bRB/image-11.png").into(binding.imagePregunta10);
 
         binding.radioGrupPadre.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

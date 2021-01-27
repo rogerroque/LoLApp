@@ -14,8 +14,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
         app:queryHint="Teemo salvage"
-        app:defaultQueryHint="Buscar amigo"
-        />
+        app:defaultQueryHint="Buscar amigo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewChat"

@@ -13,10 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.spashscreen2.AdaptersRecyclers.Partida;
+import com.example.spashscreen2.Model.Partida;
 import com.example.spashscreen2.databinding.FragmentHistorialPartidasBinding;
 import com.example.spashscreen2.databinding.ViewholderPartidaBinding;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;

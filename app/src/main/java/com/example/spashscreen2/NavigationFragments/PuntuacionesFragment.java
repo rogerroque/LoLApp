@@ -9,10 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.spashscreen2.AdaptersRecyclers.AdapterPuntuaciones;
-import com.example.spashscreen2.AdaptersRecyclers.Puntuaciones;
+import com.bumptech.glide.Glide;
+import com.example.spashscreen2.Model.Puntuaciones;
 import com.example.spashscreen2.databinding.FragmentPuntuacionesBinding;
+import com.example.spashscreen2.databinding.ViewholderPuntuacionesBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -175,8 +177,44 @@ public class PuntuacionesFragment extends Fragment {
 
     public void mostrarDatos() {
         binding.recyclerViewPuntuaciones.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapterPuntuaciones = new AdapterPuntuaciones(elementosPuntuaciones, getContext());
+        adapterPuntuaciones = new AdapterPuntuaciones();
         binding.recyclerViewPuntuaciones.setAdapter(adapterPuntuaciones);
+    }
+
+    class AdapterPuntuaciones extends RecyclerView.Adapter<AdapterPuntuaciones.PuntuacionesViewHolder> {
+
+        @NonNull
+        @Override
+        public PuntuacionesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new PuntuacionesViewHolder(ViewholderPuntuacionesBinding.inflate(getLayoutInflater(), parent, false));
+        }
+
+        @Override
+        public void onBindViewHolder(PuntuacionesViewHolder holder, int position) {
+
+            String username = elementosPuntuaciones.get(position).getUsername();
+            String score = String.valueOf(elementosPuntuaciones.get(position).getScore());
+
+            holder.binding.usernamePuntuaciones.setText(username);
+            holder.binding.numeroPuntuacion.setText(score);
+            Glide.with(requireContext()).load(elementosPuntuaciones.get(position).getProfileImageURL()).into(holder.binding.playerIMG);
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return elementosPuntuaciones.size();
+        }
+
+        class PuntuacionesViewHolder extends RecyclerView.ViewHolder {
+            private final ViewholderPuntuacionesBinding binding;
+
+            public PuntuacionesViewHolder(ViewholderPuntuacionesBinding binding) {
+                super(binding.getRoot());
+                this.binding = binding;
+            }
+        }
+
     }
 
 }

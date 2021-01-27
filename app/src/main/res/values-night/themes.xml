@@ -26,6 +26,7 @@
         <item name="colorControlNormal">#F7FFC8</item>
         <item name="fontFamily"> @font/ubuntu_bold </item>
 
+
     </style>
 
     <style name="AppTheme.Color.Letra" parent="Theme.MaterialComponents.DayNight.NoActionBar">

@@ -1,17 +1,10 @@
-package com.example.spashscreen2.AdaptersRecyclers;
+package com.example.spashscreen2.Model;
 
 public class Puntuaciones {
 
-    private int profileIMG;
     private String username;
     private int score;
     private String profileImageURL;
-
-    /*public ElementosPuntuaciones(int profileIMG, String username, int score) {
-        this.profileIMG = profileIMG;
-        this.username = username;
-        this.score = score;
-    }*/
 
     public String getProfileImageURL() {
         return profileImageURL;
@@ -19,14 +12,6 @@ public class Puntuaciones {
 
     public void setProfileImageURL(String profileImageURL) {
         this.profileImageURL = profileImageURL;
-    }
-
-    public int getProfileIMG() {
-        return profileIMG;
-    }
-
-    public void setProfileIMG(int profileIMG) {
-        this.profileIMG = profileIMG;
     }
 
     public String getUsername() {

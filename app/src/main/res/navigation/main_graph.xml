@@ -38,7 +38,11 @@
         android:id="@+id/amigosFragment"
         android:name="com.example.spashscreen2.NavigationFragments.ChatFragment"
         android:label=""
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_amigosFragment_to_chatMessagesFragment"
+            app:destination="@id/chatMessagesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/calendarioFragment"
         android:name="com.example.spashscreen2.NavigationFragments.CalendarioFragment"
@@ -197,5 +201,9 @@
             android:defaultValue="1" />
 
     </action>
+    <fragment
+        android:id="@+id/chatMessagesFragment"
+        android:name="com.example.spashscreen2.ChatMessagesFragment"
+        tools:layout="@layout/fragment_chat_messages" />
 
 </navigation>

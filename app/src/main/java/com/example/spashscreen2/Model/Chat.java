@@ -1,4 +1,4 @@
-package com.example.spashscreen2.AdaptersRecyclers;
+package com.example.spashscreen2.Model;
 
 public class Chat {
 

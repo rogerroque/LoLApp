@@ -9,11 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.spashscreen2.AdaptersRecyclers.Chat;
+import com.example.spashscreen2.Model.Chat;
+import com.example.spashscreen2.Model.ChatMessageViewModel;
 import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentChatBinding;
 import com.example.spashscreen2.databinding.ViewholderChatBinding;
@@ -24,8 +28,10 @@ import java.util.List;
 public class ChatFragment extends Fragment {
 
     private FragmentChatBinding binding;
-    List<Chat> elementosChats = new ArrayList<>();
-    AdapterChat adapterChat;
+    private List<Chat> elementosChats = new ArrayList<>();
+    private AdapterChat adapterChat;
+    private NavController navController;
+    private ChatMessageViewModel chatMessageViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +44,8 @@ public class ChatFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        chatMessageViewModel = new ViewModelProvider(requireActivity()).get(ChatMessageViewModel.class);
+        navController = Navigation.findNavController(view);
         cargarChat();
         mostrarChat();
 
@@ -191,6 +199,11 @@ public class ChatFragment extends Fragment {
             } else {
                 holder.binding.statusChat.setTextColor(ContextCompat.getColor(requireContext(), R.color.OfflineColor));
             }
+
+            holder.itemView.setOnClickListener(v -> {
+                chatMessageViewModel.seleccionar(elementosChats.get(position));
+                navController.navigate(R.id.action_amigosFragment_to_chatMessagesFragment);
+            });
 
         }
 

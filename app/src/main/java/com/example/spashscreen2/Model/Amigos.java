@@ -1,4 +1,4 @@
-package com.example.spashscreen2.AdaptersRecyclers;
+package com.example.spashscreen2.Model;
 
 public class Amigos {
 
@@ -6,14 +6,6 @@ public class Amigos {
     private String nameAmigo;
     private String statusAmigo;
     private String imgUrlAmigo;
-
-    public int getImgChat() {
-        return imgChat;
-    }
-
-    public void setImgChat(int imgChat) {
-        this.imgChat = imgChat;
-    }
 
     public String getNameAmigo() {
         return nameAmigo;

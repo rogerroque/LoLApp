@@ -2,6 +2,10 @@ package com.example.spashscreen2;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,13 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RadioGroup;
-
+import com.bumptech.glide.Glide;
 import com.example.spashscreen2.databinding.FragmentPreguntaDosBinding;
-import com.squareup.picasso.Picasso;
+
 
 public class PreguntaDosFragment extends Fragment {
 
@@ -50,7 +50,7 @@ public class PreguntaDosFragment extends Fragment {
         binding.progressBarPreguntasHorizontal2.setProgress(20);
         binding.progressBarPreguntas2.setProgress(90);
 
-        Picasso.get().load("https://i.ibb.co/S5r0yp5/Shurima-Pregunta2.png").into(binding.imagePregunta2);
+        Glide.with(requireActivity()).load("https://i.ibb.co/S5r0yp5/Shurima-Pregunta2.png").into(binding.imagePregunta2);
 
         binding.radioGrupPadre.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

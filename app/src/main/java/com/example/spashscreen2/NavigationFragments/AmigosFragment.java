@@ -1,6 +1,5 @@
 package com.example.spashscreen2.NavigationFragments;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,13 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.example.spashscreen2.AdaptersRecyclers.Amigos;
-import com.example.spashscreen2.HistorialPartidasFragment;
-import com.example.spashscreen2.R;
+import com.example.spashscreen2.Model.Amigos;
 import com.example.spashscreen2.databinding.FragmentAmigosBinding;
 import com.example.spashscreen2.databinding.ViewholderAmigosBinding;
-import com.example.spashscreen2.databinding.ViewholderPartidaBinding;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;

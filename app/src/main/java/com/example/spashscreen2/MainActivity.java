@@ -9,25 +9,30 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.spashscreen2.Model.ChatMessageViewModel;
 import com.example.spashscreen2.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
-    AppBarConfiguration appBarConfiguration;
-    NavController navController;
+    private ActivityMainBinding binding;
+    private AppBarConfiguration appBarConfiguration;
+    private NavController navController;
+    private ChatMessageViewModel chatMessageViewModel;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        chatMessageViewModel = new ViewModelProvider(this).get(ChatMessageViewModel.class);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -45,92 +50,42 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
 
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.perfilFragment) {
+
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.perfilFragment) {
+                binding.bottomNavigation.setVisibility(View.GONE);
+                binding.viewBottom.setVisibility(View.GONE);
+                binding.viewTop.setVisibility(View.GONE);
+            } else if (destination.getId() == R.id.cambiarIdiomaFragment || destination.getId() == R.id.verAmigosFragment || destination.getId() == R.id.appInfoFragment
+                || destination.getId() == R.id.calendarioFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.cambiarIdiomaFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.verAmigosFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.appInfoFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.calendarioFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.splashScreenFragment) {
+            }  else if (destination.getId() == R.id.splashScreenFragment || destination.getId() == R.id.signInFragment || destination.getId() == R.id.signUpFragment
+                || destination.getId() == R.id.firstScreenFragment || destination.getId() == R.id.gameTypeFragment ||destination.getId() == R.id.startingGameFragment
+                || destination.getId() == R.id.preguntaUnoFragment || destination.getId() == R.id.preguntaDosFragment || destination.getId() == R.id.preguntaDiezFragment
+                || destination.getId() == R.id.resultadoPreguntasFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.toolbar.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);
                     binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.signInFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.signUpFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.firstScreenFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.gameTypeFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.startingGameFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.preguntaUnoFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.preguntaDosFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.preguntaDiezFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else if (destination.getId() == R.id.resultadoPreguntasFragment) {
-                    binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.toolbar.setVisibility(View.GONE);
-                    binding.viewBottom.setVisibility(View.GONE);
-                    binding.viewTop.setVisibility(View.GONE);
-                } else {
-                    binding.bottomNavigation.setVisibility(View.VISIBLE);
-                    binding.toolbar.setVisibility(View.VISIBLE);
-                    binding.viewBottom.setVisibility(View.VISIBLE);
-                    binding.viewTop.setVisibility(View.VISIBLE);
-                }
+            } else if (destination.getId() == R.id.chatMessagesFragment) {
+                binding.toolbar.setTitle("");
+                binding.bottomNavigation.setVisibility(View.GONE);
+                binding.viewBottom.setVisibility(View.GONE);
+                binding.toolbar.setVisibility(View.GONE);
+            } else {
+                binding.bottomNavigation.setVisibility(View.VISIBLE);
+                binding.toolbar.setVisibility(View.VISIBLE);
+                binding.viewBottom.setVisibility(View.VISIBLE);
+                binding.viewTop.setVisibility(View.VISIBLE);
             }
         });
 
-
     }
-
 
     @Override
     public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
 
 

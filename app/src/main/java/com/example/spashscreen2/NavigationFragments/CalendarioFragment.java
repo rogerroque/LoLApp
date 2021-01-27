@@ -1,18 +1,17 @@
 package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.spashscreen2.R;
+import com.bumptech.glide.Glide;
 import com.example.spashscreen2.databinding.FragmentCalendarioBinding;
-import com.squareup.picasso.Picasso;
+
 
 public class CalendarioFragment extends Fragment {
 
@@ -30,31 +29,31 @@ public class CalendarioFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //Game1
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game1);
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game1);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game1);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game1);
         //Game2
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo1Game2);
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo2Game2);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo1Game2);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo2Game2);
         //Game3
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo1Game3);
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo2Game3);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo1Game3);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo2Game3);
         //Game4
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game4);
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo2Game4);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game4);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo2Game4);
         //Game5
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo1Game5);
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game5);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/LGD.png/revision/latest?cb=20170802033858").into(binding.imgEquipo1Game5);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game5);
         //Game6
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo1Game6);
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo2Game6);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo1Game6);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo2Game6);
         //Game7
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/7d/FlyQuestlogo_std.png/revision/latest/scale-to-width-down/45?cb=20171121011050").into(binding.imgEquipo1Game7);
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo2Game7);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/7d/FlyQuestlogo_std.png/revision/latest/scale-to-width-down/45?cb=20171121011050").into(binding.imgEquipo1Game7);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo2Game7);
         //Game8
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo1Game8);
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo2Game8);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/Gen.Glogo_square.png/revision/latest?cb=20190309161345").into(binding.imgEquipo1Game8);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo2Game8);
         //Game9
-        Picasso.get().load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo1Game9);
-        Picasso.get().load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game9);
+        Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo1Game9);
+        Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game9);
     }
 }
