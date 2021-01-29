@@ -52,7 +52,7 @@ public class SplashScreenFragment extends Fragment {
 
         executor.execute(() -> {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(3000);
                 finishedLoading.postValue(true);
             } catch (InterruptedException e) {
                 e.printStackTrace();

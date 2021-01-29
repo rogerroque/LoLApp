@@ -57,7 +57,11 @@
         android:id="@+id/quizesFragment"
         android:name="com.example.spashscreen2.NavigationFragments.QuizesFragment"
         android:label=""
-        tools:layout="@layout/fragment_quizes" />
+        tools:layout="@layout/fragment_quizes" >
+        <action
+            android:id="@+id/action_quizesFragment_to_gameTypeFragment"
+            app:destination="@id/gameTypeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.spashscreen2.NavigationFragments.HomeFragment"
