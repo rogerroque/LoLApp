@@ -10,19 +10,24 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.ui.AppBarConfiguration;
 
 import com.bumptech.glide.Glide;
 import com.example.spashscreen2.Model.ChatMessageViewModel;
 import com.example.spashscreen2.databinding.FragmentChatMessagesBinding;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import co.intentservice.chatui.ChatView;
+import co.intentservice.chatui.models.ChatMessage;
 
 
 public class ChatMessagesFragment extends Fragment {
 
     private FragmentChatMessagesBinding binding;
     private ChatMessageViewModel chatMessageViewModel;
-    
+    ArrayList<ChatMessage> messages;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,7 +43,6 @@ public class ChatMessagesFragment extends Fragment {
 
         chatMessageViewModel.getChatSeleccionado().observe(getViewLifecycleOwner(), chat -> {
 
-            binding.nombreChatSummoner.setText(chat.getNameChat());
             binding.textSummonerChat.setText(chat.getNameChat());
             binding.statusSummonerChat.setText(chat.getStatusChat());
             Glide.with(requireActivity()).load(chat.getImgCharURL()).into(binding.imgSummonerChat);
@@ -49,5 +53,27 @@ public class ChatMessagesFragment extends Fragment {
                 binding.statusSummonerChat.setTextColor(ContextCompat.getColor(requireContext(), R.color.OfflineColor));
             }
         });
+
+        binding.chatView.setOnSentMessageListener(new ChatView.OnSentMessageListener() {
+            @Override
+            public boolean sendMessage(ChatMessage chatMessage) {
+                return true;
+            }
+        });
+
+        binding.chatView.setTypingListener(new ChatView.TypingListener(){
+            @Override
+            public void userStartedTyping(){
+                binding.statusSummonerChat.setText("Escribiendo...");
+            }
+
+            @Override
+            public void userStoppedTyping(){
+                binding.statusSummonerChat.setText("Online");
+            }
+        });
+
+
+
     }
 }

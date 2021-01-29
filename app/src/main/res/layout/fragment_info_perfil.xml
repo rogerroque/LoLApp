@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NavigationFragments.InfoPerfilFragment"
-    android:background="#0F2D35"
+    android:background="@color/backgroundColor"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout

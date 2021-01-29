@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +28,8 @@ public class CalendarioFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.scroll.fullScroll(ScrollView.FOCUS_UP);
 
         //Game1
         Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592591295307_FnaticFNC-01-FullonDark.png").into(binding.imgEquipo1Game1);
@@ -55,5 +58,16 @@ public class CalendarioFragment extends Fragment {
         //Game9
         Glide.with(requireActivity()).load("https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/77/G2_Esportslogo_square.png/revision/latest?cb=20190201222017").into(binding.imgEquipo1Game9);
         Glide.with(requireActivity()).load("https://am-a.akamaihd.net/image/?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1592590917094_TSMTSM-01-FullonDark.png").into(binding.imgEquipo2Game9);
+
+        //Competitions
+        Glide.with(requireActivity()).load("https://i.ibb.co/BrQkxjZ/WORLDS.png").into(binding.worlds);
+        Glide.with(requireActivity()).load("https://i.ibb.co/N7rHxsH/LEC.png").into(binding.lec);
+        Glide.with(requireActivity()).load("https://i.ibb.co/nkpHDtG/LCS.png").into(binding.lcs);
+        Glide.with(requireActivity()).load("https://i.ibb.co/k9WcWgs/LCK.png").into(binding.lck);
+        Glide.with(requireActivity()).load("https://i.ibb.co/mqHWzLN/LPL.png").into(binding.lpl);
+        Glide.with(requireActivity()).load("https://i.ibb.co/vJMTKj3/CBLOL.png").into(binding.cblol);
+        Glide.with(requireActivity()).load("https://i.ibb.co/Gxdcn49/TCL.png").into(binding.tcl);
+        Glide.with(requireActivity()).load("https://i.ibb.co/bHRdcnf/OPL.png").into(binding.opl);
+
     }
 }

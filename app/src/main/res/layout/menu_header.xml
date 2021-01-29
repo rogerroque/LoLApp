@@ -4,7 +4,7 @@
     android:layout_height="168dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relativeLayoutDrawer"
-    android:background="#000">
+    android:background="@color/backgroundColor">
 
     <ImageView
         android:id="@+id/imagenFondo"

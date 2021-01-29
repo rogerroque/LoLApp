@@ -7,7 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="ToolbarBottomColor"> #11414E </color>
+    <color name="ToolbarBottomColor"> #212425 </color>
+    <color name="backgroundColor">#1D1F20</color>
     <color name="IconColors"> #FFF979 </color>
     <color name="OfflineColor"> #E62323 </color>
     <color name="DarkerOfflineColor">#9A2E2E</color>

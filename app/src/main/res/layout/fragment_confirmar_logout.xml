@@ -5,7 +5,7 @@
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ConfirmarLogoutFragment"
-    android:background="#11414E">
+    android:background="@color/backgroundColor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="300dp"
