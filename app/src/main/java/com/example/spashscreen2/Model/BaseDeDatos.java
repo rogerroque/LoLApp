@@ -14,7 +14,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-@Database(entities = {Usuario.class}, version = 1, exportSchema = false)
+@Database(entities = {Usuario.class, Puntuaciones.class}, version = 2, exportSchema = false)
 public abstract class BaseDeDatos extends RoomDatabase {
 
     private static volatile BaseDeDatos INSTANCIA;

@@ -1,10 +1,24 @@
 package com.example.spashscreen2.Model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Puntuaciones {
+
+    @PrimaryKey(autoGenerate = true)
+    public int key;
 
     private String username;
     private int score;
     private String profileImageURL;
+
+
+    /*public Puntuaciones(String username, int score, String profileImageURL) {
+        this.username = username;
+        this.score = score;
+        this.profileImageURL = profileImageURL;
+    }*/
 
     public String getProfileImageURL() {
         return profileImageURL;
