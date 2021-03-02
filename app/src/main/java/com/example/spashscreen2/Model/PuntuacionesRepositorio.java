@@ -15,9 +15,7 @@ public class PuntuacionesRepositorio {
     private final BaseDeDatos.AppUsuarioDAO appUsuarioDAO;
 
     public PuntuacionesRepositorio(Application application) {
-
         appUsuarioDAO = BaseDeDatos.obtenerInstancia(application).obtenerElementosDao();
-
     }
 
     public LiveData<List<Puntuaciones>> obtener() {

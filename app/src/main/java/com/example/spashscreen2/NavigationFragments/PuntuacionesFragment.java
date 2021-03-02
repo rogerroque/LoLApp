@@ -1,6 +1,7 @@
 package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.spashscreen2.Model.Puntuaciones;
 import com.example.spashscreen2.Model.PuntuacionesViewModel;
 import com.example.spashscreen2.R;
@@ -35,14 +37,9 @@ public class PuntuacionesFragment extends Fragment {
     private PuntuacionesViewModel puntuacionesViewModel;
     private NavController navController;
 
-
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        binding = FragmentPuntuacionesBinding.inflate(inflater, container, false);
-        return binding.getRoot();
-
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return (binding = FragmentPuntuacionesBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -102,10 +99,12 @@ public class PuntuacionesFragment extends Fragment {
         @Override
         public void onBindViewHolder(PuntuacionesViewHolder holder, int position) {
 
-            Puntuaciones puntuaciones = puntuacionesLista.get(position);
-            holder.binding.usernamePuntuaciones.setText(puntuaciones.username);
-            holder.binding.numeroPuntuacion.setText(String.valueOf(puntuaciones.score));
-            Glide.with(requireContext()).load(puntuaciones.profileImageURL).into(holder.binding.playerIMG);
+            holder.binding.usernamePuntuaciones.setText(puntuacionesLista.get(position).username);
+            holder.binding.numeroPuntuacion.setText(String.valueOf(puntuacionesLista.get(position).score));
+            Glide.with(requireContext())
+                    .load(puntuacionesLista.get(position).profileImageURL)
+                    .transform(new RoundedCorners(64))
+                    .into(holder.binding.playerIMG);
 
         }
 

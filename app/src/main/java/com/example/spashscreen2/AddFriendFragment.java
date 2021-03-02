@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class AddFriendFragment extends Fragment {
     private NavController navController;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return (binding = FragmentAddFriendBinding.inflate(inflater, container, false)).getRoot();
@@ -60,9 +61,7 @@ public class AddFriendFragment extends Fragment {
             }
             String nombreAmigo = binding.nombreAmigoAnadir.getText().toString();
             String puntuacionAmigo = binding.puntuacionAmigoAnadir.getText().toString();
-
             puntuacionesViewModel.insertarPuntuacion(nombreAmigo, puntuacionAmigo, imagenSeleccionada);
-
             navController.popBackStack();
 
         });

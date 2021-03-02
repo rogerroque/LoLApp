@@ -15,6 +15,7 @@ public class PuntuacionesViewModel extends AndroidViewModel {
 
     Executor executor = Executors.newSingleThreadExecutor();
 
+
     private final PuntuacionesRepositorio puntuacionesRepositorio;
 
     public PuntuacionesViewModel(@NonNull Application application) {
