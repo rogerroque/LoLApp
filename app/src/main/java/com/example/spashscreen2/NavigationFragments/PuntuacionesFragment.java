@@ -1,7 +1,6 @@
 package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -74,7 +72,6 @@ public class PuntuacionesFragment extends Fragment {
         mostrarDatos();
 
     }
-
 
     public void mostrarDatos() {
         binding.recyclerViewPuntuaciones.setLayoutManager(new LinearLayoutManager(getContext()));
