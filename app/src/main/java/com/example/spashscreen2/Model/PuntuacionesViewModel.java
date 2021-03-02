@@ -15,7 +15,6 @@ public class PuntuacionesViewModel extends AndroidViewModel {
 
     Executor executor = Executors.newSingleThreadExecutor();
 
-
     private final PuntuacionesRepositorio puntuacionesRepositorio;
 
     public PuntuacionesViewModel(@NonNull Application application) {
@@ -28,9 +27,7 @@ public class PuntuacionesViewModel extends AndroidViewModel {
     }
 
     public void insertarPuntuacion(String nombreAmigo, String puntuacionAmigo, Uri imagenSeleccionada) {
-        executor.execute(() -> {
-            puntuacionesRepositorio.insertarPuntuacion(nombreAmigo, puntuacionAmigo, imagenSeleccionada);
-        });
+        executor.execute(() -> puntuacionesRepositorio.insertarPuntuacion(nombreAmigo, puntuacionAmigo, imagenSeleccionada));
     }
 
     public void eliminarPuntuacion(Puntuaciones puntuaciones) {

@@ -29,7 +29,6 @@ public class ResultadoPreguntasFragment extends DialogFragment {
     private NavController navController;
     private final Random random = new Random();
     private int puntacion = 0;
-    Executor executor = Executors.newSingleThreadExecutor();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +38,7 @@ public class ResultadoPreguntasFragment extends DialogFragment {
 
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "ClickableViewAccessibility"})
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -54,10 +53,8 @@ public class ResultadoPreguntasFragment extends DialogFragment {
         if (puntacion >= 5) {
 
             binding.elPadre.setOnTouchListener((v, event) -> {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        CommonConfetti.rainingConfetti((ViewGroup) view, new int[] {Color.YELLOW, Color.RED, Color.BLUE}).stream(3500);
-                    break;
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    CommonConfetti.rainingConfetti((ViewGroup) view, new int[]{Color.YELLOW, Color.RED, Color.BLUE}).stream(3500);
                 }
                 return true;
             });
