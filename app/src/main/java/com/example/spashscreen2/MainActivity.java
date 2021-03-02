@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }  else if (destination.getId() == R.id.splashScreenFragment || destination.getId() == R.id.signInFragment || destination.getId() == R.id.signUpFragment
                 || destination.getId() == R.id.firstScreenFragment || destination.getId() == R.id.gameTypeFragment ||destination.getId() == R.id.startingGameFragment
                 || destination.getId() == R.id.preguntaUnoFragment || destination.getId() == R.id.preguntaDosFragment || destination.getId() == R.id.preguntaDiezFragment
-                || destination.getId() == R.id.resultadoPreguntasFragment ||destination.getId() == R.id.puzzlesDisponiblesFragment) {
+                || destination.getId() == R.id.resultadoPreguntasFragment || destination.getId() == R.id.puzzlesDisponiblesFragment || destination.getId() == R.id.addFriendFragment) {
                     binding.bottomNavigation.setVisibility(View.GONE);
                     binding.toolbar.setVisibility(View.GONE);
                     binding.viewBottom.setVisibility(View.GONE);

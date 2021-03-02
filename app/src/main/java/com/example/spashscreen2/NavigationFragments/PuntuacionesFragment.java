@@ -8,11 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.spashscreen2.Model.Puntuaciones;
+import com.example.spashscreen2.Model.PuntuacionesViewModel;
+import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentPuntuacionesBinding;
 import com.example.spashscreen2.databinding.ViewholderPuntuacionesBinding;
 
@@ -23,12 +30,14 @@ import java.util.List;
 public class PuntuacionesFragment extends Fragment {
 
     private FragmentPuntuacionesBinding binding;
-    List<Puntuaciones> elementosPuntuaciones = new ArrayList<>();
     AdapterPuntuaciones adapterPuntuaciones;
+    List<Puntuaciones> puntuacionesLista = new ArrayList<>();
+    private PuntuacionesViewModel puntuacionesViewModel;
+    private NavController navController;
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentPuntuacionesBinding.inflate(inflater, container, false);
@@ -40,140 +49,35 @@ public class PuntuacionesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        cargarPuntuaciones();
+        AdapterPuntuaciones adapterPuntuaciones = new AdapterPuntuaciones();
+        puntuacionesViewModel = new ViewModelProvider(requireActivity()).get(PuntuacionesViewModel.class);
+
+        navController = Navigation.findNavController(view);
+        puntuacionesViewModel = new ViewModelProvider(requireActivity()).get(PuntuacionesViewModel.class);
+        puntuacionesViewModel.obtener().observe(getViewLifecycleOwner(), adapterPuntuaciones::establecerPuntuacionesList);
+
+        binding.navegarAddAmigo.setOnClickListener(v -> navController.navigate(R.id.action_puntuacionesFragment_to_addFriendFragment));
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.RIGHT  | ItemTouchHelper.LEFT) {
+
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return true;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                int posicion = viewHolder.getAdapterPosition();
+                Puntuaciones puntuaciones = adapterPuntuaciones.obtenerLaPuntuacion(posicion);
+                puntuacionesViewModel.eliminarPuntuacion(puntuaciones);
+
+            }
+        }).attachToRecyclerView(binding.recyclerViewPuntuaciones);
+
         mostrarDatos();
 
     }
 
-    public void cargarPuntuaciones () {
-
-        Puntuaciones puntuacion1 = new Puntuaciones();
-        puntuacion1.setProfileImageURL("https://i.ibb.co/C1S6VkV/Teemo.png");
-        puntuacion1.setUsername("Teemo Salvage");
-        puntuacion1.setScore(10);
-        elementosPuntuaciones.add(puntuacion1);
-
-        Puntuaciones puntuacion2 = new Puntuaciones();
-        puntuacion2.setProfileImageURL("https://i.ibb.co/j4CLhkq/Yasuo.png");
-        puntuacion2.setUsername("21 Roger");
-        puntuacion2.setScore(10);
-        elementosPuntuaciones.add(puntuacion2);
-
-        Puntuaciones puntuacion3 = new Puntuaciones();
-        puntuacion3.setProfileImageURL("https://i.ibb.co/yyF170D/Padre-Willyrex.png");
-        puntuacion3.setUsername("Willyrex");
-        puntuacion3.setScore(10);
-        elementosPuntuaciones.add(puntuacion3);
-
-        Puntuaciones puntuacion4 = new Puntuaciones();
-        puntuacion4.setProfileImageURL("https://i.ibb.co/KsFzJfw/Talon.png");
-        puntuacion4.setUsername("21 Jhon");
-        puntuacion4.setScore(10);
-        elementosPuntuaciones.add(puntuacion4);
-
-        Puntuaciones puntuacion5 = new Puntuaciones();
-        puntuacion5.setProfileImageURL("https://i.ibb.co/2qcgnG1/G2.png");
-        puntuacion5.setUsername("G2 Rekkles");
-        puntuacion5.setScore(9);
-        elementosPuntuaciones.add(puntuacion5);
-
-        Puntuaciones puntuacion6 = new Puntuaciones();
-        puntuacion6.setProfileImageURL("https://i.ibb.co/BBzc02V/Ekko.png");
-        puntuacion6.setUsername("Xyphr");
-        puntuacion6.setScore(9);
-        elementosPuntuaciones.add(puntuacion6);
-
-        Puntuaciones puntuacion7 = new Puntuaciones();
-        puntuacion7.setProfileImageURL("https://i.ibb.co/YZzWJwF/Akali.png");
-        puntuacion7.setUsername("Aldart");
-        puntuacion7.setScore(9);
-        elementosPuntuaciones.add(puntuacion7);
-
-        Puntuaciones puntuacion8 = new Puntuaciones();
-        puntuacion8.setProfileImageURL("https://i.ibb.co/j4CLhkq/Yasuo.png");
-        puntuacion8.setUsername("MENTOS24");
-        puntuacion8.setScore(8);
-        elementosPuntuaciones.add(puntuacion8);
-
-        Puntuaciones puntuacion9 = new Puntuaciones();
-        puntuacion9.setProfileImageURL("https://i.ibb.co/YWcQ9MH/Irelia.png");
-        puntuacion9.setUsername("Frimil");
-        puntuacion9.setScore(8);
-        elementosPuntuaciones.add(puntuacion9);
-
-        Puntuaciones puntuacion10 = new Puntuaciones();
-        puntuacion10.setProfileImageURL("https://i.ibb.co/9yK50y4/Camille.png");
-        puntuacion10.setUsername("FRANPOWERFUL");
-        puntuacion10.setScore(8);
-        elementosPuntuaciones.add(puntuacion10);
-
-        Puntuaciones puntuacion11 = new Puntuaciones();
-        puntuacion11.setProfileImageURL("https://i.ibb.co/n7dPdj4/Evelynn.png");
-        puntuacion11.setUsername("JDärk");
-        puntuacion11.setScore(7);
-        elementosPuntuaciones.add(puntuacion11);
-
-        Puntuaciones puntuacion12 = new Puntuaciones();
-        puntuacion12.setProfileImageURL("https://i.ibb.co/HnPZhQz/TSM.png");
-        puntuacion12.setUsername("JakioXX");
-        puntuacion12.setScore(7);
-        elementosPuntuaciones.add(puntuacion12);
-
-        Puntuaciones puntuacion13 = new Puntuaciones();
-        puntuacion13.setProfileImageURL("https://i.ibb.co/d202bQD/Draven.png");
-        puntuacion13.setUsername("T1 Faker");
-        puntuacion13.setScore(5);
-        elementosPuntuaciones.add(puntuacion13);
-
-        Puntuaciones puntuacion14 = new Puntuaciones();
-        puntuacion14.setProfileImageURL("https://i.ibb.co/LzXk19j/Proyecto.png");
-        puntuacion14.setUsername("Vegetta777");
-        puntuacion14.setScore(5);
-        elementosPuntuaciones.add(puntuacion14);
-
-        Puntuaciones puntuacion15 = new Puntuaciones();
-        puntuacion15.setProfileImageURL("https://i.ibb.co/smpxhKL/Miss-Fortune.png");
-        puntuacion15.setUsername("Auronplay");
-        puntuacion15.setScore(5);
-        elementosPuntuaciones.add(puntuacion15);
-
-        Puntuaciones puntuacion16 = new Puntuaciones();
-        puntuacion16.setProfileImageURL("https://i.ibb.co/HnPZhQz/TSM.png");
-        puntuacion16.setUsername("Biyin");
-        puntuacion16.setScore(5);
-        elementosPuntuaciones.add(puntuacion16);
-
-        Puntuaciones puntuacion17 = new Puntuaciones();
-        puntuacion17.setProfileImageURL("https://i.ibb.co/BBzc02V/Ekko.png");
-        puntuacion17.setUsername("Alexelcapo");
-        puntuacion17.setScore(5);
-        elementosPuntuaciones.add(puntuacion17);
-
-        Puntuaciones puntuacion18 = new Puntuaciones();
-        puntuacion18.setProfileImageURL("https://i.ibb.co/gMpFgM4/Gangplank.png");
-        puntuacion18.setUsername("xQc");
-        puntuacion18.setScore(4);
-        elementosPuntuaciones.add(puntuacion18);
-
-        Puntuaciones puntuacion19 = new Puntuaciones();
-        puntuacion19.setProfileImageURL("https://i.ibb.co/w6Gqhff/Ahri.png");
-        puntuacion19.setUsername("Romero");
-        puntuacion19.setScore(4);
-        elementosPuntuaciones.add(puntuacion19);
-
-        Puntuaciones puntuacion20 = new Puntuaciones();
-        puntuacion20.setProfileImageURL("https://i.ibb.co/1nzYpzq/Bronza.png");
-        puntuacion20.setUsername("Teemo Salvage");
-        puntuacion20.setScore(1);
-        elementosPuntuaciones.add(puntuacion20);
-
-        Puntuaciones puntuacion21 = new Puntuaciones();
-        puntuacion21.setProfileImageURL("https://i.ibb.co/crHjdbn/DJSona.png");
-        puntuacion21.setUsername("G2 Caps");
-        puntuacion21.setScore(1);
-        elementosPuntuaciones.add(puntuacion21);
-
-    }
 
     public void mostrarDatos() {
         binding.recyclerViewPuntuaciones.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -182,6 +86,12 @@ public class PuntuacionesFragment extends Fragment {
     }
 
     class AdapterPuntuaciones extends RecyclerView.Adapter<AdapterPuntuaciones.PuntuacionesViewHolder> {
+
+        public Puntuaciones obtenerLaPuntuacion(int posicion){
+            return puntuacionesLista.get(posicion);
+        }
+
+        List<Puntuaciones> puntuacionesLista;
 
         @NonNull
         @Override
@@ -192,18 +102,21 @@ public class PuntuacionesFragment extends Fragment {
         @Override
         public void onBindViewHolder(PuntuacionesViewHolder holder, int position) {
 
-            String username = elementosPuntuaciones.get(position).getUsername();
-            String score = String.valueOf(elementosPuntuaciones.get(position).getScore());
+            Puntuaciones puntuaciones = puntuacionesLista.get(position);
+            holder.binding.usernamePuntuaciones.setText(puntuaciones.username);
+            holder.binding.numeroPuntuacion.setText(String.valueOf(puntuaciones.score));
+            Glide.with(requireContext()).load(puntuaciones.profileImageURL).into(holder.binding.playerIMG);
 
-            holder.binding.usernamePuntuaciones.setText(username);
-            holder.binding.numeroPuntuacion.setText(score);
-            Glide.with(requireContext()).load(elementosPuntuaciones.get(position).getProfileImageURL()).into(holder.binding.playerIMG);
+        }
 
+        void establecerPuntuacionesList(List<Puntuaciones> puntuacionesLista) {
+            this.puntuacionesLista = puntuacionesLista;
+            notifyDataSetChanged();
         }
 
         @Override
         public int getItemCount() {
-            return elementosPuntuaciones.size();
+            return puntuacionesLista == null ? 0 : puntuacionesLista.size();
         }
 
         class PuntuacionesViewHolder extends RecyclerView.ViewHolder {
@@ -214,7 +127,5 @@ public class PuntuacionesFragment extends Fragment {
                 this.binding = binding;
             }
         }
-
     }
-
 }

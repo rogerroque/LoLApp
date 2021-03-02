@@ -14,7 +14,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-@Database(entities = {Usuario.class, Puntuaciones.class}, version = 2, exportSchema = false)
+@Database(entities = {Usuario.class, Puntuaciones.class}, version = 6, exportSchema = false)
 public abstract class BaseDeDatos extends RoomDatabase {
 
     private static volatile BaseDeDatos INSTANCIA;
@@ -40,11 +40,19 @@ public abstract class BaseDeDatos extends RoomDatabase {
         @Insert
         void insertarUsuario(Usuario usuario);
 
+        @Insert
+        void insertarPuntuacion(Puntuaciones puntuaciones);
+
+        @Delete
+        void eliminarPuntuaciones(Puntuaciones puntuaciones);
+
         @Query("SELECT * FROM Usuario WHERE username = :username AND password = :password")
         Usuario autenticar(String username, String password);
 
         @Query("SELECT * FROM Usuario WHERE username = :username")
         Usuario comprobarNombreDisponible(String username);
 
+        @Query("SELECT * FROM Puntuaciones")
+        LiveData<List<Puntuaciones>> sacarPuntuaciones();
     }
 }

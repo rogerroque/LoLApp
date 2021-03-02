@@ -9,18 +9,17 @@ public class Puntuaciones {
     @PrimaryKey(autoGenerate = true)
     public int key;
 
-    private String username;
-    private int score;
-    private String profileImageURL;
+    public String username;
+    public String score;
+    public String profileImageURL;
 
-
-    /*public Puntuaciones(String username, int score, String profileImageURL) {
+    public Puntuaciones(String username, String score, String profileImageURL) {
         this.username = username;
         this.score = score;
         this.profileImageURL = profileImageURL;
-    }*/
+    }
 
-    public String getProfileImageURL() {
+    /*public String getProfileImageURL() {
         return profileImageURL;
     }
 
@@ -42,5 +41,5 @@ public class Puntuaciones {
 
     public void setScore(int score) {
         this.score = score;
-    }
+    }*/
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/puntuacionesFragment">
 
     <fragment
         android:id="@+id/appInfoFragment"
@@ -14,7 +14,11 @@
         android:id="@+id/puntuacionesFragment"
         android:name="com.example.spashscreen2.NavigationFragments.PuntuacionesFragment"
         android:label=""
-        tools:layout="@layout/fragment_puntuaciones" />
+        tools:layout="@layout/fragment_puntuaciones" >
+        <action
+            android:id="@+id/action_puntuacionesFragment_to_addFriendFragment"
+            app:destination="@id/addFriendFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cambiarIdiomaFragment"
         android:name="com.example.spashscreen2.NavigationFragments.CambiarIdiomaFragment"
@@ -209,5 +213,10 @@
         android:id="@+id/chatMessagesFragment"
         android:name="com.example.spashscreen2.ChatMessagesFragment"
         tools:layout="@layout/fragment_chat_messages" />
+    <fragment
+        android:id="@+id/addFriendFragment"
+        android:name="com.example.spashscreen2.AddFriendFragment"
+        android:label="fragment_add_friend"
+        tools:layout="@layout/fragment_add_friend" />
 
 </navigation>
