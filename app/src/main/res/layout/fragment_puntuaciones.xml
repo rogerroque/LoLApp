@@ -35,19 +35,17 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="10dp"/>
 
-        <TextView
-            android:id="@+id/textTipoPuntuacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/campeones"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:layout_marginStart="15dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@id/textPuntuaciones"
-            android:fontFamily="@font/ubuntu_medium"
-            android:layout_marginTop="3dp"/>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/buscarAmigos"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_search_view"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:queryHint="Teemo salvage"
+            app:defaultQueryHint="Buscar amigo"
+            app:layout_constraintTop_toBottomOf="@id/textPuntuaciones"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,10 +54,10 @@
             android:textSize="20sp"
             android:textColor="#F7FFC8"
             android:fontFamily="@font/ubuntu_medium"
-            app:layout_constraintTop_toBottomOf="@id/textTipoPuntuacion"
+            app:layout_constraintTop_toBottomOf="@id/buscarAmigos"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,10 +66,10 @@
             android:textColor="#F7FFC8"
             android:textSize="20sp"
             android:fontFamily="@font/ubuntu_medium"
-            app:layout_constraintTop_toBottomOf="@id/textTipoPuntuacion"
+            app:layout_constraintTop_toBottomOf="@id/buscarAmigos"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="15sp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="15dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -79,6 +77,6 @@
         android:id="@+id/recyclerViewPuntuaciones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
-
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 </LinearLayout>

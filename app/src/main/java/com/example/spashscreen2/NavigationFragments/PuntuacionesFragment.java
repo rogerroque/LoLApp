@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -23,7 +23,6 @@ import com.example.spashscreen2.R;
 import com.example.spashscreen2.databinding.FragmentPuntuacionesBinding;
 import com.example.spashscreen2.databinding.ViewholderPuntuacionesBinding;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -31,7 +30,6 @@ public class PuntuacionesFragment extends Fragment {
 
     private FragmentPuntuacionesBinding binding;
     AdapterPuntuaciones adapterPuntuaciones;
-    List<Puntuaciones> puntuacionesLista = new ArrayList<>();
     private PuntuacionesViewModel puntuacionesViewModel;
     private NavController navController;
 
@@ -44,46 +42,33 @@ public class PuntuacionesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        AdapterPuntuaciones adapterPuntuaciones = new AdapterPuntuaciones();
         puntuacionesViewModel = new ViewModelProvider(requireActivity()).get(PuntuacionesViewModel.class);
-
         navController = Navigation.findNavController(view);
-        puntuacionesViewModel = new ViewModelProvider(requireActivity()).get(PuntuacionesViewModel.class);
-        puntuacionesViewModel.obtener().observe(getViewLifecycleOwner(), adapterPuntuaciones::establecerPuntuacionesList);
 
         binding.navegarAddAmigo.setOnClickListener(v -> navController.navigate(R.id.action_puntuacionesFragment_to_addFriendFragment));
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.RIGHT  | ItemTouchHelper.LEFT) {
-
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return true;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                int posicion = viewHolder.getAdapterPosition();
-                Puntuaciones puntuaciones = adapterPuntuaciones.obtenerLaPuntuacion(posicion);
-                puntuacionesViewModel.eliminarPuntuacion(puntuaciones);
-
-            }
-        }).attachToRecyclerView(binding.recyclerViewPuntuaciones);
-
-        mostrarDatos();
-
-    }
-
-    public void mostrarDatos() {
-        binding.recyclerViewPuntuaciones.setLayoutManager(new LinearLayoutManager(getContext()));
         adapterPuntuaciones = new AdapterPuntuaciones();
         binding.recyclerViewPuntuaciones.setAdapter(adapterPuntuaciones);
+
+        puntuacionesViewModel.obtener().observe(getViewLifecycleOwner(), adapterPuntuaciones::establecerPuntuacionesList);
+
+        /*binding.buscarAmigos.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                puntuacionesViewModel.establecerTerminoBusqueda(newText);
+                return false;
+            }
+        });*/
+
+
     }
 
     class AdapterPuntuaciones extends RecyclerView.Adapter<AdapterPuntuaciones.PuntuacionesViewHolder> {
-
-        public Puntuaciones obtenerLaPuntuacion(int posicion){
-            return puntuacionesLista.get(posicion);
-        }
 
         List<Puntuaciones> puntuacionesLista;
 
@@ -95,14 +80,18 @@ public class PuntuacionesFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(PuntuacionesViewHolder holder, int position) {
-
-            holder.binding.usernamePuntuaciones.setText(puntuacionesLista.get(position).username);
-            holder.binding.numeroPuntuacion.setText(String.valueOf(puntuacionesLista.get(position).score));
+            Puntuaciones p = puntuacionesLista.get(position);
+            holder.binding.usernamePuntuaciones.setText(p.username);
+            holder.binding.numeroPuntuacion.setText(p.score);
             Glide.with(requireContext())
-                    .load(puntuacionesLista.get(position).profileImageURL)
+                    .load(p.profileImageURL)
                     .transform(new RoundedCorners(64))
                     .into(holder.binding.playerIMG);
 
+            holder.itemView.setOnLongClickListener(v -> {
+                puntuacionesViewModel.eliminarPuntuacion(p);
+                return true;
+            });
         }
 
         void establecerPuntuacionesList(List<Puntuaciones> puntuacionesLista) {
