@@ -32,19 +32,8 @@ public class GameTypeFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        binding.buttonConTiempo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_gameTypeFragment_to_startingGameFragment);
-            }
-        });
-
-        binding.buttonSinTiempo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_gameTypeFragment_to_startingGameFragment);
-            }
-        });
+        binding.buttonConTiempo.setOnClickListener(v -> navController.navigate(R.id.action_gameTypeFragment_to_startingGameFragment));
+        binding.buttonSinTiempo.setOnClickListener(v -> navController.navigate(R.id.action_gameTypeFragment_to_startingGameFragment));
 
     }
 }

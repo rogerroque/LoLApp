@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -46,12 +45,9 @@ public class ChatFragment extends Fragment {
 
         chatMessageViewModel = new ViewModelProvider(requireActivity()).get(ChatMessageViewModel.class);
         navController = Navigation.findNavController(view);
-        cargarChat();
-        mostrarChat();
 
-    }
-
-    private void cargarChat() {
+        adapterChat = new AdapterChat();
+        binding.recyclerViewChat.setAdapter(adapterChat);
 
         Chat chat1 = new Chat();
         chat1.setImgCharURL("https://i.ibb.co/C1S6VkV/Teemo.png");
@@ -157,14 +153,6 @@ public class ChatFragment extends Fragment {
         chat15.setStatusChat("Offline");
         chat15.setStatusBall("red");
         elementosChats.add(chat15);
-
-    }
-
-    private void mostrarChat() {
-
-        binding.recyclerViewChat.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapterChat = new AdapterChat();
-        binding.recyclerViewChat.setAdapter(adapterChat);
 
     }
 

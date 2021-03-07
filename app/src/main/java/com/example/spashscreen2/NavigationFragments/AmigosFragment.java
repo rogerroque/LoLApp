@@ -1,16 +1,14 @@
 package com.example.spashscreen2.NavigationFragments;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 import com.example.spashscreen2.Model.Amigos;
@@ -37,13 +35,6 @@ public class AmigosFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        cargarAmigos();
-        mostrarAmigos();
-
-    }
-
-    private void mostrarAmigos() {
 
         Amigos amic1 = new Amigos();
         amic1.setImgUrlAmigo("https://i.ibb.co/C1S6VkV/Teemo.png");
@@ -137,13 +128,6 @@ public class AmigosFragment extends Fragment {
 
     }
 
-    private void cargarAmigos() {
-
-        binding.recyclerViewAmigos.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapterAmigos = new AdapterAmigos();
-        binding.recyclerViewAmigos.setAdapter(adapterAmigos);
-
-    }
 
     class AdapterAmigos extends RecyclerView.Adapter<AdapterAmigos.AmigosViewHolder> {
 

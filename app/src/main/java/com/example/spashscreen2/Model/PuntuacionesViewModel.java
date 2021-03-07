@@ -4,11 +4,9 @@ import android.app.Application;
 import android.net.Uri;
 
 import androidx.annotation.NonNull;
-import androidx.arch.core.util.Function;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Transformations;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -20,13 +18,6 @@ public class PuntuacionesViewModel extends AndroidViewModel {
     Executor executor = Executors.newSingleThreadExecutor();
 
     private final PuntuacionesRepositorio puntuacionesRepositorio;
-
-    /*LiveData<List<Puntuaciones>> resultadoBusqueda = Transformations.switchMap(terminoBusqueda, new Function<String, LiveData<List<Puntuaciones>>>() {
-        @Override
-        public LiveData<List<Puntuaciones>> apply(String input) {
-            return puntuacionesRepositorio.buscar(input);
-        }
-    });*/
 
     public PuntuacionesViewModel(@NonNull Application application) {
         super(application);
@@ -45,13 +36,5 @@ public class PuntuacionesViewModel extends AndroidViewModel {
     public void eliminarPuntuacion(Puntuaciones puntuaciones) {
         puntuacionesRepositorio.eliminarPuntuaciones(puntuaciones);
     }
-
-    /*LiveData<List<Puntuaciones>> buscar(){
-        return resultadoBusqueda;
-    }
-
-    public void establecerTerminoBusqueda(String t){
-        terminoBusqueda.setValue(t);
-    }*/
 
 }

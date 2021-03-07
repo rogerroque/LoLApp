@@ -22,10 +22,6 @@ public class PuntuacionesRepositorio {
         return appUsuarioDAO.sacarPuntuaciones();
     }
 
-    /*LiveData<List<Puntuaciones>> buscar(String t) {
-        return appUsuarioDAO.buscar(t);
-    }*/
-
     public void insertarPuntuacion(String nombreAmigo, String puntuacionAmigo, Uri imagenSeleccionada) {
         appUsuarioDAO.insertarPuntuacion(new Puntuaciones(nombreAmigo, puntuacionAmigo, imagenSeleccionada.toString()));
     }

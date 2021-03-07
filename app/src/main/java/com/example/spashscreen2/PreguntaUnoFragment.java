@@ -48,7 +48,6 @@ public class PreguntaUnoFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        //progres();
         binding.progressBarPreguntasHorizontal1.setProgress(10);
         binding.progressBarPreguntas1.setProgress(70);
 
@@ -85,23 +84,5 @@ public class PreguntaUnoFragment extends Fragment {
 
 
 
-    }
-
-    public void progres() {
-
-        Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void run() {
-
-                number++;
-                binding.progressBarPreguntas.setProgress(number);
-
-                if (number == 0)
-                    timer.cancel();
-
-            }
-        }; timer.schedule(timerTask, 10,100);
     }
 }

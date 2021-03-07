@@ -54,12 +54,7 @@ public class ChatMessagesFragment extends Fragment {
             }
         });
 
-        binding.chatView.setOnSentMessageListener(new ChatView.OnSentMessageListener() {
-            @Override
-            public boolean sendMessage(ChatMessage chatMessage) {
-                return true;
-            }
-        });
+        binding.chatView.setOnSentMessageListener(chatMessage -> true);
 
         binding.chatView.setTypingListener(new ChatView.TypingListener(){
             @Override

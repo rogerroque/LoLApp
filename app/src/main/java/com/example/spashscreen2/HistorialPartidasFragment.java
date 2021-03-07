@@ -35,11 +35,8 @@ public class HistorialPartidasFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        cargarPartidas();
-        mostrarDatos();
-    }
-
-    public void cargarPartidas() {
+        adapterPartidas = new AdapterPartidas();
+        binding.recyclerViewPartidas.setAdapter(adapterPartidas);
 
         Partida game1 = new Partida();
         game1.setWinLose("blue");
@@ -270,12 +267,6 @@ public class HistorialPartidasFragment extends Fragment {
         game12.setItem7("https://i.ibb.co/5cMcGPF/Mercury-s.png");
         partidasInfo.add(game12);
 
-    }
-
-    public void mostrarDatos() {
-        binding.recyclerViewPartidas.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapterPartidas = new AdapterPartidas();
-        binding.recyclerViewPartidas.setAdapter(adapterPartidas);
     }
 
     class AdapterPartidas extends RecyclerView.Adapter<PartidaViewHolder> {

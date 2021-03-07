@@ -9,7 +9,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -41,28 +40,22 @@ public class LogInFragment extends Fragment {
         appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
         navController = Navigation.findNavController(view);
 
-        binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = binding.usernameLogin.getText().toString();
-                String password = binding.passwordLogin.getText().toString();
+        binding.buttonLogin.setOnClickListener(v -> {
+            String username = binding.usernameLogin.getText().toString();
+            String password = binding.passwordLogin.getText().toString();
 
-                appViewModel.iniciarSesion(username, password);
-            }
+            appViewModel.iniciarSesion(username, password);
         });
 
-        appViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), new Observer<AppViewModel.EstadoDeLaAutenticacion>() {
-            @Override
-            public void onChanged(AppViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
-                switch (estadoDeLaAutenticacion){
-                    case AUTENTICADO:
-                        navController.navigate(R.id.action_signInFragment_to_homeFragment);
-                        break;
+        appViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), estadoDeLaAutenticacion -> {
+            switch (estadoDeLaAutenticacion){
+                case AUTENTICADO:
+                    navController.navigate(R.id.action_signInFragment_to_homeFragment);
+                    break;
 
-                    case AUTENTICACION_INVALIDA:
-                        Toast.makeText(getContext(), R.string.autenticacion, Toast.LENGTH_SHORT).show();
-                        break;
-                }
+                case AUTENTICACION_INVALIDA:
+                    Toast.makeText(getContext(), R.string.autenticacion, Toast.LENGTH_SHORT).show();
+                    break;
             }
         });
 

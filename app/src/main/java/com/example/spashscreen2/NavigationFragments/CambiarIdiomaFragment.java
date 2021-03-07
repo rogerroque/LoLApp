@@ -23,7 +23,6 @@ public class CambiarIdiomaFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentCambiarIdiomaBinding.inflate(inflater, container, false);
         return binding.getRoot();
-        /*return inflater.inflate(R.layout.fragment_cambiar_idioma, container, false);*/
     }
 
     @Override
